@@ -1,0 +1,35 @@
+TestForm.addTemplate('default', function(){return `
+
+  <div class="container space-above">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="jumbotron">
+       <h1 class="head">Test frågor</h1>
+        <h2 class="display-3"><strong class="number">01</strong> av 24</h2>
+        <h3>${this.title}</h3>
+        <hr class="line">
+        <p class="paragraph">${this.question[0]}</p>
+          
+            <ul class="alt">
+              
+                <a class="alt1" data-click="message">a. byte</a>
+                <a class="alt1" href="#">b. short</a>
+                <a class="alt1" href="#">c. int</a>
+                <a class="alt1" href="#">d. float</a>
+               
+              </ul>
+  		<div class="buttons">
+        <p class="lead">
+          <nav aria-label="...">
+              <ul class="pager">
+                <li><a class="arrow-left" href="#"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a></li>
+                <li><a class="arrow-right" href="#"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
+               </ul>
+          </nav>
+          </div>
+          </div>
+        </p>
+      </div>
+    </div>
+</div>
+`});
