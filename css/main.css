@@ -1,0 +1,9 @@
+/* Add your own css */
+
+.pet-box, .pet-owner-name {
+  cursor:pointer;
+}
+
+.big-border {
+  border: 20px solid #000;
+}
