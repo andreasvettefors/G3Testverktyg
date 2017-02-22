@@ -11,20 +11,20 @@ TestForm.addTemplate('default', function(){return `
         <hr class="line">
         <p  class="paragraph">${this.question[0]}</p>
           
-            <ul class="alt">
-              <li >
-                <a data-click="message1" class="alt1">a. byte</a></li>
-                <li><a class="alt1" href="#">b. short</a></li>
-                <li><a class="alt1" href="#">c. int</a></li>
-                <li><a class="alt1" href="#">d. float</a></li>
-               
-              </ul>
+            <form id="form">
+              <div><input name="answer" type="radio"  value="byte"> Byte</div>
+              <div><input name="answer" type="radio"  value="short"> Short</div>
+              <div><input name="answer" type="radio"  value="int"> Int</div>
+              <div><input name="answer" type="radio"  value="float"> Float</div>
+              
+            </form>
+
   		<div class="buttons">
         <p class="lead">
           <nav aria-label="...">
               <ul class="pager">
                 <li><a class="arrow-left" href="#"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a></li>
-                <li><a class="arrow-right" href="#"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
+                <li><a data-click="message1" class="arrow-right" href="#"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
                </ul>
           </nav>
           </div>

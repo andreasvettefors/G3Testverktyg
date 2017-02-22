@@ -12,7 +12,10 @@ test.display('body');*/
 
 var test = new TestForm();
 test.display('body');
+
+test.readAllFromDb();
 	}
+
 
 
 }

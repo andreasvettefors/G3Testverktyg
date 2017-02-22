@@ -1,24 +1,60 @@
-class TestForm extends Base{
+class TestForm extends Base {
 
-	static defaultPropertyValues(){
-		return{
-			idTest: 0,
-			title:'Programmering A',
-			//description:''
-			question: ['question1','question2']
+static defaultPropertyValues(){
+return{
+idTest: 0,
+name:'.Net',
+description:'Frågor i C#'
+question: ['question1','question2']
 
-		}
-		
-	}
+}
+}
+  constructor(propertyValues = {}){
+    super(propertyValues);
 
-	constructor(propertyValues = {}){
-		super(propertyValues);
-	} 
 
+
+    if(!(this.questions instanceof QuestionList)){
+      this.questions = new QuestionList(this.questions);
+    }
+  }
+
+readAllFromDb() {
+  this.db.readAll((data) => {
+  console.log(data);
+  });
+}
+
+static get sqlQueries() {
+  return {
+    readAll: `
+     select question, answer FROM answerOptions, questions WHERE questions_idQuestion=1;
+
+    `
+  }
+}
+
+//listen to which answer alternative you have chosen
  message1(){
 
- 	alert("hej");
+ 	var answer = $('input[name=answer]:checked', '#form').val();
+ 	console.log(answer);
+
  }
-	
-  
-} 
+
+  insertInDb(callback){
+    this.db.newTestForm({
+      idTest: this.idTest,
+      name: this.name,
+      description: this.description
+    },callback);
+  }
+
+  static get sqlQueries(){
+    return {
+      newTestForm: `
+        INSERT test SET ?
+      ` 
+    }
+  }
+}
