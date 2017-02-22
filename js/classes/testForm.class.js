@@ -5,7 +5,7 @@ return{
 idTest: 0,
 name:'.Net',
 description:'Frågor i C#'
-question: ['question1','question2']
+question: new QuestionList();
 
 }
 }
