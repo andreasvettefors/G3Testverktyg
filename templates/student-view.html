@@ -1,0 +1,43 @@
+StudentView.addTemplate('default', function(){return `
+<div class="container">
+	<section class="student-view">
+		<div class="row space-above">
+			<div class="col-md-3 hidden-sm">
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h3>${this.name}</h3>
+						<hr>
+
+						<!--Lista med elevens ogjorda tester-->
+						<article class="student-view-test-info">
+							<p><strong>Kunskapstester att göra</strong></p>
+
+							<div class="list-group">
+								<a href="#" class="list-group-item">Grunder i java</a>
+								<a href="#" class="list-group-item">Avancerad grottforskning</a>
+							</div>
+						</article>
+
+						<!--Lista med elevens gjorda tester-->
+						<article class="student-view-test-info">
+							<p><strong>Kunskapstester du genomfört</strong></p>
+
+							<div class="list-group">
+								<a href="#" class="list-group-item">Datorns delar</a>
+								<a href="#" class="list-group-item">Word</a>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<div class="col-md-3 hidden-sm">
+				</div>
+			</div>
+
+	</section>
+	</div>
+
+	`});

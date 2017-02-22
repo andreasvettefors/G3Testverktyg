@@ -20,15 +20,18 @@ window.load = `
     base.class.js
     list.class.js
     router.class.js
+		
   
   js/classes/
     bootstrap-size.js
     modal.class.js
     app.class.js
+		student-view.class.js
 
   templates/
     bootstrap-size.html
     modal.html
+		student-view.html
 
   js/main.js
 
