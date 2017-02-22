@@ -15,9 +15,9 @@ class TestForm extends Base{
 		super(propertyValues);
 	} 
 
- message(){
+ message1(){
 
- 	console.log('hej');
+ 	alert("hej");
  }
 	
   

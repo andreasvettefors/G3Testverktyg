@@ -4,7 +4,9 @@ window.load = `
     cerulean.bootstrap.min.css
     bootstrap-tricks.css
 
+css/testForm.css
   css/main.css
+
 
   js/libs/
     jquery.js
@@ -20,15 +22,22 @@ window.load = `
     base.class.js
     list.class.js
     router.class.js
+    
   
   js/classes/
     bootstrap-size.js
     modal.class.js
     app.class.js
+    question.class.js
+   
+    question-list.class.js
+    testForm.class.js
 
   templates/
     bootstrap-size.html
     modal.html
+    
+    testForm.html
 
   js/main.js
 
