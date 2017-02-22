@@ -1,4 +1,153 @@
 TestForm.addTemplate('default', function(){return `
+<style>
+.container .jumbotron{
+      border-radius: 0px;
+}
+.jumbotron{
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-style: 1px solid white;
+  }
+
+ .number{
+  font-size: 80px;
+  color:#ff6a20;
+  
+}
+
+.display-3{
+  font-family: 'Vidaloka', serif;
+  color: lightgrey;
+  text-align:right;
+  float:right;
+}
+
+.jumbotron h1{
+  font-family: 'Vidaloka', serif;
+  font-size: 70px;
+  color:#b5bbca;
+  text-align:left;
+  float:left;
+}
+
+.jumbotron h3{
+  margin-top: 110px;
+  margin-left: 5px;
+  margin-bottom: 0px;
+  font-family: Verdana;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color:#b5bbca;
+}
+
+.jumbotron>hr {
+
+  margin-top: 20px;
+  border-color: #ff6a20;
+}
+
+.jumbotron p{
+  margin-top: 50px;
+  text-align: center;
+  color:#7c8495;
+  font-size: 23px;
+  font-family: 'Vidaloka', serif;
+
+}
+
+.line{
+  margin-top: 130px;
+   border-top: 2px solid #ff6a20;
+}
+.alt{
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  font-family: verdana;
+  padding-left: 0px;
+  
+}
+
+.alt a{
+  display: block;
+  cursor: pointer;
+}
+.alt1{
+  color:#b5bbca;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+a:hover{
+  color:#ff6a20 ;
+  border: 2px solid #ff6a20 ;
+  text-decoration: none;
+  
+}
+
+a:checked{
+  color:#ff6a20 ;
+  border: 2px solid #ff6a20 ;
+  text-decoration: none;    
+}
+
+a{
+  color:#ff6a20;
+}
+
+.pager li>a{
+  background-color: #ff6a20 ;
+  color:white;
+  border-color: white;
+}
+
+.pager li>a:hover{
+  background-color: lightgrey ;
+  color:#ff6a20;
+  border-color: white;
+}
+
+
+
+/* design for mobile */
+@media screen and (max-width: 376px){
+
+.jumbotron h1{
+  margin-top: 70px;
+  font-size: 50px;  
+}
+
+.display-3{
+  
+  font-size: 30px;
+  margin-top: -150px;
+}
+
+.number{
+  font-size: 50px;
+}
+
+.jumbotron h3{
+  margin-top: 140px;
+}
+
+.alt{
+  justify-content: center;
+}
+
+}
+
+@media (min-width: 377px) and (max-width: 668px){
+
+
+
+}
+
+</style>
 
   <div class="container space-above">
   <div class="row">
