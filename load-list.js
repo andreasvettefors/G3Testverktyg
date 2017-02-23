@@ -40,7 +40,7 @@ css/testForm.css
     modal.html
     
     testForm.html
-
+    question.html
   js/main.js
 
 `;

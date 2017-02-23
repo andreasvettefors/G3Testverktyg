@@ -5,8 +5,12 @@ class App {
 		var test = new TestForm();
 
 		var question = new Question();
-		question.readQuestionFromDb();
+		test.questions.readAllFromDb();
+    console.log(test.questions);
 		test.display('body');
+
+    window.test = test;
+
 		/*var test = new TestForm();
 var test2 = new TestForm({id: 2, title: 'Engelska'});
 console.log(test);

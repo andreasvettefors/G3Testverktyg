@@ -13,9 +13,6 @@ class Question extends Base {
 	constructor(propertyValues = {}){
 		super(propertyValues);
 
-
-
-
 	// If needed convert the pets property 
     // from Array to PetList
     /*if(!(this.answerOptions instanceof AnswerOptionList)){
@@ -33,24 +30,16 @@ class Question extends Base {
     },callback);
   }
 
-  /*readQuestionFromDb(idTest){
-  	this.db.readQuestion([idTest],(data)=>{
-  		//this.question = data[0].question;
-      data.forEach(function(element){
-        console.log(element.question);
-      });
-  		
-  	});
-  };*/
 
   readQuestionFromDb(){
     this.db.readQuestion((data) => {
-
+                  var quest=[];
+                  var a = 0;
                   data.forEach(function(element) {
-                   console.log(element.question)
-
-                });
-    
+                   quest[a]=element.question
+                   a++;
+                       });
+                  return(quest[2]);
       
                 });
               

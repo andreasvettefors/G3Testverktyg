@@ -1,13 +1,13 @@
 class TestForm extends Base {
 
 static defaultPropertyValues(){
-return{
-idTest: 0,
-name:'.Net',
-description:'Frågor i C#',
-question: new QuestionList()
+  return{
+  idTest: 0,
+  name:'.Net',
+  description:'Frågor i C#',
+  questions: new QuestionList()
 
-}
+  }
 }
   constructor(propertyValues = {}){
     super(propertyValues);
