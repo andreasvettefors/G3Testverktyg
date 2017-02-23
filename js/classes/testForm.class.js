@@ -5,7 +5,8 @@ static defaultPropertyValues(){
   idTest: 0,
   name:'.Net',
   description:'Frågor i C#',
-  questions: new QuestionList()
+  questions: new QuestionList(),
+  currentQIndex: 0
 
   }
 }
@@ -34,12 +35,19 @@ static get sqlQueries() {
   }
 }
 
-//listen to which answer alternative you have chosen
-nextQuestion(){
+// get the question
+get question() {
+  return this.questions[this.currentQIndex];
+}
+//listen to which answer alternative you have chosen and goes to the next question
+nextQ(){
+  
+var answer = $('input[name=answer]:checked', '#form').val();
 
- 	var answer = $('input[name=answer]:checked', '#form').val();
- 	console.log(answer);
-
+console.log(answer);
+    if(this.currentQIndex < this.questions.length){
+      this.currentQIndex++;
+    }
  }
 
   insertInDb(callback){
