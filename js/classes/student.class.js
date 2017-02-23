@@ -3,8 +3,9 @@ class Student extends Base {
 		  static defaultPropertyValues(){
     
 				return {
+					studentID: 0,
 					email: 'john@doe.se',
-			tests: new StudentTestList()
+			tests: new StudentTestList() 
     }
   }
 		constructor(propertyValues) {
@@ -14,7 +15,8 @@ class Student extends Base {
 	
 	readEmailFromDbById(id,callback){
 		this.db.readEmail([id],(data) => {
-			 this.email = data[0].email;
+			this.studentID = data[0].idUser;
+			this.email = data[0].email;
 			callback();
 		});	
 	}
@@ -26,7 +28,7 @@ class Student extends Base {
 	static get sqlQueries() {
 		return {
 			readEmail: `
-       SELECT email FROM users where idUser = ?;
+       SELECT idUser,email FROM users where idUser = ?;
       `
 		}
 	}

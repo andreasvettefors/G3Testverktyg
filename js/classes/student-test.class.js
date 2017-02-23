@@ -9,5 +9,10 @@ class StudentTest extends Base{
 
 		}
 	
+	doTest(){
+		console.log('id:',sv.student.studentID);
+		console.log('email:',sv.student.email);
+		
+	}
 
 	}

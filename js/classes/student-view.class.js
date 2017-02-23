@@ -10,11 +10,6 @@ class StudentView extends Base {
 		super(propertyValues);	
 	}
 	
-	get email(){
-		return this.student.email;
-	}
 	
-	set email(e){
-		this.student.email = e;
-	}
+	
 }

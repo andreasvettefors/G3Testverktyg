@@ -1,7 +1,7 @@
 window.load = `
 
   css/libs/
-    cerulean.bootstrap.min.css
+    bootstrap.min.css
     bootstrap-tricks.css
 
   css/main.css
@@ -37,11 +37,8 @@ templates/
     modal.html
 		student-view.html
 		student-tests.html
-
-  templates/
-    bootstrap-size.html
-    modal.html
-    login.html
+		login.html
+    
 
 
   js/main.js
