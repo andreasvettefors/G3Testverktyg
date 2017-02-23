@@ -24,9 +24,8 @@ window.load = `
   js/classes/
     bootstrap-size.js
     modal.class.js
+    studentAnswer.class.js
     app.class.js
-    test.class.js
-    login.class.js
 
   templates/
     bootstrap-size.html
