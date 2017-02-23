@@ -2,8 +2,11 @@ class App {
 
 	constructor() {
 		new BootstrapSize().display('body');
-		
+		var test = new TestForm();
 
+		var question = new Question();
+		question.readQuestionFromDb();
+		test.display('body');
 		/*var test = new TestForm();
 var test2 = new TestForm({id: 2, title: 'Engelska'});
 console.log(test);
@@ -11,10 +14,9 @@ console.log(test2);
 
 test.display('body');*/
 
-var test = new TestForm();
-test.display('body');
 
-test.readAllFromDb();
+
+//test.readAllFromDb();
 	}
 
 	/*start(petOwnerView){

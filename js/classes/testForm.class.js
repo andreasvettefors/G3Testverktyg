@@ -4,8 +4,8 @@ static defaultPropertyValues(){
 return{
 idTest: 0,
 name:'.Net',
-description:'Frågor i C#'
-question: new QuestionList();
+description:'Frågor i C#',
+question: new QuestionList()
 
 }
 }

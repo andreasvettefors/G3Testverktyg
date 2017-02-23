@@ -1,4 +1,4 @@
-class Question extends Base{
+class Question extends Base {
 
 	static defaultPropertyValues(){
 		return{
@@ -18,9 +18,9 @@ class Question extends Base{
 
 	// If needed convert the pets property 
     // from Array to PetList
-    if(!(this.answerOptions instanceof AnswerOptionList)){
+    /*if(!(this.answerOptions instanceof AnswerOptionList)){
       this.answerOptions = new AnswerOptionList(this.answerOptions);
-    }
+    }*/
 	}
 
 
@@ -33,11 +33,39 @@ class Question extends Base{
     },callback);
   }
 
+  /*readQuestionFromDb(idTest){
+  	this.db.readQuestion([idTest],(data)=>{
+  		//this.question = data[0].question;
+      data.forEach(function(element){
+        console.log(element.question);
+      });
+  		
+  	});
+  };*/
+
+  readQuestionFromDb(){
+    this.db.readQuestion((data) => {
+
+                  data.forEach(function(element) {
+                   console.log(element.question)
+
+                });
+    
+      
+                });
+              
+}
+
   static get sqlQueries(){
     return {
       newQuestion: `
         INSERT questions SET ?
+      `,
+      readQuestion: `
+      select * from questions
       ` 
+  		    
+
     }
   }
 }

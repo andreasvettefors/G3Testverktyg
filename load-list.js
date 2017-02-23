@@ -27,11 +27,13 @@ css/testForm.css
   js/classes/
     bootstrap-size.js
     modal.class.js
-    app.class.js
+    
     question.class.js
    
     question-list.class.js
     testForm.class.js
+    testForm-list.class.js
+    app.class.js
 
   templates/
     bootstrap-size.html
