@@ -41,11 +41,8 @@ class Login extends Base {
 				$(".wrongUserPass").html(` <p style="text-align:center;color:red;font-size:25px">${this.wrongUserPass()} </p>`);
 			}
 		});
-
-
-
-
 	}
+
 	readAllFromDb() {
 		this.db.readAll((data) => {
 			console.log(data);
