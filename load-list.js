@@ -27,11 +27,15 @@ window.load = `
     modal.class.js
     app.class.js
 		student-view.class.js
-
-  templates/
+		student-test-list.class.js
+		student.class.js
+		student-test.class.js
+  
+templates/
     bootstrap-size.html
     modal.html
 		student-view.html
+		student-tests.html
 
   js/main.js
 

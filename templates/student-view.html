@@ -8,7 +8,7 @@ StudentView.addTemplate('default', function(){return `
 			<div class="col-md-6 col-sm-12">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<h3>${this.name}</h3>
+						<h3>${this.student.email}</h3>
 						<hr>
 
 						<!--Lista med elevens ogjorda tester-->
@@ -16,8 +16,7 @@ StudentView.addTemplate('default', function(){return `
 							<p><strong>Kunskapstester att göra</strong></p>
 
 							<div class="list-group">
-								<a href="#" class="list-group-item">Grunder i java</a>
-								<a href="#" class="list-group-item">Avancerad grottforskning</a>
+								${this.student.tests.display()}
 							</div>
 						</article>
 
@@ -26,8 +25,7 @@ StudentView.addTemplate('default', function(){return `
 							<p><strong>Kunskapstester du genomfört</strong></p>
 
 							<div class="list-group">
-								<a href="#" class="list-group-item">Datorns delar</a>
-								<a href="#" class="list-group-item">Word</a>
+				
 							</div>
 						</article>
 					</div>
@@ -38,6 +36,7 @@ StudentView.addTemplate('default', function(){return `
 			</div>
 
 	</section>
+
 	</div>
 
 	`});
