@@ -4,22 +4,32 @@ class Login extends Base {
     super(propertyValues);
   }
 
-
+ wrongUserPass(){
+  return 'wrong username/password';
+}
 
 login(){
-
+  var validate = false;
 
                 var password = $('#inputPassword').val();
                 var email = $('#inputEmail').val();
                 this.db.readAll((data) => {
 
                   data.forEach(function(element) {
+
                     if(element.email == email && element.password == password){
-                      console.log('inlogged');
+                      validate = true;
                     }
 
                   });
+                  if(validate){
+                    window.location.replace("http://facebook.se");
+                  } else{
+                     console.log(this.wrongUserPass());
+                  }
                 });
+
+
 
 
 }
