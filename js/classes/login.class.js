@@ -5,7 +5,7 @@ class Login extends Base {
   }
 
  wrongUserPass(){
-  return 'wrong username/password';
+  return 'wrong username or password';
 }
 
 login(){
@@ -25,7 +25,7 @@ login(){
                   if(validate){
                     window.location.replace("http://facebook.se");
                   } else{
-                     console.log(this.wrongUserPass());
+                     $( ".wrongUserPass" ).html( ` <p style="text-align:center;color:red;font-size:25px">${this.wrongUserPass()} </p>`);
                   }
                 });
 
