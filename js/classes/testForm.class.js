@@ -35,7 +35,7 @@ static get sqlQueries() {
 }
 
 //listen to which answer alternative you have chosen
- message1(){
+nextQuestion(){
 
  	var answer = $('input[name=answer]:checked', '#form').val();
  	console.log(answer);

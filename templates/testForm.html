@@ -7,7 +7,7 @@ TestForm.addTemplate('default', function(){return `
       <div class="jumbotron">
        <h1 class="head">Test frågor</h1>
         <h2 class="display-3"><strong class="number">01</strong> av 24</h2>
-        <h3 data-click="message1">${this.title}</h3>
+        <h3>${this.name}</h3>
         <hr class="line">
         ${this.questions[0].display()}
 
@@ -16,7 +16,7 @@ TestForm.addTemplate('default', function(){return `
           <nav aria-label="...">
               <ul class="pager">
                 <li><a class="arrow-left" href="#"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a></li>
-                <li><a data-click="message1" class="arrow-right" href="#"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
+                <li><a data-click="nextQuestion" class="arrow-right" href="#"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
                </ul>
           </nav>
           </div>

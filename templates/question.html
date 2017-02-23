@@ -1,11 +1,6 @@
 Question.addTemplate('default', function(){return `
 <p  class="paragraph">${this.question}</p>
-          
-            <form id="form">
-              <div><input name="answer" type="radio"  value="byte"> ${this.answerOptions.answer}</div>
-              <div><input name="answer" type="radio"  value="short"> Short</div>
-              <div><input name="answer" type="radio"  value="int"> Int</div>
-              <div><input name="answer" type="radio"  value="float"> Float</div>
-              
-            </form>
+          <form id="form">
+           ${this.answerOptions.display()}
+           </form>
 `});

@@ -44,6 +44,7 @@ css/testForm.css
     
     testForm.html
     question.html
+    answerOption.html
   js/main.js
 
 `;
