@@ -39,41 +39,39 @@ amountOfCorrects(testID){
     })
     
 }
-getStudentGrade(){
-  var a= this.getTestQuestionsCount(1);
-    var b = this.getStudentCorrectsCount(1,1);
-    console.log(a);
+getStudentGrade(a,b,callback){
     var returnNum = (b/a*100)+'%';
-    console.log(returnNum);
-    return returnNum;
-    
-    
+    return callback(returnNum);
 }
-getTestQuestionsCount(testID){
+getTestQuestionsCount(testID,callback){
     var a = 0; 
 this.db.testQuestionsCount([testID],(data) => {
 
                   data.forEach(function(element) {
-                      a++;
-                      if(element.length == a){
-                          return a;
-                      }
-                      
-                      
+                       a++;
                   });
-                        console.log(a);
-                        
+                        return callback(a);
                 });
 };
-getStudentCorrectsCount(userID,testID){
+studentCorrectsCount(userID,testID,callback){
 this.db.correctStudentAnswers([userID,testID],(data) => {
-var a = 0;
+var b = 0;
                   data.forEach(function(element) {
-                      a++;
+                      b++;
                   });
-                        return a;
+                       return callback(b);
+   
                 });
 };
+studentGradePercentage(userID,testID,callback){
+          this.studentCorrectsCount(userID,testID, (element) => {
+                             this.getTestQuestionsCount(testID,(element1) => {
+						 this.getStudentGrade(element1,element,(element2) => {
+                             return callback(element2);
+					});
+                });
+          }); 
+}
     
 static get sqlQueries() {
   return {
