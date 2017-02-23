@@ -10,12 +10,13 @@ TestForm.addTemplate('default', function(){return `
         <h3>${this.name}</h3>
         <hr class="line">
         ${this.question.display()}
+        
 
   		<div class="buttons">
         <p class="lead">
           <nav aria-label="...">
               <ul class="pager">
-                <li><a class="arrow-left" href="#"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a></li>
+                <li><a data-click="backToQ" class="arrow-left" href="#"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a></li>
                 <li><a data-click="nextQ" class="arrow-right" href="#"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
                </ul>
           </nav>

@@ -50,6 +50,16 @@ console.log(answer);
     }
  }
 
+ backToQ(){
+  
+var answer = $('input[name=answer]:checked', '#form').val();
+
+console.log(answer);
+    if(this.currentQIndex > 0){
+      this.currentQIndex--;
+    }
+ }
+
   insertInDb(callback){
     this.db.newTestForm({
       idTest: this.idTest,
