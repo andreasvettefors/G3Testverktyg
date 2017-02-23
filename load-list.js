@@ -25,8 +25,8 @@ window.load = `
   js/classes/
     bootstrap-size.js
     modal.class.js
-    login.class.js
     app.class.js
+    login.class.js
 
   templates/
     bootstrap-size.html

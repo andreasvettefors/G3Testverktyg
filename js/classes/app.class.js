@@ -2,7 +2,8 @@ class App {
 
 	constructor() {
 		new BootstrapSize().display('body');
-		new Login();
+		var a = new Login().display('body');
+		/*a.readAllFromDb();*/
 	}
 
 }
