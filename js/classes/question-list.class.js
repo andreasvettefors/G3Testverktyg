@@ -5,22 +5,10 @@ class QuestionList extends List {
      
   }
 
-
-  writeToDb(callback){
-    var co = 0, listLength = this.length;
-    function callbackEach(res){
-      co++;
-      if(co == listLength){ callback(); }
-    }
-    for(let question of this){
-      question.insertInDb(callbackEach);
-    }
-  }
-
-  readAllFromDb(){
-    this.db.readAll((data)=>{
+  readAllFromDb(id, callback){
+    this.db.readAll( [id],(data)=>{
       this.push.apply(this,data);
-      
+      callback();
     });
   }
 
@@ -29,7 +17,7 @@ class QuestionList extends List {
     return {
     
       readAll: `
-       select * from questions
+       select * from questions where test_idTest = ?
       `
     }
 

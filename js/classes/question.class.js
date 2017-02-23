@@ -5,12 +5,12 @@ class Question extends Base {
 			idQuestion: 0,
 			question: 'Are you stupid?',
 			imgURL: 'image.jpg',
-			test_idTest: 0
-			//answerOptions: new AnswerOptionList();
+			test_idTest: 0,
+			answerOptions: new AnswerOptionList()
 		}
 
 	}
-	constructor(propertyValues = {}){
+	constructor(propertyValues){
 		super(propertyValues);
 
 	// If needed convert the pets property 

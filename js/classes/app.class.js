@@ -3,11 +3,23 @@ class App {
 	constructor() {
 		new BootstrapSize().display('body');
 		var test = new TestForm();
+     //console.log(test.questions[0].answerOptions);
+     //var list = new AnswerOptionList();
+      //console.log('list',list);
+      //list.readFromDb(1);
+	   
+     
+		test.questions.readAllFromDb(1,() => {
+      test.questions[0].answerOptions.readFromDb(1, ()=>{
+     test.display('body');
+      });
+      
+    });
 
-		var question = new Question();
-		test.questions.readAllFromDb();
-    console.log(test.questions);
-		test.display('body');
+
+
+
+		
 
     window.test = test;
 

@@ -4,10 +4,11 @@ class AnswerOption extends Base {
     return {
       idAnswerOption: 0 ,
       answer: 'Pelle'
+
     }
   } 
 
-  constructor(propertyValues = {}){
+  constructor(propertyValues){
     super(propertyValues);
 
    
