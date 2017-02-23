@@ -12,11 +12,14 @@ class Student extends Base {
 			
 		}	
 	
-	readEmailFromDbById(id){
+	readEmailFromDbById(id,callback){
 		this.db.readEmail([id],(data) => {
-			 this.email = data[0].email;	
-		});
+			 this.email = data[0].email;
+			callback();
+		});	
 	}
+	
+	
 	
 
 	

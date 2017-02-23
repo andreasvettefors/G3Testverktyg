@@ -10,28 +10,11 @@ class StudentView extends Base {
 		super(propertyValues);	
 	}
 	
-	
-	
-	readAllFromDb() {
-		this.db.readAll((data) => {
-		console.log(data);
-		});
+	get email(){
+		return this.student.email;
 	}
 	
-	readOneFromDb() {
-		this.db.readOne((data) => {
-		console.log(data);
-		});
-	}
-
-	static get sqlQueries() {
-		return {
-			readAll: `
-       SELECT * FROM users;
-      `,
-			readOne: `
-        SELECT email FROM users
-      `
-		}
+	set email(e){
+		this.student.email = e;
 	}
 }
