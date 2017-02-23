@@ -21,17 +21,28 @@ window.load = `
     list.class.js
     router.class.js
 
-
   js/classes/
     bootstrap-size.js
     modal.class.js
     app.class.js
+
     login.class.js
+		student-view.class.js
+		student-test-list.class.js
+		student.class.js
+		student-test.class.js
+  
+templates/
+    bootstrap-size.html
+    modal.html
+		student-view.html
+		student-tests.html
 
   templates/
     bootstrap-size.html
     modal.html
     login.html
+
 
   js/main.js
 
