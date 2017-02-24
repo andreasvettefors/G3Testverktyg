@@ -1,7 +1,7 @@
 window.load = `
 
   css/libs/
-    bootstrap.min.css
+    cerulean.bootstrap.min.css
     bootstrap-tricks.css
 
   css/main.css
