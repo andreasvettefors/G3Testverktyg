@@ -56,9 +56,4 @@ class AnswerOption extends Base {
 
 }
 
-/*$(document).ready(function(){
-    $(".arrow-right").click(function(){
-        $("#myRadio").prop("checked", true);
-    });*/
-
 

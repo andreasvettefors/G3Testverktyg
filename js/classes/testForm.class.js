@@ -3,7 +3,7 @@ class TestForm extends Base {
 static defaultPropertyValues(){
   return{
   idTest: 0,
-  name:'.Net',
+  name:'Objektorienterad Programmering',
   description:'Frågor i C#',
   questions: new QuestionList(),
   currentQIndex: 0
@@ -55,6 +55,18 @@ var answer = $('input[name=answer]:checked', '#form').val();
 console.log(answer);
     
  }
+
+ finishTest(){
+  
+var answer = $('input[name=answer]:checked', '#form').val();
+  //checks if alternativs is undefined then disable next button
+  if(this.currentQIndex == this.questions.length-1) {
+    console.log()
+  console.log('ghhy');
+  }
+  }
+
+    
 
  backToQ(){
   
