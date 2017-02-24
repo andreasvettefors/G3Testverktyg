@@ -37,11 +37,8 @@ templates/
     modal.html
 		student-view.html
 		student-tests.html
-
-  templates/
-    bootstrap-size.html
-    modal.html
-    login.html
+		login.html
+    
 
 
   js/main.js

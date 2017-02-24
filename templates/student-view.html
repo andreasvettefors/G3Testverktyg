@@ -1,17 +1,25 @@
+<!--Studentpage that shows test to do an also test that have been done -->
 StudentView.addTemplate('default', function(){return `
+<!--Start container-->
 <div class="container">
+
+	<!--Start section-->
 	<section class="student-view">
+
+		<!--Start row-->
 		<div class="row space-above">
+			
 			<div class="col-md-3 hidden-sm">
 			</div>
 
+			<!--Start maincontent-->
 			<div class="col-md-6 col-sm-12">
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<h3>${this.student.email}</h3>
 						<hr>
 
-						<!--Lista med elevens ogjorda tester-->
+						<!--List with tests to do-->
 						<article class="student-view-test-info">
 							<p><strong>Kunskapstester att göra</strong></p>
 
@@ -19,24 +27,30 @@ StudentView.addTemplate('default', function(){return `
 								${this.student.tests.display()}
 							</div>
 						</article>
+						<!--end tests to do-->
 
-						<!--Lista med elevens gjorda tester-->
+						<!--List with finished tests-->
 						<article class="student-view-test-info">
 							<p><strong>Kunskapstester du genomfört</strong></p>
 
 							<div class="list-group">
-				
+
 							</div>
 						</article>
+						<!--end finished tests-->
+
 					</div>
 				</div>
+			</div>
+			<!--end maincontent-->
 
-				<div class="col-md-3 hidden-sm">
-				</div>
+			<div class="col-md-3 hidden-sm">
 			</div>
 
+		</div>
 	</section>
+	<!--end content-->
 
-	</div>
-
-	`});
+</div>
+<!--end container-->
+`});
