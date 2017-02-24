@@ -28,7 +28,6 @@ class Login extends Base {
 
 			});
 			if (validate) {
-
 				if(authorisation == 1){
 
 					//Elev sida
@@ -41,6 +40,7 @@ class Login extends Base {
 							sv.display('body');
 							window.sv = sv;
 						});
+
 					});
 				} else if (authorisation == 2){
 					//lärare
@@ -49,7 +49,6 @@ class Login extends Base {
 					//Administratör
 					console.log('Administratör');
 				}
-
 
 
 			} else {
