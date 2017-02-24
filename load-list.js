@@ -35,6 +35,7 @@ css/testForm.css
     question-list.class.js
     question.class.js
     answerOption.class.js
+    finishedForm.class.js
     
     
 
@@ -45,6 +46,7 @@ css/testForm.css
     testForm.html
     question.html
     answerOption.html
+    finishedForm.html
   js/main.js
 
 `;

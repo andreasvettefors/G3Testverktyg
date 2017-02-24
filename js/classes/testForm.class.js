@@ -45,26 +45,39 @@ nextQ(){
 var answer = $('input[name=answer]:checked', '#form').val();
   //checks if alternativs is undefined then disable next button
   if(typeof answer == 'undefined') {
-
+   
   }else{
     if(this.currentQIndex < this.questions.length){
       this.currentQIndex++;
     }
+
+     if (this.currentQIndex == this.questions.length-1){
+       $('#nextButton').remove();
+       $('#finishButton').css('display','initial');
+    }
+
+
   }
 
 console.log(answer);
-    
+   
  }
 
  finishTest(){
   
-var answer = $('input[name=answer]:checked', '#form').val();
+  var answer = $('input[name=answer]:checked', '#form').val();
+  console.log(this.currentQIndex);
+     
   //checks if alternativs is undefined then disable next button
-  if(this.currentQIndex == this.questions.length-1) {
-    console.log()
-  console.log('ghhy');
+      if(this.currentQIndex == this.questions.length-1) {
+        $('#testForm').remove();
+          var finish= new FinishedForm();
+          finish.display('body');
   }
+
+  
   }
+
 
     
 

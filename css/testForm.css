@@ -159,6 +159,7 @@ input[type='radio']:checked:before {
  letter-spacing: 1px;
  color:#ff6a20;
  font-size: 10px;
+ display:none;
 }
 /* design for mobile */
 @media screen and (max-width: 376px){
