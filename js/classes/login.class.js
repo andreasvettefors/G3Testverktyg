@@ -33,8 +33,8 @@ class Login extends Base {
 					//Elev sida
 					//window.location.replace("http://facebook.se");
 					var sv = new StudentView();
-					sv.student.tests.readTestFromDbById(id, () => {
-						sv.student.readEmailFromDbById(id, () => {
+					sv.student.tests.readStudentTestFromDbById(id, () => {
+						sv.student.readStudentFromDbById(id, () => {
 							$('#login').remove();
 							$('.wrongUserPass').remove();
 							sv.display('body');
@@ -44,6 +44,14 @@ class Login extends Base {
 					});
 				} else if (authorisation == 2){
 					//lärare
+						var tv = new TeacherView();
+					tv.teacher.readTeacherFromDbById(id, () => {
+						$('#login').remove();
+						$('.wrongUserPass').remove();
+						tv.display('body');
+						window.tv = tv;
+					});
+
 					console.log('lärare')
 				} else if (authorisation == 3){
 					//Administratör
