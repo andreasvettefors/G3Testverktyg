@@ -27,8 +27,8 @@ class Login extends Base {
 			if (validate) {
 				//window.location.replace("http://facebook.se");
 				var sv = new StudentView();
-				sv.student.tests.readTestFromDbById(id, () => {
-					sv.student.readEmailFromDbById(id, () => {
+				sv.student.tests.readStudentTestFromDbById(id, () => {
+					sv.student.readStudentFromDbById(id, () => {
 						$('#login').remove();
 						$('.wrongUserPass').remove();
 						sv.display('body');
