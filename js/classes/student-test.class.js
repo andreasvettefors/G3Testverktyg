@@ -16,7 +16,7 @@ class StudentTest extends Base {
 		test.questions.readAllFromDb(1, () => {
 
 				test.questions[0].answerOptions.readFromDb(1, () => {
-				test.questions[1].answerOptions.readFromDb(3, () => {
+				test.questions[1].answerOptions.readFromDb(2, () => {
 					test.questions[2].answerOptions.readFromDb(3, () => {
 						test.questions[3].answerOptions.readFromDb(4, () => {
 							test.questions[4].answerOptions.readFromDb(5, () => {
@@ -24,6 +24,7 @@ class StudentTest extends Base {
 
 									$('#studentview').remove();
 									test.display('body');
+									window.test = test;
 
 								});
 
@@ -38,7 +39,7 @@ class StudentTest extends Base {
 			});
 		});
 
-				console.log('id:', sv.student.ID);
+				console.log('id:', sv.student.idUser);
 				console.log('email:', sv.student.email);
 			}
 		}

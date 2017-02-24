@@ -6,7 +6,7 @@ class QuestionList extends List {
   }
 
   readAllFromDb(id, callback){
-    this.db.readAll( [id],(data)=>{
+    this.db.readAll( [id],(data)=>{		
       this.push.apply(this,data);
       callback();
     });

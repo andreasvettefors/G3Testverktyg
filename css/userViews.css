@@ -21,8 +21,16 @@
 	color:#b5bbca;
 }
 
-#studentview a:hover{
+#studentview a:hover, #teacherview a:hover{
   color:#ff6a20 ;
   border: 1px solid #ff6a20 ;
   text-decoration: none;
+}
 
+#studentview .list-group-item, #teacherview .list-group-item{
+	margin-top: 2%;
+}
+
+.studentlink{
+	margin-left:20%;
+}

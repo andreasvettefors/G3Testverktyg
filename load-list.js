@@ -43,9 +43,13 @@ window.load = `
 		student-view.class.js
 		student-test-list.class.js
 		student.class.js
+		student-list.class.js
 		student-test.class.js
 		teacher.class.js
   	teacher-view.class.js
+
+		class.class.js
+		class-list.class.js
 
 templates/
     bootstrap-size.html
@@ -60,6 +64,8 @@ templates/
 		student-tests.html
 		login.html
 		teacher-view.html
+class.html
+student.html
     
   js/main.js
 

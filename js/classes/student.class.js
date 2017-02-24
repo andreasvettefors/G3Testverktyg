@@ -3,7 +3,7 @@ class Student extends Base {
 	static defaultPropertyValues() {
 
 		return {
-			ID: 0,
+			idUser: 0,
 			email: 'john@student.se',
 			tests: new StudentTestList()
 		}
@@ -12,10 +12,21 @@ class Student extends Base {
 		super(propertyValues);
 
 	}
+	
+	showTestResults(e){
+		var el = $(e.target).text();
+		for(var item of sl){
+			if(el===item.email){
+				var id = item.idUser;
+			}
+		}
+		console.log(id);
+	}
 
 	readStudentFromDbById(id, callback) {
 		this.db.readStudentData([id], (data) => {
-			this.ID = data[0].idUser;
+			
+			this.idUser = data[0].idUser;
 			this.email = data[0].email;
 			callback();
 		});

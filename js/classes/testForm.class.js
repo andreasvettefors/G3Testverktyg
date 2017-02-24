@@ -1,4 +1,4 @@
-class TestForm extends Base {
+ class TestForm extends Base {
 
 static defaultPropertyValues(){
   return{
