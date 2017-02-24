@@ -10,18 +10,14 @@ class App {
 				console.log(element);
           }); 
           */
-	}
-    
+    	
 
 		new BootstrapSize().display('body');
-s
 
 
 		//test.questions[0].answerOptions.readFromDb(1, ()=>{
       
       //});
-		
-	
 
 		new Login().display('body');
 	}
