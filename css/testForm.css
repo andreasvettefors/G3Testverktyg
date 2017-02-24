@@ -144,6 +144,22 @@ input[type='radio']:checked:before {
   background:#7c8495;
 }
 
+
+#finishButton{
+ margin-left: 87%;
+ background-color: white;
+ border-radius: 20px;
+ border: 2px #ff6a20 solid ;
+ padding:5px;
+ padding-left:10px;
+ padding-right: 10px;
+ font-family: verdana;
+ font-weight: bold;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ color:#ff6a20;
+ font-size: 10px;
+}
 /* design for mobile */
 @media screen and (max-width: 376px){
 
@@ -179,6 +195,11 @@ input[type='radio']:checked:before {
   margin-top: 10px;
   margin-left: 50px;
   text-align: center left;
+}
+
+#finishButton{
+ margin-left: 73%;
+
 }
 }
 
