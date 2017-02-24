@@ -1,0 +1,31 @@
+TestForm.addTemplate('default', function(){return `
+
+
+  <div id="testForm" class="container space-above">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="jumbotron">
+       <h1 class="head">Test frågor</h1>
+        <h2 class="display-3"><strong class="number">${this.questions.indexOf(this.question)+1}</strong> av ${this.questions.length}</h2>
+        <h3>${this.name}</h3>
+        <hr class="line">
+        ${this.question.display()}
+        
+
+  		<div class="buttons">
+        <p class="lead">
+          <nav aria-label="...">
+              <ul class="pager">
+                <!--<li><a data-click="backToQ" class="arrow-left" href="#"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a></li>-->
+                <li><a id="nextButton" class="arrow-right" data-click="nextQ" href="#"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></li>
+                <button data-click="finishTest" id="finishButton">Avsluta</button>
+               </ul>
+               
+          </nav>
+          </div>
+          </div>
+        </p>
+      </div>
+    </div>
+</div>
+`});
