@@ -12,12 +12,15 @@ class Question extends Base {
 	}
 	constructor(propertyValues){
 		super(propertyValues);
-
-	// If needed convert the pets property 
-    // from Array to PetList
-    /*if(!(this.answerOptions instanceof AnswerOptionList)){
-      this.answerOptions = new AnswerOptionList(this.answerOptions);
-    }*/
+// när en fråga skapas hämtar man svarsalternativen som är kopplade 
+//till den frågan med hjälp av idQuestion
+    this.answerOptions.readFromDb(this.idQuestion, ()=>{
+      if(test.questions.indexOf(this) == test.questions.length -1){
+        test.display('body');
+      }
+      
+      });
+	
 	}
 
 

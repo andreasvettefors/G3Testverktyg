@@ -29,7 +29,7 @@
 }
 
 .jumbotron h3{
-  margin-top: 110px;
+  margin-top: 120px;
   margin-left: 5px;
   margin-bottom: 0px;
   font-family: Verdana;
@@ -39,6 +39,7 @@
   letter-spacing: 2px;
   font-weight: bold;
   color:#b5bbca;
+  text-align: left;
 }
 
 .jumbotron>hr {
@@ -49,7 +50,8 @@
 
 .jumbotron p{
   margin-top: 50px;
-  text-align: center;
+  text-align: left;
+  margin-left: 100px;
   color:#7c8495;
   font-size: 23px;
   font-family: 'Vidaloka', serif;
@@ -63,7 +65,7 @@
 .alt{
   text-decoration: none;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
   font-family: verdana;
   padding-left: 0px;
   list-style-type: none;
@@ -97,6 +99,8 @@ a{
   color:#ff6a20;
 }
 
+
+
 .pager li>a{
   background-color: #ff6a20 ;
   color:white;
@@ -109,7 +113,36 @@ a{
   border-color: white;
 }
 
+#myOption{
+  font-family: verdana bold;
+  margin-top: 10px;
+  margin-left: 100px;
+  text-align: center left;
+  color:#7c8495;
+}
 
+input[type='radio'] {
+  -webkit-appearance:none;
+  width:15px;
+  height:15px;
+  border:2px solid #ff6a20;
+  border-radius:50%;
+  outline:none;
+ 
+}
+
+input[type='radio']:before {
+  content:'';
+  display:block;
+  width:80%;
+  height:80%;
+  margin: 8% auto;  
+  margin-left: 1.5px;  
+  border-radius:60%;    
+}
+input[type='radio']:checked:before {
+  background:#7c8495;
+}
 
 /* design for mobile */
 @media screen and (max-width: 376px){
@@ -133,9 +166,20 @@ a{
   margin-top: 140px;
 }
 
+.jumbotron p{
+  margin-left: 50px;
+}
+
+
 .alt{
   justify-content: center;
 }
-
+#myOption{
+  font-family: verdana;
+  margin-top: 10px;
+  margin-left: 50px;
+  text-align: center left;
 }
+}
+
 

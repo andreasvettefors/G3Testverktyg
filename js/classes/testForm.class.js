@@ -43,11 +43,17 @@ get question() {
 nextQ(){
   
 var answer = $('input[name=answer]:checked', '#form').val();
+  //checks if alternativs is undefined then disable next button
+  if(typeof answer == 'undefined') {
 
-console.log(answer);
+  }else{
     if(this.currentQIndex < this.questions.length){
       this.currentQIndex++;
     }
+  }
+
+console.log(answer);
+    
  }
 
  backToQ(){
@@ -76,3 +82,4 @@ console.log(answer);
     }
   }
 }
+
