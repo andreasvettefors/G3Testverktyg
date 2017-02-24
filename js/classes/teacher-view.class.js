@@ -2,7 +2,7 @@ class TeacherView extends Base {
 
 	static defaultPropertyValues() {
 		return {
-			student: new Teacher(),
+			teacher: new Teacher()
 
 		}
 	}

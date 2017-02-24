@@ -36,7 +36,6 @@ class Login extends Base {
 					});
 				});
 
-
 			} else {
 				$(".wrongUserPass").html(` <p style="text-align:center;color:red;font-size:25px">${this.wrongUserPass()} </p>`);
 			}

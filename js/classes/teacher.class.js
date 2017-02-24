@@ -12,10 +12,11 @@ class Teacher extends Base {
 
 	}
 
-	readTeacherEmailFromDbById(id, callback) {
+	readTeacherFromDbById(id, callback) {
 		this.db.readTeacherData([id], (data) => {
 			this.ID = data[0].idUser;
 			this.email = data[0].email;
+			console.log();
 			callback();
 		});
 	}

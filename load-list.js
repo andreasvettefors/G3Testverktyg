@@ -31,13 +31,16 @@ window.load = `
 		student-test-list.class.js
 		student.class.js
 		student-test.class.js
-  
+		teacher.class.js
+  	teacher-view.class.js
+
 templates/
     bootstrap-size.html
     modal.html
 		student-view.html
 		student-tests.html
 		login.html
+		teacher-view.html
     
 
 
