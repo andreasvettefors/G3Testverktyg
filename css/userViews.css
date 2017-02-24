@@ -1,0 +1,28 @@
+#studentview,#teacherview{
+	font-family:'Verdana';
+}
+
+#studentview .panel-style ,#teacherview .panel-style{
+	background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-style: 1px solid white;
+	border-radius:0;
+}
+
+#studentview h3,h4 ,#teacherview h3,h4{
+	font-family: 'Vidaloka', serif;
+  color:#b5bbca;
+}
+
+#studentview hr,#teacherview hr{
+	border-color: #ff6a20;
+}
+#studentview  .student-view-test-info{
+	color:#b5bbca;
+}
+
+#studentview a:hover{
+  color:#ff6a20 ;
+  border: 1px solid #ff6a20 ;
+  text-decoration: none;
+

@@ -114,7 +114,7 @@ a{
 }
 
 #myOption{
-  font-family: verdana bold;
+  font-family:  verdana bold;
   margin-top: 10px;
   margin-left: 100px;
   text-align: center left;
@@ -149,7 +149,7 @@ input[type='radio']:checked:before {
  margin-left: 87%;
  background-color: white;
  border-radius: 20px;
- border: 2px #ff6a20 solid ;
+ bord	er: 2px #ff6a20 solid ;
  padding:5px;
  padding-left:10px;
  padding-right: 10px;
