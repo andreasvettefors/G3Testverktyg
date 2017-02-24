@@ -26,6 +26,7 @@ css/testForm.css
   js/classes/
     bootstrap-size.js
     modal.class.js
+    studentAnswer.class.js
     app.class.js
     
     testForm.class.js
