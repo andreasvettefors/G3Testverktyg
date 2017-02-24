@@ -22,8 +22,7 @@ css/testForm.css
     base.class.js
     list.class.js
     router.class.js
-    
-  
+
   js/classes/
     bootstrap-size.js
     modal.class.js
@@ -35,11 +34,17 @@ css/testForm.css
     question-list.class.js
     question.class.js
     answerOption.class.js
-    finishedForm.class.js
-    
-    
+    finishedForm.class.js  
 
-  templates/
+    login.class.js
+		student-view.class.js
+		student-test-list.class.js
+		student.class.js
+		student-test.class.js
+		teacher.class.js
+  	teacher-view.class.js
+
+templates/
     bootstrap-size.html
     modal.html
     
@@ -47,6 +52,12 @@ css/testForm.css
     question.html
     answerOption.html
     finishedForm.html
+
+		student-view.html
+		student-tests.html
+		login.html
+		teacher-view.html
+    
   js/main.js
 
 `;
