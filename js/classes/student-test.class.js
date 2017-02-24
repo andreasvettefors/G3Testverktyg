@@ -15,7 +15,7 @@ class StudentTest extends Base {
 		//hämtar question och answerAlternative från databasen 
 		test.questions.readAllFromDb(1, () => {
 
-			test.questions[0].answerOptions.readFromDb(1, () => {
+				test.questions[0].answerOptions.readFromDb(1, () => {
 				test.questions[1].answerOptions.readFromDb(3, () => {
 					test.questions[2].answerOptions.readFromDb(3, () => {
 						test.questions[3].answerOptions.readFromDb(4, () => {
@@ -38,7 +38,7 @@ class StudentTest extends Base {
 			});
 		});
 
-		console.log('id:', sv.student.ID);
-		console.log('email:', sv.student.email);
-	}
-}
+				console.log('id:', sv.student.ID);
+				console.log('email:', sv.student.email);
+			}
+		}
