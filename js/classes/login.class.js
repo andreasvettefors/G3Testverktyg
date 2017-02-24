@@ -14,27 +14,42 @@ class Login extends Base {
 		var password = $('#inputPassword').val();
 		var email = $('#inputEmail').val();
 		var id;
+		var authorisation;
 		this.db.readAll((data) => {
 
 			data.forEach(function (element) {
 
 				if (element.email == email && element.password == password) {
 					id = element.idUser;
+					authorisation = element.authorisation;
+					console.log(element.idUser + " " + authorisation);
 					validate = true;
 				}
 
 			});
 			if (validate) {
-				//window.location.replace("http://facebook.se");
-				var sv = new StudentView();
-				sv.student.tests.readTestFromDbById(id, () => {
-					sv.student.readEmailFromDbById(id, () => {
-						$('#login').remove();
-						$('.wrongUserPass').remove();
-						sv.display('body');
-						window.sv = sv;
+
+				if(authorisation == 1){
+
+					//Elev sida
+					//window.location.replace("http://facebook.se");
+					var sv = new StudentView();
+					sv.student.tests.readTestFromDbById(id, () => {
+						sv.student.readEmailFromDbById(id, () => {
+							$('#login').remove();
+							$('.wrongUserPass').remove();
+							sv.display('body');
+							window.sv = sv;
+						});
 					});
-				});
+				} else if (authorisation == 2){
+					//lärare
+					console.log('lärare')
+				} else if (authorisation == 3){
+					//Administratör
+					console.log('Administratör');
+				}
+
 
 
 			} else {
