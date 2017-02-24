@@ -14,12 +14,12 @@ class Question extends Base {
 		super(propertyValues);
 // när en fråga skapas hämtar man svarsalternativen som är kopplade 
 //till den frågan med hjälp av idQuestion
-    this.answerOptions.readFromDb(this.idQuestion, ()=>{
-      if(test.questions.indexOf(this) == test.questions.length -1){
-        test.display('body');
-      }
+    //this.answerOptions.readFromDb(this.idQuestion, ()=>{
+      //if(test.questions.indexOf(this) == test.questions.length -1){
+				//  test.display('body');
+      //}
       
-      });
+      //});
 	
 	}
 
