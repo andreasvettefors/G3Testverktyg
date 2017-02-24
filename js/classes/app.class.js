@@ -1,7 +1,6 @@
 class App {
 
 	constructor() {
-		new BootstrapSize().display('body');
         /*
            HUR MAN KALLAR CALLBACKS METODER
            var a = new studentAnswer();
@@ -11,4 +10,6 @@ class App {
           }); 
           */
 	}
+    
+
 }

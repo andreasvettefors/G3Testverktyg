@@ -40,20 +40,6 @@ addAnswer(userID,answerID,questionID){
       console.log('Result of the query "byFullName"',data);
     });
   }
-amountOfQuestions(testID){
-    this.db.testQuestionsCount([testID],(data)=>{
-        console.log('Amount of questions in this test:',data);
-        var returnedData = data;
-        return returnedData;
-    })
-    
-}
-amountOfCorrects(testID){
-    this.db.correctStudentAnswers([testID],(data)=>{
-        console.log('Amount of student corrects:',data);
-    })
-    
-}
 getStudentGrade(a,b,callback){
     var returnNum = (b/a*100)+'%';
     return callback(returnNum);
