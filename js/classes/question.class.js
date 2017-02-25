@@ -4,7 +4,7 @@ class Question extends Base {
 		return{
 			idQuestion: 0,
 			question: 'Are you stupid?',
-			imgURL: 'http://www.virtualstock.co.uk/assets/Uploads/10px-blank.png',
+			imgURL: 'http://litbimg.rightinthebox.com/images/wholesale/201407/white.jpg',
 			test_idTest: 0,
 			answerOptions: new AnswerOptionList()
 		}
@@ -20,7 +20,7 @@ class Question extends Base {
       //}
       
       //});
-	
+	   
 	}
 
 
