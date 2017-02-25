@@ -4,7 +4,7 @@ class Question extends Base {
 		return{
 			idQuestion: 0,
 			question: 'Are you stupid?',
-			imgURL: 'image.jpg',
+			imgURL: 'http://www.virtualstock.co.uk/assets/Uploads/10px-blank.png',
 			test_idTest: 0,
 			answerOptions: new AnswerOptionList()
 		}

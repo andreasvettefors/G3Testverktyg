@@ -29,7 +29,7 @@ class Login extends Base {
 			});
 			if (validate) {
 				if(authorisation == 1){
-
+					
 					//Elev sida
 					//window.location.replace("http://facebook.se");
 					var sv = new StudentView();
@@ -65,6 +65,13 @@ class Login extends Base {
 		});
 	}
 
+get id(){
+return this.id;
+}
+
+set id (userID){
+this.id = userID;
+}
 	readAllFromDb() {
 		this.db.readAll((data) => {
 			console.log(data);

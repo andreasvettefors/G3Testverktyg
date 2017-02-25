@@ -9,11 +9,13 @@ TestForm.addTemplate('default', function(){return `
         <h2 class="display-3"><strong class="number">${this.questions.indexOf(this.question)+1}</strong> av ${this.questions.length}</h2>
         <h3>${this.name}</h3>
         <hr class="line">
+
         ${this.question.display()}
         
 
   		<div class="buttons">
-        <p class="lead">
+        <div class="lead">
+
           <nav aria-label="...">
               <ul class="pager">
                 <!--<li><a data-click="backToQ" class="arrow-left" href="#"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a></li>-->
@@ -24,7 +26,7 @@ TestForm.addTemplate('default', function(){return `
           </nav>
           </div>
           </div>
-        </p>
+        </div>
       </div>
     </div>
 </div>

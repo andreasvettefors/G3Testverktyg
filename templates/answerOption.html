@@ -1,6 +1,6 @@
 AnswerOption.addTemplate('default', function(){return `
 
-    <div><input id="myRadio" name="answer" type="radio" value="${this.answer}"> ${this.answer}</div>
+    <div class="alternative"><input id="${this.answer}" name="answer" type="radio" value="${this.answer}"><label for="${this.answer}">${this.answer}</label></div>
               
               
            

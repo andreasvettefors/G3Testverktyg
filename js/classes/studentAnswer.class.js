@@ -12,7 +12,7 @@ class studentAnswer extends Base {
           }); 
           */
     
-message(){
+message(){ 
 
               var answer = $('button').val();
                 var email = $('.inputPassword').val();

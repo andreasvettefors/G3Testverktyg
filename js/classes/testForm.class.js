@@ -7,7 +7,6 @@ static defaultPropertyValues(){
   description:'Frågor i C#',
   questions: new QuestionList(),
   currentQIndex: 0
-
   }
 }
   constructor(propertyValues = {}){
@@ -45,10 +44,20 @@ nextQ(){
 var answer = $('input[name=answer]:checked', '#form').val();
   //checks if alternativs is undefined then disable next button
   if(typeof answer == 'undefined') {
-   
+    $('#error-message').remove();
+    $('<h4 id="error-message">Ett svarsalternativ måste väljas!</h4>').appendTo('.lead');
+
   }else{
     if(this.currentQIndex < this.questions.length){
       this.currentQIndex++;
+      
+      //sparar svar till databas
+      
+      var studentA= new studentAnswer();
+      var answerOptions = new AnswerOptionList();
+      window.answerOptions = answerOptions;
+      studentA.addAnswer(sv.student.ID);
+      console.log('id:', answerOptions.answer);
     }
 
      if (this.currentQIndex == this.questions.length-1){

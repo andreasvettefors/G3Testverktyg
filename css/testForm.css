@@ -51,10 +51,11 @@
 .jumbotron p{
   margin-top: 50px;
   text-align: left;
-  margin-left: 100px;
+  margin-left: 0px;
   color:#7c8495;
   font-size: 23px;
   font-family: 'Vidaloka', serif;
+  text-align: center;
 
 }
 
@@ -72,7 +73,7 @@
 }
 
 .alt a{
-  display: block;
+  display:block;
   cursor: pointer;
 }
 .alt1{
@@ -119,6 +120,8 @@ a{
   margin-left: 100px;
   text-align: center left;
   color:#7c8495;
+  text-align: center;
+
 }
 
 input[type='radio'] {
@@ -133,7 +136,7 @@ input[type='radio'] {
 
 input[type='radio']:before {
   content:'';
-  display:block;
+  display: block;
   width:80%;
   height:80%;
   margin: 8% auto;  
@@ -161,12 +164,32 @@ input[type='radio']:checked:before {
  font-size: 10px;
  display:none;
 }
+
+.image{
+text-align: center;
+}
+
+.alternative{
+  display: block;
+  text-align: left;
+}
+
+#error-message{
+  color:red;
+  font-family: verdana;
+  font-size: 14px;
+}
+
 /* design for mobile */
 @media screen and (max-width: 376px){
 
 .jumbotron h1{
   margin-top: 70px;
   font-size: 50px;  
+}
+
+.jumbotron p{
+  text-align: center; 
 }
 
 .display-3{
@@ -183,8 +206,8 @@ input[type='radio']:checked:before {
   margin-top: 140px;
 }
 
-.jumbotron p{
-  margin-left: 50px;
+.paragraph{
+  text-align: center;
 }
 
 
