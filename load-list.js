@@ -51,6 +51,9 @@ window.load = `
 		class.class.js
 		class-list.class.js
 
+		testresult-view.class.js
+		testresult-item.class.js
+
 templates/
     bootstrap-size.html
     modal.html
@@ -64,8 +67,10 @@ templates/
 		student-tests.html
 		login.html
 		teacher-view.html
-class.html
-student.html
+		testresult-view.html
+		testresult-item.html
+		class.html
+		student.html
     
   js/main.js
 

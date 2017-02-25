@@ -20,6 +20,13 @@ class Student extends Base {
 				var id = item.idUser;
 			}
 		}
+		
+		var tr = new TestResultView({student: el});
+		tr.display('body');
+		var tritem = new TestResultItem();
+		tritem.display('#testresult');
+		var tritem2 = new TestResultItem();
+		tritem2.display('#testresult');
 		console.log(id);
 	}
 
