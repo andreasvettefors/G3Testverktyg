@@ -8,6 +8,9 @@ window.load = `
 		testForm.css
   	main.css
 		userViews.css
+    finishedForm.css
+   
+
 
 
   js/libs/
@@ -41,6 +44,7 @@ window.load = `
     question.class.js
     answerOption.class.js
     finishedForm.class.js  
+    
 
     login.class.js
 		student-view.class.js
@@ -68,6 +72,7 @@ templates/
     question.html
     answerOption.html
     finishedForm.html
+
 
 		student-view.html
 		student-tests.html
