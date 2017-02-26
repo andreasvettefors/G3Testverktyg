@@ -57,7 +57,8 @@ radioBtnCollection.each(function(index, element){
     if(this.currentQIndex <= this.questions.length){
         questID=this.questions[this.currentQIndex].idQuestion;
         //////adds student choosen-answer to database////
-        studAns.addAnswer(sv.student.ID,answerID,questID);
+				console.log('iduser',sv.student.idUser,'anscwerID',answerID,'questid',questID)
+        studAns.addAnswer(sv.student.idUser,answerID,questID);
         /////////////////////////////////////////////////
       this.currentQIndex++;
     }

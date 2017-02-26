@@ -1,4 +1,4 @@
-class studentAnswer extends Base {
+	class studentAnswer extends Base {
 
   constructor(propertyValues = {}){
     super(propertyValues);
@@ -85,8 +85,8 @@ static get sqlQueries() {
     readAll: `
      SELECT * FROM users;
     `,
-      newAnswer:`
-    insert into studentanswers (user_idUser, answeroptions_idAnswerOption, answeroptions_questions_idQuestion) values (?,?,?) `,
+     newAnswer:`
+    insert into studentanswers (user_idUser, answerOptions_idAnswerOption, answerOptions_questions_idQuestion) values (?,?,?)`,
       testQuestionsCount:`
     select * from questions where test_idTest=?`,
       correctStudentAnswers:`
