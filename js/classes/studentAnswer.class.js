@@ -29,7 +29,9 @@ readAllFromDb() {
 }
 
 addAnswer(userID,answerID,questionID){
+	console.log('id',userID,'ans',answerID,'quest',questionID);
     // Just an example of how to run a query
+	
     this.db.newAnswer([userID,answerID,questionID],(data)=>{
       console.log('Result of the query "addAnswer"',data);
     });
@@ -86,7 +88,7 @@ static get sqlQueries() {
      SELECT * FROM users;
     `,
      newAnswer:`
-    insert into studentanswers (user_idUser, answerOptions_idAnswerOption, answerOptions_questions_idQuestion) values (?,?,?)`,
+    INSERT INTO studentanswers (user_idUser, answer0ptions_idAnswerOption, answerOptions_questions_idQuestion) VALUES (?,?,?)`,
       testQuestionsCount:`
     select * from questions where test_idTest=?`,
       correctStudentAnswers:`

@@ -30,7 +30,7 @@ window.load = `
     modal.class.js
     
     app.class.js
-		studentAnswer.class.js
+		
     
     testForm.class.js
     testForm-list.class.js
@@ -55,6 +55,7 @@ window.load = `
 		testresult-view.class.js
 		testresult-item.class.js
 		testresult-item-list.class.js
+		studentAnswer.class.js
 
 templates/
     bootstrap-size.html

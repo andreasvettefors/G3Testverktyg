@@ -56,8 +56,7 @@ radioBtnCollection.each(function(index, element){
   }else{
     if(this.currentQIndex <= this.questions.length){
         questID=this.questions[this.currentQIndex].idQuestion;
-        //////adds student choosen-answer to database////
-				console.log('iduser',sv.student.idUser,'anscwerID',answerID,'questid',questID)
+        //////adds student choosen-answer to database///
         studAns.addAnswer(sv.student.idUser,answerID,questID);
         /////////////////////////////////////////////////
       this.currentQIndex++;
@@ -90,16 +89,16 @@ console.log(answer);
         $('#testForm').remove();
           var studAns = new studentAnswer();
             //////adds student choosen-answer to database////
-           studAns.addAnswer(sv.student.ID,answerID,questID);
+           studAns.addAnswer(sv.student.idUser,answerID,questID);
             /////////////////////////////////////////////////
           var testId = this.questions[this.currentQIndex].test_idTest
-          studAns.studentGradePercentage(sv.student.ID,testId, (element) => {
+          studAns.studentGradePercentage(sv.student.idUser,testId, (element) => {
             console.log(element);
             //Adds final testresult to "grade" database
-            studAns.addGrade(element,testId,sv.student.ID);
+            studAns.addGrade(element,testId,sv.student.idUser);
             ////////////////////////////////////////////////
           }); 
-          studAns.updateUserCompletedTest(sv.student.ID,testId);
+          studAns.updateUserCompletedTest(sv.student.idUser,testId);
           var finish= new FinishedForm();
           finish.display('body');
   }
