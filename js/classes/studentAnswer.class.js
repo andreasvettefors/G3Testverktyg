@@ -31,13 +31,19 @@ readAllFromDb() {
 addAnswer(userID,answerID,questionID){
     // Just an example of how to run a query
     this.db.newAnswer([userID,answerID,questionID],(data)=>{
-      console.log('Result of the query "byFullName"',data);
+      console.log('Result of the query "addAnswer"',data);
     });
   }
     addGrade(gradeText,testID,userID){
     // Just an example of how to run a query
     this.db.newGrade([gradeText,testID,userID],(data)=>{
-      console.log('Result of the query "byFullName"',data);
+      console.log('Result of the query "addGrade"',data);
+    });
+  }
+    updateUserCompletedTest(userID,testID){
+    // Just an example of how to run a query
+    this.db.userTest([userID,testID],(data)=>{
+      console.log('Result of the query "updateUserCompletedTest"',data);
     });
   }
 getStudentGrade(a,b,callback){
@@ -87,6 +93,9 @@ static get sqlQueries() {
     select * from answeroptions, studentanswers where user_idUser=? &&questions_Test_idTest = ? && answerOptions_idAnswerOption = idAnswerOption && isCorrect = true`,
       newGrade:`
     insert into grade (text,test_idTest,user_idUser) values (?,?,?);
+    `,
+      userTest:`
+        update test_has_users set isDone = true where user_idUser = ? && test_idTest = ?;
     `
   }
 }

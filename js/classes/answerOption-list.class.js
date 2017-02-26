@@ -17,7 +17,7 @@ class AnswerOptionList extends List {
     return {
     
       readAnswerOptions: `
-       select answer from answerOptions where questions_idQuestion = ?
+       select answer,idAnswerOption from answerOptions where questions_idQuestion = ?
       `
     }
 
