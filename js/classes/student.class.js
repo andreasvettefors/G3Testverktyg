@@ -5,34 +5,47 @@ class Student extends Base {
 		return {
 			idUser: 0,
 			email: 'john@student.se',
-			tests: new StudentTestList()
+			testsToDo: new StudentTestList(),
+			finishedTests:new StudentFinishedTestList()
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
 
 	}
-	
-	showTestResults(e){
+
+	showTestResults(e) {
 		var el = $(e.target).text();
-		for(var item of sl){
-			if(el===item.email){
+		for (var item of sl) {
+			if (el === item.email) {
 				var id = item.idUser;
 			}
 		}
-		
-		var tr = new TestResultView({student: el});
-		tr.testresultitem.readTestResultItem(id,()=>{
-			$('#teacherview').remove();
-			tr.display('body');
+
+		var sa = new studentAnswer();
+		sa.getTestQuestionsCount(1, (total) => {
+			sa.studentCorrectsCount(id, 1, (correct) => {
+				sa.studentGradePercentage(id, 1,(grade) => {
+					var tr = new TestResultView({
+						student: el,
+						correctAnswers: correct,
+						totalQuestions: total,
+						grade: grade
+					});
+					tr.testresultitem.readTestResultItem(id, () => {
+						$('#teacherview').remove();
+						tr.display('body');
+					});
+				});
+			});
+
 		});
-		
 
 	}
 
 	readStudentFromDbById(id, callback) {
 		this.db.readStudentData([id], (data) => {
-			
+
 			this.idUser = data[0].idUser;
 			this.email = data[0].email;
 			callback();

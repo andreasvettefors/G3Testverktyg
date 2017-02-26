@@ -52,10 +52,10 @@ window.load = `
 		student.class.js
 		student-list.class.js
 		student-test.class.js
+		student-finished-test-list.class.js
 		teacher.class.js
   	teacher-view.class.js
 		studentAnswer.class.js
-		nice.class.js
 		class.class.js
 		class-list.class.js
 

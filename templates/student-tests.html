@@ -2,6 +2,6 @@
 
 StudentTest.addTemplate('default', function(){return `
 		
-		<a data-click="doTest" class="list-group-item">${this.name}</a>	
+		<a data-click="test${this.isDone}" class="list-group-item">${this.name}</a>	
 
 	`});

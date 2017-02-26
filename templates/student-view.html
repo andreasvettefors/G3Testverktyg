@@ -25,7 +25,7 @@ StudentView.addTemplate('default', function(){return `
 							<p><strong>Kunskapstester att göra</strong></p>
 
 							<div class="list-group">
-								${this.student.tests.display()}
+								${this.student.testsToDo.display()}
 							</div>
 						</article>
 						<!--end tests to do-->
@@ -35,7 +35,7 @@ StudentView.addTemplate('default', function(){return `
 							<p><strong>Kunskapstester du genomfört</strong></p>
 
 							<div class="list-group">
-
+								${this.student.finishedTests.display()}
 							</div>
 						</article>
 						<!--end finished tests-->
