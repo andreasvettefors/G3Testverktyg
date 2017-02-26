@@ -3,9 +3,10 @@ window.load = `
   css/libs/
     cerulean.bootstrap.min.css
     bootstrap-tricks.css
-
-css/testForm.css
-  css/main.css
+    css/finishedForm.css
+    css/testForm.css
+    css/main.css
+ 
 
 
   js/libs/
@@ -36,6 +37,7 @@ css/testForm.css
     question.class.js
     answerOption.class.js
     finishedForm.class.js  
+    
 
     login.class.js
 		student-view.class.js
@@ -53,6 +55,7 @@ templates/
     question.html
     answerOption.html
     finishedForm.html
+
 
 		student-view.html
 		student-tests.html

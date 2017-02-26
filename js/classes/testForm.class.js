@@ -9,10 +9,9 @@ class TestForm extends Base {
       currentQIndex: 0
     }
   }
+
   constructor(propertyValues = {}){
     super(propertyValues);
-
-
 
     if(!(this.questions instanceof QuestionList)){
       this.questions = new QuestionList(this.questions);
@@ -27,8 +26,6 @@ class TestForm extends Base {
 
   static get sqlQueries() {
     return {
-
-
       readAll: `
       SELECT idTest, name, description, question, answer FROM test
       LEFT OUTER JOIN questions ON (test.idTest=questions.test_idTest)
@@ -41,71 +38,52 @@ class TestForm extends Base {
   }
 
 // get the question
-get question() {
-  return this.questions[this.currentQIndex];
-}
-//listen to which answer alternative you have chosen and goes to the next question
-nextQ(){
-
-  var answer = $('input[name=answer]:checked', '#form').val();
-//checks if alternativs is undefined then disable next button
-if(typeof answer == 'undefined') {
-  $('#error-message').remove();
-  $('<h4 id="error-message">Ett svarsalternativ måste väljas!</h4>').appendTo('.lead');
-
-}else{
-  if(this.currentQIndex < this.questions.length){
-    this.currentQIndex++;
-   
-    $('#error-message').remove();
-
-    //sparar svar till databas
-    
-    var studentA= new studentAnswer();
-    var answerOptions = new AnswerOptionList();
-    window.answerOptions = answerOptions;
-    studentA.addAnswer(sv.student.ID);
-    console.log('id:', answerOptions.answer);
+  get question() {
+    return this.questions[this.currentQIndex];
   }
+//listen to which answer alternative you have chosen and goes to the next question
+  nextQ(){
 
-  if (this.currentQIndex == this.questions.length-1){
-   $('#nextButton').remove();
-   $('#finishButton').css('display','initial');
- }
- //gör så att varje gång man kommer till en ny fråga att ingen radio button är tryckt
-$('input[name="answer"]').prop('checked', false);
+    var answer = $('input[name=answer]:checked', '#form').val();
+  //checks if alternativs is undefined then disable next button
+   if(typeof answer == 'undefined') {
+      $('#error-message').remove();
+      $('<h4 id="error-message">Ett svarsalternativ måste väljas!</h4>').appendTo('.lead');
 
+    }else{
+      if(this.currentQIndex < this.questions.length){
+        this.currentQIndex++;
+        $('#error-message').remove();
+        }
 
-
+      if (this.currentQIndex == this.questions.length-1){
+        $('#nextButton').remove();
+        $('#finishButton').css('display','initial');
+        }
+ //Will reset the radio buttons so they are not checked 
+    $('input[name="answer"]').prop('checked', false);
+  }
 }
 
-console.log(answer);
-
-}
-
+//Function that will take you to the page when the user have finished the test
 finishTest(){
 
   var answer = $('input[name=answer]:checked', '#form').val();
-  console.log(this.currentQIndex);
-
+  
 //checks if alternativs is undefined then disable next button
-if(this.currentQIndex == this.questions.length-1) {
-  $('#testForm').remove();
-  var finish= new FinishedForm();
-  finish.display('body');
+  if(this.currentQIndex == this.questions.length-1) {
+    $('#testForm').remove();
+    var finish= new FinishedForm();
+    finish.display('body');
+    }
 }
 
 
-}
 
-
-
-
+//function so you can go back to previous question
 backToQ(){
 
   var answer = $('input[name=answer]:checked', '#form').val();
-
-  console.log(answer);
   if(this.currentQIndex > 0){
     this.currentQIndex--;
     $('#error-message').remove();
@@ -120,13 +98,13 @@ insertInDb(callback){
   },callback);
 }
 
-static get sqlQueries(){
-  return {
-    newTestForm: `
-    INSERT test SET ?
-    ` 
+  static get sqlQueries(){
+    return {
+      newTestForm: `
+      INSERT test SET ?
+      ` 
+    }
   }
-}
 
 
 }

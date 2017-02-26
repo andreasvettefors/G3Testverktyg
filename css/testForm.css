@@ -1,3 +1,5 @@
+
+
 .container .jumbotron{
       border-radius: 0px;
 }
@@ -5,6 +7,9 @@
   background-color: white;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-style: 1px solid white;
+  text-align: center;
+  padding-top:20px;
+  padding-bottom: 20px;
   }
 
  .number{
@@ -19,6 +24,7 @@
   text-align:right;
   float:right;
 }
+
 
 .jumbotron h1{
   font-family: 'Vidaloka', serif;
@@ -51,12 +57,11 @@
 .jumbotron p{
   margin-top: 50px;
   text-align: left;
-  margin-left: 0px;
+  margin-left: 15%;
   color:#7c8495;
   font-size: 23px;
   font-family: 'Vidaloka', serif;
-  text-align: center;
-
+  margin-top: 10px;
 }
 
 .line{
@@ -109,8 +114,8 @@ a{
 }
 
 .pager li>a:hover{
-  background-color: lightgrey ;
-  color:#ff6a20;
+  background-color: #ff6a20 ;
+  color:white;
   border-color: white;
 }
 
@@ -125,6 +130,7 @@ a{
 }
 
 input[type='radio'] {
+
   -webkit-appearance:none;
   width:15px;
   height:15px;
@@ -132,12 +138,13 @@ input[type='radio'] {
   border-radius:50%;
   outline:none;
   margin-right: 10px;
-  margin-bottom: -2px;
+  margin-bottom: -5px;
 }
 
 input[type='radio']:before {
   content:'';
   display: block;
+
   width:80%;
   height:80%;
   margin: 8% auto;  
@@ -146,10 +153,14 @@ input[type='radio']:before {
 }
 input[type='radio']:checked:before {
   background:#7c8495;
+
+}
+input[type='radio']:focus {
+  outline: 0;
+
 }
 
-
-#finishButton{
+#finishButton {
  margin-left: 87%;
  background-color: white;
  border-radius: 20px;
@@ -165,6 +176,16 @@ input[type='radio']:checked:before {
  font-size: 10px;
  display:none;
 }
+
+#finishButton:hover{
+  background-color: #ff6a20;
+  color:white;
+}
+
+#finishButton:focus{
+  outline: 0; 
+}
+
 
 .image{
 text-align: center;
@@ -187,6 +208,15 @@ text-align: center;
   font-size: 14px;
 }
 
+#form{
+  margin-left: 15%;
+}
+
+/*clock design*/
+#clock{
+  font-family: lato;
+}
+
 /* design for mobile */
 @media screen and (max-width: 376px){
 
@@ -196,7 +226,8 @@ text-align: center;
 }
 
 .jumbotron p{
-  text-align: center; 
+  text-align: left; 
+  margin-left: 15%;
 }
 
 .display-3{
@@ -211,10 +242,6 @@ text-align: center;
 
 .jumbotron h3{
   margin-top: 140px;
-}
-
-.paragraph{
-  text-align: center;
 }
 
 
@@ -232,6 +259,8 @@ text-align: center;
  margin-left: 73%;
 
 }
+
+
 }
 
 
