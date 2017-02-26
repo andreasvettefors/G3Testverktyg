@@ -28,8 +28,7 @@ class Login extends Base {
 
 			});
 			if (validate) {
-				if(authorisation == 1){
-					
+				if (authorisation == 1) {
 					//Elev sida
 					//window.location.replace("http://facebook.se");
 					var sv = new StudentView();
@@ -42,18 +41,24 @@ class Login extends Base {
 						});
 
 					});
-				} else if (authorisation == 2){
+				} else if (authorisation == 2) {
 					//lärare
-						var tv = new TeacherView();
-					tv.teacher.readTeacherFromDbById(id, () => {
-						$('#login').remove();
-						$('.wrongUserPass').remove();
-						tv.display('body');
-						window.tv = tv;
+					var tv = new TeacherView();
+					var cl = new ClassList();
+
+					cl.readClassData(() => {
+						tv.teacher.readTeacherFromDbById(id, () => {
+							$('#login').remove();
+							$('.wrongUserPass').remove();
+							tv.display('body');
+							cl.display('#classes');
+							window.tv = tv;
+							window.cl = cl;
+						});
 					});
 
 					console.log('lärare')
-				} else if (authorisation == 3){
+				} else if (authorisation == 3) {
 					//Administratör
 					console.log('Administratör');
 				}

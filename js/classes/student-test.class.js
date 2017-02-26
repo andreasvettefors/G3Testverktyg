@@ -23,10 +23,15 @@ class StudentTest extends Base {
 								test.questions[4].answerOptions.readFromDb(5, () => {
 									test.questions[5].answerOptions.readFromDb(6, () => {
 
+									$('#studentview').remove();
+									test.display('body');
+									window.test = test;
+
 										$('#studentview').remove();
 										test.display('body');
 
 									});
+
 
 								});
 
@@ -40,9 +45,5 @@ class StudentTest extends Base {
 			});
 		});
 
-		
-
-				console.log('id:', sv.student.ID);
-				console.log('email:', sv.student.email);
 			}
 		}
