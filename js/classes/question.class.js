@@ -4,7 +4,7 @@ class Question extends Base {
 		return{
 			idQuestion: 0,
 			question: 'Are you stupid?',
-			imgURL: 'http://litbimg.rightinthebox.com/images/wholesale/201407/white.jpg',
+			imgURL: '',
 			test_idTest: 0,
 			answerOptions: new AnswerOptionList()
 		}
@@ -12,15 +12,7 @@ class Question extends Base {
 	}
 	constructor(propertyValues){
 		super(propertyValues);
-// när en fråga skapas hämtar man svarsalternativen som är kopplade 
-//till den frågan med hjälp av idQuestion
-    //this.answerOptions.readFromDb(this.idQuestion, ()=>{
-      //if(test.questions.indexOf(this) == test.questions.length -1){
-				//  test.display('body');
-      //}
-      
-      //});
-	   
+   
 	}
 
 

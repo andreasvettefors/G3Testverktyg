@@ -131,7 +131,8 @@ input[type='radio'] {
   border:2px solid #ff6a20;
   border-radius:50%;
   outline:none;
- 
+  margin-right: 10px;
+  margin-bottom: -2px;
 }
 
 input[type='radio']:before {
@@ -169,9 +170,15 @@ input[type='radio']:checked:before {
 text-align: center;
 }
 
-.alternative{
-  display: block;
-  text-align: left;
+.alternatives{
+  display:flex;
+}
+.answerAlternatives{
+    display: inline;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color:#7c8495;
 }
 
 #error-message{

@@ -27,8 +27,14 @@ class TestForm extends Base {
 
   static get sqlQueries() {
     return {
+
+
       readAll: `
-      select question, answer FROM answerOptions, questions WHERE questions_idQuestion=1;
+      SELECT idTest, name, description, question, answer FROM test
+      LEFT OUTER JOIN questions ON (test.idTest=questions.test_idTest)
+      LEFT OUTER JOIN answerOptions ON (questions.idQuestion=answerOptions.questions_idQuestion)
+      WHERE questions.test_idTest 
+      OR answerOptions.questions_Test_idTest 
 
       `
     }
@@ -68,6 +74,7 @@ if(typeof answer == 'undefined') {
  }
  //gör så att varje gång man kommer till en ny fråga att ingen radio button är tryckt
 $('input[name="answer"]').prop('checked', false);
+
 
 
 }
