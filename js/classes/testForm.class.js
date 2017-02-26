@@ -47,7 +47,7 @@ nextQ(){
     var i =0;
 radioBtnCollection.each(function(index, element){
     if (index == i && element.checked){
-        answerID=this.id;
+        answerID=parseInt(this.id);
     }
         i++;
 });

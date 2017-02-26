@@ -13,9 +13,7 @@ class App {
     	
 
 		new BootstrapSize().display('body');
-		//var cool = new studentAnswer();
-		//cool.addAnswer(1,1,1);
-
+		
 		new Login().display('body');
 	}
 }

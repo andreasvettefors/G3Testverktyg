@@ -26,10 +26,12 @@ window.load = `
     router.class.js
 
   js/classes/
+		
     bootstrap-size.js
     modal.class.js
     
     app.class.js
+
 		
     
     testForm.class.js
@@ -48,14 +50,15 @@ window.load = `
 		student-test.class.js
 		teacher.class.js
   	teacher-view.class.js
-
+		studentAnswer.class.js
+		nice.class.js
 		class.class.js
 		class-list.class.js
 
 		testresult-view.class.js
 		testresult-item.class.js
 		testresult-item-list.class.js
-		studentAnswer.class.js
+
 
 templates/
     bootstrap-size.html
