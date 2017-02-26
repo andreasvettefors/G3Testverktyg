@@ -10,5 +10,11 @@ class TestResultView extends Base {
 	constructor(propertyValues) {
 		super(propertyValues);
 	}
+	
+	goBack(){
+		$('#testresultview').remove();
+		tv.display('body');
+		cl.display('#classes');
+	}
 
 }

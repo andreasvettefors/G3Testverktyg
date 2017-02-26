@@ -53,6 +53,7 @@ window.load = `
 
 		testresult-view.class.js
 		testresult-item.class.js
+		testresult-item-list.class.js
 
 templates/
     bootstrap-size.html

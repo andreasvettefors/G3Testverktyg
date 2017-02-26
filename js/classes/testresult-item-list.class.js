@@ -14,7 +14,7 @@ class TestResultItemList extends List {
 		static get sqlQueries() {
 		return {
 			readTestResultItem: `
-       SELECT question,answer FROM testresuls WHERE user_idUser = ?
+       SELECT question,answer FROM testresults WHERE user_idUser = ?
       `
 		}
 	}

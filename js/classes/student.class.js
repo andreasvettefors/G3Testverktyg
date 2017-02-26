@@ -22,12 +22,12 @@ class Student extends Base {
 		}
 		
 		var tr = new TestResultView({student: el});
-		tr.display('body');
-		var tritem = new TestResultItem();
-		tritem.display('#testresult');
-		var tritem2 = new TestResultItem();
-		tritem2.display('#testresult');
-		console.log(id);
+		tr.testresultitem.readTestResultItem(id,()=>{
+			$('#teacherview').remove();
+			tr.display('body');
+		});
+		
+
 	}
 
 	readStudentFromDbById(id, callback) {
