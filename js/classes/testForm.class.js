@@ -76,13 +76,16 @@ console.log(answer);
  finishTest(){
   
   var answer = $('input[name=answer]:checked', '#form').val();
+	 console.log('answer',answer);
   var answerID = this.questions[this.currentQIndex].answerOptions[0].idAnswerOption;
-     for(var i = 0; i > 6; i++){
+     for(var i = 0; i < this.questions[this.currentQIndex].answerOptions.length; i++){
          var ansOpt =this.questions[this.currentQIndex].answerOptions[i].answer;
+			 console.log('ansopt',ansOpt);
          if(ansOpt==answer){
              answerID=this.questions[this.currentQIndex].answerOptions[i].idAnswerOption;
          }
      }
+	 console.log('ansid',answerID);
      var questID=this.questions[this.currentQIndex].idQuestion;
   //checks if alternativs is undefined then disable next button
       if(this.currentQIndex == this.questions.length-1) {
