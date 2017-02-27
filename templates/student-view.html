@@ -14,10 +14,10 @@ StudentView.addTemplate('default', function(){return `
 
 			<!--Start maincontent-->
 			<div class="col-md-6 col-sm-12">
-				<div class="panel panel-default">
+				<div class="panel panel-default panel-style">
 					<div class="panel-body">
-						<h3>Student</h3>
 						<h3>${this.student.email}</h3>
+						<h4>Student</h4>
 						<hr>
 
 						<!--List with tests to do-->
@@ -25,7 +25,7 @@ StudentView.addTemplate('default', function(){return `
 							<p><strong>Kunskapstester att göra</strong></p>
 
 							<div class="list-group">
-								${this.student.tests.display()}
+								${this.student.testsToDo.display()}
 							</div>
 						</article>
 						<!--end tests to do-->
@@ -35,7 +35,7 @@ StudentView.addTemplate('default', function(){return `
 							<p><strong>Kunskapstester du genomfört</strong></p>
 
 							<div class="list-group">
-
+								${this.student.finishedTests.display()}
 							</div>
 						</article>
 						<!--end finished tests-->

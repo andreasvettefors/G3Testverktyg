@@ -28,32 +28,39 @@ class Login extends Base {
 
 			});
 			if (validate) {
-				if(authorisation == 1){
-
+				if (authorisation == 1) {
 					//Elev sida
 					//window.location.replace("http://facebook.se");
 					var sv = new StudentView();
-					sv.student.tests.readStudentTestFromDbById(id, () => {
-						sv.student.readStudentFromDbById(id, () => {
+					sv.student.finishedTests.readStudentFinishedTestFromDbById(id, () => {
+						sv.student.testsToDo.readStudentTestFromDbById(id, () => {
+							sv.student.readStudentFromDbById(id, () => {
+								$('#login').remove();
+								$('.wrongUserPass').remove();
+								sv.display('body');
+								window.sv = sv;
+							});
+
+						});
+					});
+				} else if (authorisation == 2) {
+					//lärare
+					var tv = new TeacherView();
+					var cl = new ClassList();
+
+					cl.readClassData(() => {
+						tv.teacher.readTeacherFromDbById(id, () => {
 							$('#login').remove();
 							$('.wrongUserPass').remove();
-							sv.display('body');
-							window.sv = sv;
+							tv.display('body');
+							cl.display('#classes');
+							window.tv = tv;
+							window.cl = cl;
 						});
-
-					});
-				} else if (authorisation == 2){
-					//lärare
-						var tv = new TeacherView();
-					tv.teacher.readTeacherFromDbById(id, () => {
-						$('#login').remove();
-						$('.wrongUserPass').remove();
-						tv.display('body');
-						window.tv = tv;
 					});
 
 					console.log('lärare')
-				} else if (authorisation == 3){
+				} else if (authorisation == 3) {
 					//Administratör
 					console.log('Administratör');
 				}
@@ -65,6 +72,13 @@ class Login extends Base {
 		});
 	}
 
+	get id() {
+		return this.id;
+	}
+
+	set id(userID) {
+		this.id = userID;
+	}
 	readAllFromDb() {
 		this.db.readAll((data) => {
 			console.log(data);

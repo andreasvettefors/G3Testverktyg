@@ -70,9 +70,6 @@ class TestFormList extends List {
       `,
       readAll: `
         SELECT * FROM test
-      `,
-      readAllWithPets: `
-        SELECT * FROM petownersWithPets
       `
     }
   }

@@ -1,13 +1,14 @@
-class StudentView extends Base {
+class TestResultItem extends Base {
 
 	static defaultPropertyValues() {
-		return {
-			student: new Student(),
 
+		return {
+			question: 'Hur?',
+			answer: 'Perfekt!'
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-	}
 
+	}
 }

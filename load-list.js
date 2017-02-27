@@ -4,8 +4,13 @@ window.load = `
     cerulean.bootstrap.min.css
     bootstrap-tricks.css
 
-css/testForm.css
-  css/main.css
+	css/
+		testForm.css
+  	main.css
+		userViews.css
+    finishedForm.css
+   
+
 
 
   js/libs/
@@ -24,10 +29,13 @@ css/testForm.css
     router.class.js
 
   js/classes/
+		
     bootstrap-size.js
     modal.class.js
-    studentAnswer.class.js
+    
     app.class.js
+
+		
     
     testForm.class.js
     testForm-list.class.js
@@ -36,14 +44,25 @@ css/testForm.css
     question.class.js
     answerOption.class.js
     finishedForm.class.js  
+    
 
     login.class.js
 		student-view.class.js
 		student-test-list.class.js
 		student.class.js
+		student-list.class.js
 		student-test.class.js
+		student-finished-test-list.class.js
 		teacher.class.js
   	teacher-view.class.js
+		studentAnswer.class.js
+		class.class.js
+		class-list.class.js
+
+		testresult-view.class.js
+		testresult-item.class.js
+		testresult-item-list.class.js
+
 
 templates/
     bootstrap-size.html
@@ -54,10 +73,15 @@ templates/
     answerOption.html
     finishedForm.html
 
+
 		student-view.html
 		student-tests.html
 		login.html
 		teacher-view.html
+		testresult-view.html
+		testresult-item.html
+		class.html
+		student.html
     
   js/main.js
 
