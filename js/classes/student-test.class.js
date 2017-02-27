@@ -9,7 +9,7 @@ class StudentTest extends Base {
 		super(propertyValues);
 
 	}
-
+	
 	test1() {
 		var sa = new studentAnswer();
 		sa.getTestQuestionsCount(1, (total) => {
@@ -19,7 +19,8 @@ class StudentTest extends Base {
 						student: sv.student.email,
 						correctAnswers: correct,
 						totalQuestions: total,
-						grade: grade
+						grade: grade,
+						userType: 1
 					});
 					tr.testresultitem.readTestResultItem(sv.student.idUser, () => {
 						$('#studentview').remove();

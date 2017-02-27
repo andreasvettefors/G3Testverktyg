@@ -4,7 +4,7 @@ class FinishedForm extends Base {
 		super(propertyValues);
 	}
 
-	finishTest() {
+	seeResult() {
 		var sa = new studentAnswer();
 		sa.getTestQuestionsCount(1, (total) => {
 			sa.studentCorrectsCount(sv.student.idUser, 1, (correct) => {
@@ -13,7 +13,8 @@ class FinishedForm extends Base {
 						student: sv.student.email,
 						correctAnswers: correct,
 						totalQuestions: total,
-						grade: grade
+						grade: grade,
+						userType: 1
 					});
 					tr.testresultitem.readTestResultItem(sv.student.idUser, () => {
 						$('#finishedform').remove();

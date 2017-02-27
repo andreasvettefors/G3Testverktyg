@@ -30,7 +30,8 @@ class Student extends Base {
 						student: el,
 						correctAnswers: correct,
 						totalQuestions: total,
-						grade: grade
+						grade: grade,
+						userType: 2
 					});
 					tr.testresultitem.readTestResultItem(id, () => {
 						$('#teacherview').remove();
