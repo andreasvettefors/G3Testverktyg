@@ -32,14 +32,16 @@ class Login extends Base {
 					//Elev sida
 					//window.location.replace("http://facebook.se");
 					var sv = new StudentView();
-					sv.student.tests.readStudentTestFromDbById(id, () => {
-						sv.student.readStudentFromDbById(id, () => {
-							$('#login').remove();
-							$('.wrongUserPass').remove();
-							sv.display('body');
-							window.sv = sv;
-						});
+					sv.student.finishedTests.readStudentFinishedTestFromDbById(id, () => {
+						sv.student.testsToDo.readStudentTestFromDbById(id, () => {
+							sv.student.readStudentFromDbById(id, () => {
+								$('#login').remove();
+								$('.wrongUserPass').remove();
+								sv.display('body');
+								window.sv = sv;
+							});
 
+						});
 					});
 				} else if (authorisation == 2) {
 					//lärare
@@ -70,13 +72,13 @@ class Login extends Base {
 		});
 	}
 
-get id(){
-return this.id;
-}
+	get id() {
+		return this.id;
+	}
 
-set id (userID){
-this.id = userID;
-}
+	set id(userID) {
+		this.id = userID;
+	}
 	readAllFromDb() {
 		this.db.readAll((data) => {
 			console.log(data);
