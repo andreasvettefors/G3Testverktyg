@@ -1,0 +1,11 @@
+Question.addTemplate('default', function(){return `
+
+	<div class="image"><img src="${this.imgURL}" alt=""></div>
+	<p  class="paragraph">${this.question}</p>
+
+    <form id="form">
+        ${this.answerOptions.display()}
+    </form>
+
+
+`});

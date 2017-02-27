@@ -1,0 +1,57 @@
+<!--Studentpage that shows test to do an also test that have been done -->
+StudentView.addTemplate('default', function(){return `
+<!--Start container-->
+<div id = "studentview" class="container">
+
+	<!--Start section-->
+	<section class="student-view">
+
+		<!--Start row-->
+		<div class="row space-above">
+			
+			<div class="col-md-3 hidden-sm">
+			</div>
+
+			<!--Start maincontent-->
+			<div class="col-md-6 col-sm-12">
+				<div class="panel panel-default panel-style">
+					<div class="panel-body">
+						<h3>${this.student.email}</h3>
+						<h4>Student</h4>
+						<hr>
+
+						<!--List with tests to do-->
+						<article class="student-view-test-info">
+							<p><strong>Kunskapstester att göra</strong></p>
+
+							<div class="list-group">
+								${this.student.testsToDo.display()}
+							</div>
+						</article>
+						<!--end tests to do-->
+
+						<!--List with finished tests-->
+						<article class="student-view-test-info">
+							<p><strong>Kunskapstester du genomfört</strong></p>
+
+							<div class="list-group">
+								${this.student.finishedTests.display()}
+							</div>
+						</article>
+						<!--end finished tests-->
+
+					</div>
+				</div>
+			</div>
+			<!--end maincontent-->
+
+			<div class="col-md-3 hidden-sm">
+			</div>
+
+		</div>
+	</section>
+	<!--end content-->
+
+</div>
+<!--end container-->
+`});

@@ -1,0 +1,39 @@
+<!--Teacherview -->
+TeacherView.addTemplate('default', function(){return `
+<!--Start container-->
+<div id="teacherview" class="container">
+
+	<!--Start section-->
+	<section class="student-view">
+
+		<!--Start row-->
+		<div class="row space-above">
+
+			<div class="col-md-3 hidden-sm">
+			</div>
+
+			<!--Start maincontent-->
+			<div class="col-md-6 col-sm-12">
+				<div class="panel panel-default panel-style">
+					<div class="panel-body">
+						<h3>${this.teacher.email}</h3>
+						<h4>Lärare</h4>
+						<hr>
+						<div id="classes" class="list-group">
+								
+							</div>
+					</div>
+				</div>
+			</div>
+			<!--end maincontent-->
+
+			<div class="col-md-3 hidden-sm">
+			</div>
+
+		</div>
+	</section>
+	<!--end content-->
+
+</div>
+<!--end container-->
+`});
