@@ -50,8 +50,8 @@ class studentAnswer extends Base {
 			});
 		}
 		getStudentGrade(a, b, callback) {
-			var returnNum = (b / a * 100) + '%';
-			return callback(returnNum);
+			var returnNum =Math.ceil( (b / a * 100));
+			return callback(returnNum+'%');
 		}
 		getTestQuestionsCount(testID, callback) {
 			var a = 0;
