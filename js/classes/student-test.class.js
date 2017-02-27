@@ -9,7 +9,7 @@ class StudentTest extends Base {
 		super(propertyValues);
 
 	}
-	
+
 	test1() {
 		var sa = new studentAnswer();
 		sa.getTestQuestionsCount(1, (total) => {
@@ -49,20 +49,11 @@ class StudentTest extends Base {
 										$('#studentview').remove();
 										test.display('body');
 										window.test = test;
-
-
-
 									});
-
-
 								});
-
 							});
-
 						});
-
 					});
-
 				});
 			});
 		});

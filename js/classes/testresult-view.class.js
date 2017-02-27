@@ -2,6 +2,7 @@ class TestResultView extends Base {
 
 	static defaultPropertyValues() {
 		return {
+			test: 'Java 1',
 			student: 'student@testresult.au',
 			correctAnswers: 0,
 			totalQuestions: 0,
@@ -13,26 +14,34 @@ class TestResultView extends Base {
 	constructor(propertyValues) {
 		super(propertyValues);
 	}
-	
-	goBack(){
-		console.log(this.userType);
-		if(this.userType== 1){
+
+	goBack() {
+
+		if (this.userType == 1) {
+			
+			
+			sv.student.finishedTests.splice(0,sv.student.finishedTests.length);
+			sv.student.testsToDo.splice(0,sv.student.testsToDo.length);
+
 			$('#testresultview').remove();
-			sv.display('body');
-			alert('student');
-		}
-		else if(this.userType == 2){
+			
+			// Get the list again from 
+			sv.student.testsToDo.readStudentTestFromDbById(sv.student.idUser, () => {
+				sv.student.finishedTests.readStudentFinishedTestFromDbById(sv.student.idUser, () => {
+					sv.display('body');
+				});
+			});
+
+		} else if (this.userType == 2) {
 			$('#testresultview').remove();
 			tv.display('body');
 			cl.display('#classes');
-		}
-		else if(this.userType==3){
+		} else if (this.userType == 3) {
 			alert('Admin');
-		}
-		else{
+		} else {
 			alert('Something else');
 		}
-		
+
 	}
 
 }
