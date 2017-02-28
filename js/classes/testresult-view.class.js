@@ -2,7 +2,7 @@ class TestResultView extends Base {
 
 	static defaultPropertyValues() {
 		return {
-			test: 'Java 1',
+			name: 'Kalle',
 			student: 'student@testresult.au',
 			correctAnswers: 0,
 			totalQuestions: 0,
