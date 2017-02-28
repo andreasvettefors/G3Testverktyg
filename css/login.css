@@ -149,6 +149,17 @@ border-top-right-radius: 0;
 margin-top: 10px;
 }
 
+.label2{
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.label1{
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
 
 @media screen and (max-width: 376px){
 .container{
@@ -189,32 +200,13 @@ height: 100vh;
 .glyphicon-ring {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
-  border: 4px solid #ccb692;
-  margin-top: 70px;
-  display: inline-table;
-  text-align: center;
-  vertical-align:middle;
 
 }
 
 #glyphicon{
   margin-top: 6px;
-  color:#ccb692;
-  border-radius: 5px;
-  display:block;
-  text-align:center;
-  font-size: 30px;
-  padding: 0;
-  vertical-align:middle;
+  
 }
-/*för ikon utan bakgrund*/
 
-.glyphicon-ring .glyphicon-bordered {
-
-  font-size: 50px;
-  vertical-align: middle;
-  display: table-cell;
-}
 }
 
