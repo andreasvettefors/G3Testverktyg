@@ -2,23 +2,24 @@ Login.addTemplate('default', function(){return `
 
 
  <div id="background">
-  <div class="container">
- 
-  <div class="container" id="login">
+ <h1 class="headerNewton">Newton testverktyg</h1>
+  <div class="container" id="login"> 
 
     <!--<div class="col-lg-12 col-md-12 col-sm-6 col-sx-3">-->
+
        <div class="icon"> <div class="glyphicon-ring"><span id="glyphicon" class="glyphicon glyphicon-user glyphicon-bordered" aria-hidden="true"></span></div></div>
-        <h2 class="form-signin-heading">Sign in</h2>
-            <label class="label1" for="inputEmail" class="sr-only">Email address</label>
+        <h2 class="form-signin-heading">Logga in</h2>
+            <label class="label1" for="inputEmail" class="sr-only">Email adress</label>
               <input  id="inputEmail" class="form-control" placeholder="Email address"  autofocus>
-              <label class="label2" for="inputPassword" class="sr-only">Password</label>
+              <label class="label2" for="inputPassword" class="sr-only">Lösenord</label>
              <input type="password" id="inputPassword" class="form-control" placeholder="Password" >
-            <button id="buttonSignIn" data-click="login" class="btn btn-lg btn-primary btn-block">Sign in</button>
-          </div>
+             <div id="buttonSign">
+            <button id="buttonSignIn" data-click="login" class="btn btn-lg btn-primary btn-block">Sign in</button></div>
         <div class="wrongUserPass">
        </div>
-      
-    </div>
+
+      </div>
+
   <div class="canvas"><canvas id="space"></canvas>
  </div>
 </div>

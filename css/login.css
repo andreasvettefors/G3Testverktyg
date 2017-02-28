@@ -7,6 +7,9 @@ body{
   left: 0;
   bottom: 0;
   right: 0;
+  background: -webkit-linear-gradient( #000000, #7b3939);
+ background:linear-gradient( #000000, #7b3939);
+
 }
 
 #background{
@@ -26,8 +29,13 @@ body{
 .container{
   position: relative;
   z-index: 3;
-  width:380px;
+  
 }
+
+#login{
+  width:340px; 
+}
+
 .canvas>#space{
  top: 0;
   left: 0;
@@ -43,7 +51,7 @@ body{
 
 .icon{
   text-align: center;
-  margin-top: 80px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 .glyphicon-ring {
@@ -145,9 +153,59 @@ border-top-left-radius: 0;
 border-top-right-radius: 0;
 }
 
-#buttonSignIn{
-margin-top: 10px;
+.headerNewton{
+  text-align: center;
+  font-family: 'Sanchez' ;
+  color:#d4c09f;
+  font-size:60px;
+  letter-spacing: 1px;
+  margin-top: 120px;
 }
+
+#buttonSign{
+  margin:0 auto;
+  width:100px;
+  margin-top: 15px;
+}
+
+.btn-primary{
+  background: #271629 !important;
+  border: 1px #FAFFBD solid;
+  border-radius: 20px;
+  color:#FAFFBD;
+  width:110px;
+  font-family: verdana;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  padding:10px;
+  
+}
+/*#buttonSignIn{
+  background-color: white !important;
+  border: 2px #ff6a20 solid;
+  border-radius: 20px;
+  color:#ff6a20;
+  font-family: verdana;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  padding:10px;
+}*/
+/*
+#buttonSignIn{
+  background-color: white !important;
+  border: 2px #ff6a20 solid;
+  border-radius: 20px;
+  color:#ff6a20;
+  font-family: verdana;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  padding:10px;
+
+}*/
 
 .label2{
   margin-top: 10px;
@@ -172,6 +230,17 @@ margin-top: 10px;
   width:100vw;
   
 }
+
+.headerNewton{
+  margin-top: 60px;
+}
+
+
+.icon{
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+
 }
 
 @media (min-width: 377px) and (max-width: 668px){
@@ -182,10 +251,17 @@ body{
 
 .container{
   flex-direction: column;
-  height: 100vh;
+  
   display: flex;
-  width:340px;
+  
   }
+
+
+#login{
+  height: 100vh;
+  width:300px; 
+
+}
 
 .canvas>#space{
 width: 100vw;
@@ -193,8 +269,18 @@ height: 100vh;
  
 }
 
+.form-signin-heading{
+  font-size:30px;
+}
+
+.headerNewton{
+  margin-top: 0px;
+  font-size:40px;
+}
+
 .icon{
-  margin-top: -50px;
+  margin-bottom: 10px;
+  margin-top: -70px;
 }
 
 .glyphicon-ring {
@@ -206,6 +292,10 @@ height: 100vh;
 #glyphicon{
   margin-top: 6px;
   
+}
+
+.label1{
+  margin-top:-2px;
 }
 
 }
