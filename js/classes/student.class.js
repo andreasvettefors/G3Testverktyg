@@ -21,7 +21,7 @@ class Student extends Base {
 				var id = item.idUser;
 			}
 		}
-
+       
 		var sa = new studentAnswer();
 		sa.getTestQuestionsCount(1, (total) => {
 			sa.studentCorrectsCount(id, 1, (correct) => {

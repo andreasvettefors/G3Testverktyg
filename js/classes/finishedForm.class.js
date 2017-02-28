@@ -5,11 +5,13 @@ class FinishedForm extends Base {
 	}
 
 	finishTest() {
+        
 		var sa = new studentAnswer();
-		sa.getTestQuestionsCount(1, (total) => {
-			sa.studentCorrectsCount(sv.student.idUser, 1, (correct) => {
-				sa.studentGradePercentage(sv.student.idUser, 1, (grade) => {
+		sa.getTestQuestionsCount(test.idTest, (total) => {
+			sa.studentCorrectsCount(sv.student.idUser, test.idTest, (correct) => {
+				sa.studentGradePercentage(sv.student.idUser, test.idTest, (grade) => {
 					var tr = new TestResultView({
+                        testName: test.name,
 						student: sv.student.email,
 						correctAnswers: correct,
 						totalQuestions: total,

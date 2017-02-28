@@ -1,6 +1,7 @@
 class StudentTest extends Base {
 	static defaultPropertyValues() {
 		return {
+            idTest: 0,
 			name: 'Java',
 			isDone: 0
 		}
@@ -11,12 +12,14 @@ class StudentTest extends Base {
 	}
 
 	test1() {
+         console.log(this.idTest);
 		var sa = new studentAnswer();
-		sa.getTestQuestionsCount(1, (total) => {
-			sa.studentCorrectsCount(sv.student.idUser, 1, (correct) => {
-				sa.studentGradePercentage(sv.student.idUser, 1, (grade) => {
+		sa.getTestQuestionsCount(this.idTest, (total) => {
+			sa.studentCorrectsCount(sv.student.idUser, this.idTest, (correct) => {
+				sa.studentGradePercentage(sv.student.idUser, this.idTest, (grade) => {
 					var tr = new TestResultView({
-						student: sv.student.email,
+						testName:this.name,
+                        student: sv.student.email,
 						correctAnswers: correct,
 						totalQuestions: total,
 						grade: grade
