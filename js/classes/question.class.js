@@ -46,7 +46,7 @@ class Question extends Base {
         INSERT questions SET ?
       `,
       readQuestion: `
-      select * from questions
+        select * from questions
       ` 
   		    
 

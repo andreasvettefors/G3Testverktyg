@@ -5,9 +5,9 @@ TestForm.addTemplate('default', function(){return `
   <div class="row">
     <div class=" col-md-8 col-md-offset-2">
       <div class="jumbotron">
-       <h1 class="head">Test frågor</h1>
-        <h2 class="display-3"><strong class="number">${this.questions.indexOf(this.question)+1}</strong> av ${this.questions.length}</h2>
-        <h3>${this.name}</h3>
+       <h1 class="header1">Test frågor</h1>
+        <h2 class="noQuestionLength"><strong class="currentQNumber">${this.questions.indexOf(this.question)+1}</strong> av ${this.questions.length}</h2>
+        <h3 class="nameOfTest">${this.name}</h3>
         <hr class="line">
 
         ${this.question.display()}

@@ -1,3 +1,4 @@
+/*design för desktop*/ 
 body{
   margin: 0;
   height: 100vh;
@@ -8,7 +9,7 @@ body{
   bottom: 0;
   right: 0;
   background: -webkit-linear-gradient( #000000, #7b3939);
- background:linear-gradient( #000000, #7b3939);
+  background:linear-gradient( #000000, #7b3939);
 
 }
 
@@ -26,6 +27,7 @@ body{
   background: linear-gradient( #000000, #7b3939);
   z-index: 1;
 }
+
 .container{
   position: relative;
   z-index: 3;
@@ -54,6 +56,7 @@ body{
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
 .glyphicon-ring {
   width: 70px;
   height: 70px;
@@ -76,6 +79,7 @@ body{
   padding: 0;
   vertical-align:middle;
 }
+
 /*för ikon utan bakgrund*/
 
 .glyphicon-ring .glyphicon-bordered {
@@ -84,18 +88,21 @@ body{
   vertical-align: middle;
   display: table-cell;
 }
+
 .center{
   color: #f1dbb6;
   text-align: left;
   font-family: 'Lato', serif;
   margin-top: 10px;
 }
+
 .form-signin {
 max-width: 330px;
 padding: 15px;
 margin: 0 auto;
 margin-top: -800px;
 }
+
 .form-signin ,
 .form-signin .checkbox {
 margin-bottom: 10px;
@@ -129,9 +136,11 @@ margin-bottom: 10px;
   font-size: 40px;
   margin-bottom: 30px;
 }
+
 .form-signin .checkbox {
 font-weight: normal;
 }
+
 .form-signin .form-control {
 position: relative;
 height: auto;
@@ -142,11 +151,13 @@ font-size: 16px;
 .form-signin .form-control:focus {
 z-index: 2;
 }
+
 .form-signin input[type="email"] {
 margin-bottom: -1px;
 border-bottom-right-radius: 0;
 border-bottom-left-radius: 0;
 }
+
 .form-signin input[type="password"] {
 margin-bottom: 10px;
 border-top-left-radius: 0;
@@ -159,7 +170,7 @@ border-top-right-radius: 0;
   color:#d4c09f;
   font-size:60px;
   letter-spacing: 1px;
-  margin-top: 120px;
+  margin-top: 110px;
 }
 
 #buttonSign{
@@ -167,6 +178,8 @@ border-top-right-radius: 0;
   width:100px;
   margin-top: 15px;
 }
+
+
 
 .btn-primary{
   background: #271629 !important;
@@ -182,30 +195,15 @@ border-top-right-radius: 0;
   padding:10px;
   
 }
-/*#buttonSignIn{
-  background-color: white !important;
-  border: 2px #ff6a20 solid;
-  border-radius: 20px;
-  color:#ff6a20;
-  font-family: verdana;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 10px;
-  padding:10px;
-}*/
-/*
-#buttonSignIn{
-  background-color: white !important;
-  border: 2px #ff6a20 solid;
-  border-radius: 20px;
-  color:#ff6a20;
-  font-family: verdana;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 10px;
-  padding:10px;
 
-}*/
+.btn-primary:hover{
+  border: 1px #FAFFBD solid;
+  background: #442530 !important;
+}
+
+.btn-primary:focus{
+  outline: 0;
+}
 
 .label2{
   margin-top: 10px;
@@ -219,6 +217,7 @@ border-top-right-radius: 0;
   font-size: 15px;
 }
 
+/*design för stående mobil*/
 @media screen and (max-width: 376px){
 .container{
   width: 95%;
@@ -226,76 +225,86 @@ border-top-right-radius: 0;
   flex-direction: column;
 }
 .canvas>#space{
-  
   width:100vw;
-  
 }
 
 .headerNewton{
   margin-top: 60px;
 }
 
-
 .icon{
   margin-bottom: 10px;
   margin-top: -20px;
 }
 
+.btn-primary:focus{
+  outline: 0;
 }
 
+.btn-primary:active{
+  border: 1px #FAFFBD solid;
+}
+
+}
+/*design för liggande mobil vy*/
 @media (min-width: 377px) and (max-width: 668px){
 
-body{
-  width:100vw;
+  body{
+    width:100vw;
+    }
+
+  .container{
+    flex-direction: column;
+    display: flex;
+    }
+
+
+  #login{
+    height: 100vh;
+    width:300px; 
   }
 
-.container{
-  flex-direction: column;
-  
-  display: flex;
-  
+  .canvas>#space{
+    width: 100vw;
+    height: 100vh;
   }
 
+  .form-signin-heading{
+    font-size:30px;
+  }
 
-#login{
-  height: 100vh;
-  width:300px; 
+  .headerNewton{
+    margin-top: 0px;
+    font-size:40px;
+  }
 
+  .icon{
+    margin-bottom: 10px;
+    margin-top: -70px;
+  }
+
+  .glyphicon-ring {
+    width: 60px;
+    height: 60px;
+
+  }
+
+  #glyphicon{
+    margin-top: 6px;
+    
+  }
+
+  .label1{
+    margin-top:-2px;
+  }
+
+  .btn-primary:focus{
+  outline: 0;
 }
 
-.canvas>#space{
-width: 100vw;
-height: 100vh;
- 
-}
-
-.form-signin-heading{
-  font-size:30px;
-}
-
-.headerNewton{
-  margin-top: 0px;
-  font-size:40px;
-}
-
-.icon{
-  margin-bottom: 10px;
-  margin-top: -70px;
-}
-
-.glyphicon-ring {
-  width: 60px;
-  height: 60px;
-
-}
-
-#glyphicon{
-  margin-top: 6px;
+.btn-primary:hover{
+  border: 1px #FAFFBD solid;
   
-}
-
-.label1{
-  margin-top:-2px;
 }
 
 }

@@ -15,7 +15,6 @@ class AnswerOptionList extends List {
    static get sqlQueries(){
     
     return {
-    
       readAnswerOptions: `
        select answer,idAnswerOption from answerOptions where questions_idQuestion = ?
       `
