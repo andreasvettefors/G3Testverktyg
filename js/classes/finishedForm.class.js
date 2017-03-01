@@ -18,7 +18,7 @@ class FinishedForm extends Base {
 						grade: grade,
 						userType: 1
 					});
-					tr.testresultitem.readTestResultItem(sv.student.idUser, () => {
+					tr.testresultitem.readTestResultItem(sv.student.idUser,test.idTest, () => {
 						$('#finishedform').remove();
 						tr.display('body');
 					});

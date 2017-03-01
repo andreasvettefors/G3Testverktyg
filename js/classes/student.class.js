@@ -51,7 +51,7 @@ class Student extends Base {
 							grade: grade,
 							userType: 2
 						});
-						tr.testresultitem.readTestResultItem(id, () => {
+						tr.testresultitem.readTestResultItem(id,idTest, () => {
 							$('#teacherview').remove();
 							tr.display('body');
 						});

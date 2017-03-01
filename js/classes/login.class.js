@@ -37,6 +37,7 @@ class Login extends Base {
 							sv.student.readStudentFromDbById(id, () => {
 								$('#login').remove();
 								$('canvas').remove();
+								$('.headerNewton').remove();
 								$('.wrongUserPass').remove();
 								sv.display('body');
 								window.sv = sv;
