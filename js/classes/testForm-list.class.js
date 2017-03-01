@@ -22,6 +22,13 @@ class TestFormList extends List {
       callback();
     });
   }
+	
+	readSpecificTest(id,callback){
+		this.db.readSpecificTest([id],(data)=>{
+			this.push.apply(this,data);
+			callback();
+		});
+	}
 
   readAllFromDBWithQuestions(callback){
     this.db.readAllWithQuestions((data)=>{
@@ -70,6 +77,9 @@ class TestFormList extends List {
       `,
       readAll: `
         SELECT * FROM test
+      `,
+			readSpecificTest:`
+        SELECT * FROM test WHERE idTest = ?
       `
     }
   }

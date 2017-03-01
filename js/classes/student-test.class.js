@@ -36,32 +36,28 @@ class StudentTest extends Base {
 	}
 
 	test0(e) {
-		var tests = new TestFormList();
-		window.t = tests;
-		tests.readAllFromDb(() => {
-
-			// Kollar vilket test som har blivit tryckt på och
-			// var i listan det ligger 
-			var el = $(e.target).text();
-			for (var item of tests) {
-				if (el === item.name) {
-					var id = item.idTest;
-					var index = tests.indexOf(item);			
-				}
+		console.log('Studentlistan',sv.student.testsToDo);
+		
+		var el = $(e.target).text();
+		for (var item of sv.student.testsToDo) {
+			if (el === item.name) {
+				var id = item.idTest;
 			}
-	
-			var test = tests[index];
-			//hämtar question och answerAlternative från databasen
-			test.questions.readAllFromDb(id, () => {
-				$(function () {
-					$('#studentview').remove();
-					test.display('body');
-					window.test = test;
+			
+			var tests = new TestFormList();
+			window.tests = tests;	
+			tests.readSpecificTest(id, () => {
+				var test = tests[0];
+
+				//hämtar question och answerAlternative från databasen
+				test.questions.readAllFromDb(test.idTest, () => {
+					$(function () {
+						$('#studentview').remove();
+						test.display('body');
+						window.test = test;
+					});
 				});
-
 			});
-		});
-
-
+		}
 	}
 }
