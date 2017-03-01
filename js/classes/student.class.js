@@ -23,6 +23,7 @@ class Student extends Base {
 		}
 
 		var finishedTests = new StudentFinishedTestList();
+
 		var sa = new studentAnswer();
 
 		finishedTests.readStudentFinishedTestFromDbById(id, () => {

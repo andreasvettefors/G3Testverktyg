@@ -14,6 +14,7 @@ class StudentTest extends Base {
 	test1() {
 		console.log('idTest', this.idTest);
 		console.log('name', this.name);
+
 		var sa = new studentAnswer();
 		sa.getTestQuestionsCount(this.idTest, (total) => {
 			sa.studentCorrectsCount(sv.student.idUser, this.idTest, (correct) => {
