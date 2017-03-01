@@ -4,22 +4,20 @@ class Class extends Base {
 
 		return {
 			idClasses: 0,
-			name: 'A special class'
+			name: 'A Great class',
+			students: new StudentList()
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-
+		this.students.readStudentData(this.idClasses,()=>{	
+		});
 	}
 	
 	showStudentsInClass(e){
 		$('.studentlink').remove();
-		var sl = new StudentList();
-		sl.readStudentData(this.idClasses,()=>{
-			$(e.target).after(sl.display());
-			//sl.display('.students');
-			window.sl = sl;
-		});
+		$(e.target).after(this.students.display());
+
 	}
 
 

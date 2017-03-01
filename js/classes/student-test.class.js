@@ -57,7 +57,6 @@ class StudentTest extends Base {
 						userType: 1
 					});
 					tr.testresultitem.readTestResultItem(sv.student.idUser,this.idTest, () => {
-						$('#testresult').remove();
 						$('#studentview').remove();
 						tr.display('body');
 					});

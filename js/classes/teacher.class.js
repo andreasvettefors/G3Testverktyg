@@ -4,12 +4,13 @@ class Teacher extends Base {
 
 		return {
 		  ID: 0,
-			email: 'john@teacher.se'
+			email: 'john@teacher.se',
+			classes:new ClassList()
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-
+		
 	}
 
 	readTeacherFromDbById(id, callback) {
