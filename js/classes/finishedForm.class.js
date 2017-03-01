@@ -1,19 +1,22 @@
 class FinishedForm extends Base {
 
 	constructor(propertyValues) {
-		super(propertyValues);
+		super(propertyValues); 
 	}
 
-	finishTest() {
+	seeResult() {
+		
 		var sa = new studentAnswer();
-		sa.getTestQuestionsCount(1, (total) => {
-			sa.studentCorrectsCount(sv.student.idUser, 1, (correct) => {
-				sa.studentGradePercentage(sv.student.idUser, 1, (grade) => {
+		sa.getTestQuestionsCount(test.idTest, (total) => {
+			sa.studentCorrectsCount(sv.student.idUser, test.idTest, (correct) => {
+				sa.studentGradePercentage(sv.student.idUser, test.idTest, (grade) => {
 					var tr = new TestResultView({
+						name: test.name,
 						student: sv.student.email,
 						correctAnswers: correct,
 						totalQuestions: total,
-						grade: grade
+						grade: grade,
+						userType: 1
 					});
 					tr.testresultitem.readTestResultItem(sv.student.idUser, () => {
 						$('#finishedform').remove();

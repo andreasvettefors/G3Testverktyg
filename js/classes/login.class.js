@@ -36,6 +36,8 @@ class Login extends Base {
 						sv.student.testsToDo.readStudentTestFromDbById(id, () => {
 							sv.student.readStudentFromDbById(id, () => {
 								$('#login').remove();
+								$('canvas').remove();
+								$('.headerNewton').remove();
 								$('.wrongUserPass').remove();
 								sv.display('body');
 								window.sv = sv;
@@ -51,6 +53,7 @@ class Login extends Base {
 					cl.readClassData(() => {
 						tv.teacher.readTeacherFromDbById(id, () => {
 							$('#login').remove();
+							$('canvas').remove();
 							$('.wrongUserPass').remove();
 							tv.display('body');
 							cl.display('#classes');

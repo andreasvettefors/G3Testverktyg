@@ -25,15 +25,15 @@ class AnswerOption extends Base {
 
   readOptionsFromDb(){
     this.db.readAnswerOptions((data) => {
-                  var quest=[];
-                  var a = 0;
-                  data.forEach(function(element) {
-                   quest[a]=element.answer
-                   a++;
-                       });
-                  return(quest[2]);
+      var quest=[];
+      var a = 0;
+        data.forEach(function(element) {
+          quest[a]=element.answer
+          a++;
+        });
+      return(quest[2]);
       
-                });
+    });
               
 }
 
@@ -45,7 +45,7 @@ class AnswerOption extends Base {
         INSERT answersOptions SET ?
       `,
       readAnswerOptions: `
-      select * from answerOptions
+        select * from answerOptions
       ` 
   		    
 
