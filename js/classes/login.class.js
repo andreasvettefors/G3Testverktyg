@@ -36,6 +36,7 @@ class Login extends Base {
 						sv.student.testsToDo.readStudentTestFromDbById(id, () => {
 							sv.student.readStudentFromDbById(id, () => {
 								$('#login').remove();
+								$('canvas').remove();
 								$('.wrongUserPass').remove();
 								sv.display('body');
 								window.sv = sv;
@@ -51,6 +52,7 @@ class Login extends Base {
 					cl.readClassData(() => {
 						tv.teacher.readTeacherFromDbById(id, () => {
 							$('#login').remove();
+							$('canvas').remove();
 							$('.wrongUserPass').remove();
 							tv.display('body');
 							cl.display('#classes');
@@ -67,7 +69,7 @@ class Login extends Base {
 
 
 			} else {
-				$(".wrongUserPass").html(` <p style="text-align:center;color:red;font-size:25px">${this.wrongUserPass()} </p>`);
+				$(".wrongUserPass").html(` <p class="center">${this.wrongUserPass()} </p>`);
 			}
 		});
 	}

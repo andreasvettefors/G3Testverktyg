@@ -9,6 +9,7 @@ window.load = `
   	main.css
 		userViews.css
     finishedForm.css
+    login.css
    
 
 
@@ -17,6 +18,7 @@ window.load = `
     jquery.js
     bootstrap.min.js
     diffDom.js
+
 
   js/classes/base-and-utility-classes/
     jQuery-dom-events.class.js
@@ -45,6 +47,7 @@ window.load = `
     answerOption.class.js
     finishedForm.class.js  
     
+    
 
     login.class.js
 		student-view.class.js
@@ -72,6 +75,7 @@ templates/
     question.html
     answerOption.html
     finishedForm.html
+   
 
 
 		student-view.html
@@ -84,5 +88,6 @@ templates/
 		student.html
     
   js/main.js
+  js/canvas.js
 
 `;
