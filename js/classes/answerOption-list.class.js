@@ -8,7 +8,7 @@ class AnswerOptionList extends List {
   readFromDb(id,callback){
     this.db.readAnswerOptions([id],(data)=>{
       this.push.apply(this,data);
-      callback();
+      callback(data);
     });
   }
 

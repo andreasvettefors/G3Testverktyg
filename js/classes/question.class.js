@@ -12,7 +12,8 @@ class Question extends Base {
 	}
 	constructor(propertyValues){
 		super(propertyValues);
-   
+   	this.answerOptions.readFromDb(this.idQuestion,(data) => { 
+		});
 	}
 
 

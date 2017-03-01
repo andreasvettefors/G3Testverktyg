@@ -6,7 +6,7 @@ class Student extends Base {
 			idUser: 0,
 			email: 'john@student.se',
 			testsToDo: new StudentTestList(),
-			finishedTests:new StudentFinishedTestList()
+			finishedTests: new StudentFinishedTestList()
 		}
 	}
 	constructor(propertyValues) {
@@ -22,23 +22,41 @@ class Student extends Base {
 			}
 		}
 
+		var finishedTests = new StudentFinishedTestList();
 		var sa = new studentAnswer();
-		sa.getTestQuestionsCount(1, (total) => {
-			sa.studentCorrectsCount(id, 1, (correct) => {
-				sa.studentGradePercentage(id, 1,(grade) => {
-					var tr = new TestResultView({
-						student: el,
-						correctAnswers: correct,
-						totalQuestions: total,
-						grade: grade
-					});
-					tr.testresultitem.readTestResultItem(id, () => {
-						$('#teacherview').remove();
-						tr.display('body');
+
+		finishedTests.readStudentFinishedTestFromDbById(id, () => {
+			if (finishedTests === undefined || finishedTests.length == 0) {
+					return;
+			}
+			// Loop through finishedtest to find id and 
+			// name of the test the teacher want to look at
+			for (let i = 0; i < finishedTests.length; i++) {
+				if (finishedTests[i].name == 'Java 1') {
+					var name = finishedTests[i].name;
+					var idTest = finishedTests[i].idTest;
+				}
+
+			}
+
+			sa.getTestQuestionsCount(idTest, (total) => {
+				sa.studentCorrectsCount(id, idTest, (correct) => {
+					sa.studentGradePercentage(id, idTest, (grade) => {
+						var tr = new TestResultView({
+							name: name,
+							student: el,
+							correctAnswers: correct,
+							totalQuestions: total,
+							grade: grade,
+							userType: 2
+						});
+						tr.testresultitem.readTestResultItem(id, () => {
+							$('#teacherview').remove();
+							tr.display('body');
+						});
 					});
 				});
 			});
-
 		});
 
 	}

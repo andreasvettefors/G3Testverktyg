@@ -1,6 +1,7 @@
 class StudentTest extends Base {
 	static defaultPropertyValues() {
 		return {
+			idTest: 0,
 			name: 'Java',
 			isDone: 0
 		}
@@ -11,15 +12,19 @@ class StudentTest extends Base {
 	}
 
 	test1() {
+		console.log('idTest', this.idTest);
+		console.log('name', this.name);
 		var sa = new studentAnswer();
-		sa.getTestQuestionsCount(1, (total) => {
-			sa.studentCorrectsCount(sv.student.idUser, 1, (correct) => {
-				sa.studentGradePercentage(sv.student.idUser, 1, (grade) => {
+		sa.getTestQuestionsCount(this.idTest, (total) => {
+			sa.studentCorrectsCount(sv.student.idUser, this.idTest, (correct) => {
+				sa.studentGradePercentage(sv.student.idUser, this.idTest, (grade) => {
 					var tr = new TestResultView({
+						name: this.name,
 						student: sv.student.email,
 						correctAnswers: correct,
 						totalQuestions: total,
-						grade: grade
+						grade: grade,
+						userType: 1
 					});
 					tr.testresultitem.readTestResultItem(sv.student.idUser, () => {
 						$('#studentview').remove();
@@ -27,44 +32,32 @@ class StudentTest extends Base {
 					});
 				});
 			});
-
 		});
 	}
 
-	test0() {
-		var tests = new TestFormList();
-		tests.readAllFromDb(() => {
-			//hämtar question och answerAlternative från databasen 
-			var test = tests[0];
-			test.questions.readAllFromDb(1, () => {
+	test0(e) {
+		console.log('Studentlistan',sv.student.testsToDo);
+		
+		var el = $(e.target).text();
+		for (var item of sv.student.testsToDo) {
+			if (el === item.name) {
+				var id = item.idTest;
+			}
+			
+			var tests = new TestFormList();
+			window.tests = tests;	
+			tests.readSpecificTest(id, () => {
+				var test = tests[0];
 
-				test.questions[0].answerOptions.readFromDb(1, () => {
-					test.questions[1].answerOptions.readFromDb(2, () => {
-						test.questions[2].answerOptions.readFromDb(3, () => {
-							test.questions[3].answerOptions.readFromDb(4, () => {
-								test.questions[4].answerOptions.readFromDb(5, () => {
-									test.questions[5].answerOptions.readFromDb(6, () => {
-
-										$('#studentview').remove();
-										test.display('body');
-										window.test = test;
-
-
-
-									});
-
-
-								});
-
-							});
-
-						});
-
+				//hämtar question och answerAlternative från databasen
+				test.questions.readAllFromDb(test.idTest, () => {
+					$(function () {
+						$('#studentview').remove();
+						test.display('body');
+						window.test = test;
 					});
-
 				});
 			});
-		});
-
+		}
 	}
 }
