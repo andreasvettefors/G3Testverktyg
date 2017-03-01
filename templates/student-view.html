@@ -1,28 +1,48 @@
 <!--Studentpage that shows test to do an also test that have been done -->
 StudentView.addTemplate('default', function(){return `
-<!--Start container-->
 <div id = "studentview" class="container">
 
 	<!--Start section-->
-	<section class="student-view">
+	
+	
+	
 
+<section class="student-view">
+	
+  		
+  		<nav class="navbar-fixed-top">
+  		<div class="container-fluid">
+  <div class="container">
+ 	 <ul class="navbar-list">
+   <div class="idBox">
+  					<h1 class="h1Student">STUDENT</h1>
+  					<h2 class="h2StudentEmail">${this.student.email}</h2>
+  				</div>
+  				<div class="navTestAndGrade">
+  				<li><a href="#" class="navbarTest">Test</a></li>
+  				<li><a href="#" class="navbarGrade">Betyg</a></li>
+  				</div>
+  				<li class="logOut"><a href="#" class="navbarLogOut">Logga ut</a></li>
+  			</ul>
+  </div>
+   </div>
+</nav>
+	
 		<!--Start row-->
 		<div class="row space-above">
-			
 			<div class="col-md-3 hidden-sm">
 			</div>
-
+		<div class="floatingImg"><div id="glyphicon-ring"><img class="img-circle" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/1910567_47245146936_1153_n.jpg?oh=cdbfaa522ecc3509bd137feca91e5d7d&oe=593B9FE0"></div></div>
 			<!--Start maincontent-->
-			<div class="col-md-6 col-sm-12">
-				<div class="panel panel-default panel-style">
+			<div class="col-md-8 col-sm-12 mainContent">
+				<div id="contentBox" class="panel panel-default panel-style">
 					<div class="panel-body">
-						<h3>${this.student.email}</h3>
-						<h4>Student</h4>
-						<hr>
+						
+						<hr class="line">
 
 						<!--List with tests to do-->
 						<article class="student-view-test-info">
-							<p><strong>Kunskapstester att göra</strong></p>
+							<p class="testTextP"><strong>Kunskapstester att göra</strong></p>
 
 							<div class="list-group">
 								${this.student.testsToDo.display()}
@@ -32,7 +52,7 @@ StudentView.addTemplate('default', function(){return `
 
 						<!--List with finished tests-->
 						<article class="student-view-test-info">
-							<p><strong>Kunskapstester du genomfört</strong></p>
+							<p class="testTextP"><strong>Kunskapstester du genomfört</strong></p>
 
 							<div class="list-group">
 								${this.student.finishedTests.display()}
@@ -52,6 +72,6 @@ StudentView.addTemplate('default', function(){return `
 	</section>
 	<!--end content-->
 
+
 </div>
-<!--end container-->
 `});

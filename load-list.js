@@ -4,14 +4,15 @@ window.load = `
     cerulean.bootstrap.min.css
     bootstrap-tricks.css
 
-	css/
-		testForm.css
+  css/
+	testForm.css
   	main.css
-		userViews.css
+	userViews.css
     finishedForm.css
     login.css
-   
-
+    teacher-view.css
+    student-view.css
+    
 
 
   js/libs/

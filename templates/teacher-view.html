@@ -1,6 +1,16 @@
 <!--Teacherview -->
 TeacherView.addTemplate('default', function(){return `
 <!--Start container-->
+<div id="wrapper">
+	<nav class="topNav"><a class="logOutButton" href="">Logga ut</a></nav>
+	
+	<nav class="sideNav">
+		<div class="icon"> <div class="glyphicon-ring"><img class="img-circle" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/33550_10150277904375612_99705_n.jpg?oh=51efb472a94b875ab8557e6ccd9757da&oe=5925F103"></div></div>
+		<a class="classButton" href="">Klasser</a>
+		<a class="createTestButton" href="">Skapa test</a>
+	</nav>
+
+	<nav class="topNavClasses"><a class="class1Button" href="">SYSJM2</a></nav>
 <div id="teacherview" class="container">
 
 	<!--Start section-->
@@ -14,7 +24,7 @@ TeacherView.addTemplate('default', function(){return `
 
 			<!--Start maincontent-->
 			<div class="col-md-6 col-sm-12">
-				<div class="panel panel-default panel-style">
+				<div id="bodyTemplate" class="panel panel-default panel-style">
 					<div class="panel-body">
 						<h3>${this.teacher.email}</h3>
 						<h4>Lärare</h4>
@@ -33,6 +43,7 @@ TeacherView.addTemplate('default', function(){return `
 	</section>
 	<!--end content-->
 
+</div>
 </div>
 <!--end container-->
 `});

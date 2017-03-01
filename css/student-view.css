@@ -1,0 +1,170 @@
+/*.navbar-link{
+  margin-left: 95%;
+
+}*/
+
+.navbar-list{
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  width:100vw;
+}
+
+li{
+  margin:0;
+  float:left;
+  border-right: 1px solid #bbb;
+
+}
+
+.container-fluid{
+  background-color: #0b3042;
+
+}
+
+
+li a{
+
+  display:block;
+  color:#dcbf87;
+  text-align: center;
+  padding:25px 16px;
+  text-decoration: none;
+  height:70px;
+}
+
+li a:hover{
+  background-color: #210f0f;
+  color:#9e6262 !important;
+  border: none !important;
+}
+
+.navbarGrade{
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+li:nth-child(3n+0){
+  border-right: none;
+}
+
+.idBox{
+  float:left;
+  width: 200px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+
+.h1Student{
+   font-family: 'Vidaloka', serif;
+   letter-spacing: 3px;
+   color:#dcbf87;
+  margin-top: 5px;
+  font-size: 30px;
+  text-align: left; 
+}
+
+.h2StudentEmail{
+  font-family: 'Lato';
+  color:#985050;
+  text-align: left;
+  font-size: 15px;
+   margin-top: -10px;
+}
+
+.navTestAndGrade{
+  margin-left:100px;
+}
+
+.logOut{
+ float:right;
+ margin-right: 10%;
+}
+
+#contentBox{
+  margin-top: 150px;
+  background-color: #985050;
+  position: relative;
+
+}
+
+#studentview .panel-style{
+  background-color: #351919;
+  border-color: #351919;
+}
+
+.line{
+  border:1px #985050 solid !important;
+}
+
+.student-view-test-info{
+  font-family: 'Lato' !important;
+  color:#dcbf87 !important;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.icon{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.img-circle{
+border-radius: 50%;
+width:100%;
+}
+
+#glyphicon-ring {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #ccb692;
+  margin-top: 70px;
+  display: inline-table;
+  text-align: center;
+  vertical-align:middle;
+
+}
+
+.mainContent{
+  align-content: center;
+}
+
+#glyphicon{
+  margin-top: 12px;
+  color:#ccb692;
+  border-radius: 5px;
+  display:block;
+  text-align:center;
+  font-size: 30px;
+  padding: 0;
+  vertical-align:middle;
+}
+
+/*för ikon utan bakgrund*/
+
+#glyphicon-ring .glyphicon-bordered {
+
+  font-size: 50px;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.floatingImg{
+  width:110px;
+  height:110px;
+  text-align: center;
+  position: absolute;
+    z-index: 1;
+}
+
+
+.img-circle{
+    background-size: 50% 50%;
+    border-radius: 50%;
+
+}
