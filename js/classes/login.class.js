@@ -48,17 +48,14 @@ class Login extends Base {
 				} else if (authorisation == 2) {
 					//lärare
 					var tv = new TeacherView();
-					var cl = new ClassList();
-
-					cl.readClassData(() => {
+					tv.teacher.classes.readClassData(() => {
 						tv.teacher.readTeacherFromDbById(id, () => {
 							$('#login').remove();
 							$('canvas').remove();
+							$('.headerNewton').remove();
 							$('.wrongUserPass').remove();
 							tv.display('body');
-							cl.display('#classes');
 							window.tv = tv;
-							window.cl = cl;
 						});
 					});
 
