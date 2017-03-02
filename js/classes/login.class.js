@@ -47,7 +47,6 @@ class Login extends Base {
 				} else if (authorisation == 2) {
 					//lärare
 					var tv = new TeacherView();
-
 					tv.teacher.readTeacherFromDbById(id, () => {
 						setTimeout(function () {
 							$(function () {
@@ -55,7 +54,6 @@ class Login extends Base {
 								$('canvas').remove();
 								$('.headerNewton').remove();
 								$('.wrongUserPass').remove();
-
 								tv.display('body');
 								$('.testlist').attr('data-click','teacher');
 								$('.students').hide();
