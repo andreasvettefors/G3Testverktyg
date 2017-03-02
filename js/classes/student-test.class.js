@@ -11,7 +11,7 @@ class StudentTest extends Base {
 
 	}
 	
-	teacher(){
+	teacher(){			
 		console.log('teacherseetest');
 	}
 
@@ -67,5 +67,34 @@ class StudentTest extends Base {
 				});
 			});
 		});
+	}
+	
+	test0teacher(){
+		return;
+	}
+
+	test1teacher(){
+		console.log('idTest', this.idTest);
+		console.log('name', this.name);
+
+		/*var sa = new studentAnswer();
+		sa.getTestQuestionsCount(this.idTest, (total) => {
+			sa.studentCorrectsCount(sv.student.idUser, this.idTest, (correct) => {
+				sa.studentGradePercentage(sv.student.idUser, this.idTest, (grade) => {
+					var tr = new TestResultView({
+						name: this.name,
+						student: sv.student.email,
+						correctAnswers: correct,
+						totalQuestions: total,
+						grade: grade,
+						userType: 2
+					});
+					tr.testresultitem.readTestResultItem(sv.student.idUser,this.idTest, () => {
+						$('#studentview').remove();
+						tr.display('body');
+					});
+				});
+			});
+		});*/
 	}
 }
