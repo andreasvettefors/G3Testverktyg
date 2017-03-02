@@ -4,14 +4,16 @@ class Administrator extends Base {
     super(propertyValues);
   }
 
+
+
   helloMyFriend(){
     return 'hej';
   }
 
   readAdminFromDbById(id, callback) {
     this.db.readAdminData([id], (data) => {
-      this.ID = data[0].idUser;
       this.email = data[0].email;
+      console.log(data);
       callback();
     });
   }
@@ -19,9 +21,12 @@ class Administrator extends Base {
 
   static get sqlQueries() {
     return {
-      readTeacherData: `
+      readAdminData: `
        SELECT idUser,email FROM users where idUser = ?;
-      `
+      `,
+      getAllUsers: `
+       SELECT idUser,email FROM users where idUser = ?;
+      `,
     }
   }
 }

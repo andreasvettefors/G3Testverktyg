@@ -61,14 +61,17 @@ class Login extends Base {
 
 					console.log('lärare')
 				} else if (authorisation == 3) {
-					
+
 					console.log('Administratör');
 					var admin = new Administrator();
-					$('#login').remove();
-					$('canvas').remove();
-					$('.headerNewton').remove();
-					$('.wrongUserPass').remove();
-					admin.display('body');
+					admin.readAdminFromDbById(id,()=>{
+						$('#login').remove();
+						$('canvas').remove();
+						$('.headerNewton').remove();
+						$('.wrongUserPass').remove();
+						admin.display('body');
+					});
+
 
 				}
 
