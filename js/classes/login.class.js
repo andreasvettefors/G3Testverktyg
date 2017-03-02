@@ -65,11 +65,13 @@ class Login extends Base {
 					console.log('Administratör');
 					var admin = new Administrator();
 					admin.readAdminFromDbById(id,()=>{
-						$('#login').remove();
-						$('canvas').remove();
-						$('.headerNewton').remove();
-						$('.wrongUserPass').remove();
-						admin.display('body');
+						admin.readAllUsers(()=>{
+							$('#login').remove();
+							$('canvas').remove();
+							$('.headerNewton').remove();
+							$('.wrongUserPass').remove();
+							admin.display('body');
+						});
 					});
 
 

@@ -18,6 +18,15 @@ class Administrator extends Base {
     });
   }
 
+  readAllUsers(callback) {
+    this.db.getAllUsers((data) => {
+      for(var i of data){
+        console.log(i.email);
+      }
+      callback();
+    });
+  }
+
 
   static get sqlQueries() {
     return {
@@ -25,7 +34,7 @@ class Administrator extends Base {
        SELECT idUser,email FROM users where idUser = ?;
       `,
       getAllUsers: `
-       SELECT idUser,email FROM users where idUser = ?;
+       select * from users;
       `,
     }
   }
