@@ -14,7 +14,7 @@ class StudentList extends List {
 		static get sqlQueries() {
 		return {
 			readStudentData: `
-       SELECT idUser,email FROM users where classes_idClasses = ?
+       SELECT idUser,email,classes_idClasses FROM users where classes_idClasses = ?
       `
 		}
 	}

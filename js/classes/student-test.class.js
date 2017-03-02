@@ -10,10 +10,44 @@ class StudentTest extends Base {
 		super(propertyValues);
 
 	}
+	
+	teacher(){
+		console.log('teacherseetest');
+	}
 
+	test0(e) {
+		var tests = new TestFormList();
+		window.t = tests;
+		tests.readAllFromDb(() => {
+
+			// Kollar vilket test som har blivit tryckt på och
+			// var i listan det ligger 
+			var el = $(e.target).text();
+			for (var item of tests) {
+				if (el === item.name) {
+					var id = item.idTest;
+					var index = tests.indexOf(item);
+				}
+			}
+
+			var test = tests[index];
+			//hämtar question och answerAlternative från databasen
+			test.questions.readAllFromDb(id, () => {
+				$(function () {
+					$('#studentview').remove();
+					test.display('body');
+					window.test = test;
+				});
+
+			});
+		});
+
+
+	}
 	test1() {
 		console.log('idTest', this.idTest);
 		console.log('name', this.name);
+
 		var sa = new studentAnswer();
 		sa.getTestQuestionsCount(this.idTest, (total) => {
 			sa.studentCorrectsCount(sv.student.idUser, this.idTest, (correct) => {
@@ -26,38 +60,12 @@ class StudentTest extends Base {
 						grade: grade,
 						userType: 1
 					});
-					tr.testresultitem.readTestResultItem(sv.student.idUser, () => {
+					tr.testresultitem.readTestResultItem(sv.student.idUser,this.idTest, () => {
 						$('#studentview').remove();
 						tr.display('body');
 					});
 				});
 			});
 		});
-	}
-
-	test0(e) {
-		console.log('Studentlistan',sv.student.testsToDo);
-		
-		var el = $(e.target).text();
-		for (var item of sv.student.testsToDo) {
-			if (el === item.name) {
-				var id = item.idTest;
-			}
-			
-			var tests = new TestFormList();
-			window.tests = tests;	
-			tests.readSpecificTest(id, () => {
-				var test = tests[0];
-
-				//hämtar question och answerAlternative från databasen
-				test.questions.readAllFromDb(test.idTest, () => {
-					$(function () {
-						$('#studentview').remove();
-						test.display('body');
-						window.test = test;
-					});
-				});
-			});
-		}
 	}
 }

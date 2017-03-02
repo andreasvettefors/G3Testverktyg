@@ -35,7 +35,7 @@ class TestResultView extends Base {
 		} else if (this.userType == 2) {
 			$('#testresultview').remove();
 			tv.display('body');
-			cl.display('#classes');
+			$('.students').hide();
 		} else if (this.userType == 3) {
 			alert('Admin');
 		} else {
