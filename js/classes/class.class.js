@@ -19,7 +19,12 @@ class Class extends Base {
 			$(e.target).after(sl.display());
 			//sl.display('.students');
                  this.avarageGradeCalculator(1,(element) => {
-				console.log(element);
+				console.log(element+'% medelvärde');
+                     this.getUndoneTests(this.idClasses,1,(element1) => {
+                         if(element1>0){
+                         console.log(element1+' has not finnished the test yet');
+                         }
+                     });
           }); 
 			window.sl = sl;
 		});
@@ -40,10 +45,21 @@ class Class extends Base {
 				return callback(data);
 			});
 		};
+    getUndoneTests(classID,testID, callback) {
+			var a = 0;
+			this.db.getUndoneTests([classID,testID], (data) => {
+				data.forEach(function (element) {
+					a++;
+				});
+				return callback(a);
+			});
+		};
     static get sqlQueries(){
 			return {
 				getGrades: `
-    select text from grade,users where user_idUser = idUser && classes_idClasses = ? && test_idTest =?`
+    select text from grade,users where user_idUser = idUser && classes_idClasses = ? && test_idTest =?`,
+                getUndoneTests:`
+    select isDone from test_has_users,users where user_idUser=idUser && classes_idClasses =? && test_idTest = ? && isDone=0`
         }
     }
 }
