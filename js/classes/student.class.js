@@ -5,6 +5,7 @@ class Student extends Base {
 		return {
 			idUser: 0,
 			email: 'john@student.se',
+			classes_idClasses: 0,
 			testsToDo: new StudentTestList(),
 			finishedTests: new StudentFinishedTestList()
 		}
@@ -16,11 +17,13 @@ class Student extends Base {
 
 	showTestResults(e) {
 		var el = $(e.target).text();
-		for (var item of sl) {
+		var studentList = tv.teacher.classes[this.classes_idClasses-1].students;
+		for (var item of studentList) {
 			if (el === item.email) {
 				var id = item.idUser;
 			}
 		}
+		console.log(id);
 
 		var finishedTests = new StudentFinishedTestList();
 

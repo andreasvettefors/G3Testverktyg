@@ -65,3 +65,11 @@ body{
 .studentlink{
 	margin-left:20%;
 }
+
+.isCorrect0{
+	color: red;
+}
+
+.isCorrect1{
+	color:green;
+}
