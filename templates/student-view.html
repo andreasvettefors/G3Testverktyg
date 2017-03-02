@@ -3,48 +3,42 @@ StudentView.addTemplate('default', function(){return `
 <div id = "studentview" class="container">
 
 	<!--Start section-->
-	
-	
-	
 
-<section class="student-view">
-	
-  		
-  		<nav class="navbar-fixed-top">
-  		<div class="container-fluid">
-  <div class="container">
- 	 <ul class="navbar-list">
-   <div class="idBox">
-  					<h1 class="h1Student">STUDENT</h1>
-  					<h2 class="h2StudentEmail">${this.student.email}</h2>
-  				</div>
-  				<div class="navTestAndGrade">
-  				<li><a href="#" class="navbarTest">Test</a></li>
-  				<li><a href="#" class="navbarGrade">Betyg</a></li>
-  				</div>
-  				<li class="logOut"><a href="#" class="navbarLogOut">Logga ut</a></li>
-  			</ul>
-  </div>
-   </div>
-</nav>
-	
+	<section class="student-view">
+<div class="container">
+		<nav class="menu">
+			<div class="menu-box">
+			<div class="idBox">
+							<h1 class="h1Student">STUDENT</h1>
+							<h2 class="h2StudentEmail">${this.student.email}</h2>
+						</div>
+						
+							<a href="#" class="navbarTest">Test</a>
+							<a href="#" class="navbarGrade">Betyg</a>
+						<a href="#" class="navbarLogOut">Logga ut</a>
+				
+
+						
+					
+				</div>
+			</div>
+		</nav>
 		<!--Start row-->
 		<div class="row space-above">
 			<div class="col-md-3 hidden-sm">
 			</div>
-		<div class="floatingImg"><div id="glyphicon-ring"><img class="img-circle" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/1910567_47245146936_1153_n.jpg?oh=cdbfaa522ecc3509bd137feca91e5d7d&oe=593B9FE0"></div></div>
 			<!--Start maincontent-->
-			<div class="col-md-8 col-sm-12 mainContent">
+			<div class="col-md-8 col-md-offset-2 mainContent">
 				<div id="contentBox" class="panel panel-default panel-style">
 					<div class="panel-body">
-						
+						<div class=" col-md-2 col-centered floatingImg"><div id="glyphicon-ring"><img class="img-circle" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/10478217_10203259481002322_7308597286536689034_n.jpg?oh=56940860822b619b5d31873bc290a503&oe=594137EC"></div></div>
 						<hr class="line">
 
 						<!--List with tests to do-->
 						<article class="student-view-test-info">
 							<p class="testTextP"><strong>Kunskapstester att göra</strong></p>
 
-							<div class="list-group">
+							<div class="list-group testToDoList">
 								${this.student.testsToDo.display()}
 							</div>
 						</article>

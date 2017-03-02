@@ -3,59 +3,64 @@
 
 }*/
 
-.navbar-list{
-  list-style-type: none;
-  margin:0;
-  padding:0;
-  overflow: hidden;
-  width:100vw;
-}
+.menu{
 
-li{
-  margin:0;
-  float:left;
-  border-right: 1px solid #bbb;
-
-}
-
-.container-fluid{
+  right:0;
+  left:0;
+  top:0;
   background-color: #0b3042;
+  text-decoration:none;
+  position: fixed;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  z-index:999;
+}
+
+.menu a{
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  text-decoration: none;
+  font-family: 'Lato' !important;
+  color:#dcbf87 !important;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-left:1px solid #1e4b61;
 
 }
 
-
-li a{
-
-  display:block;
-  color:#dcbf87;
-  text-align: center;
-  padding:25px 16px;
-  text-decoration: none;
+.menu-box{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction:row;
   height:70px;
 }
 
-li a:hover{
+.menu a:hover{
   background-color: #210f0f;
   color:#9e6262 !important;
   border: none !important;
 }
 
 .navbarGrade{
-  margin-top: 0;
-  margin-bottom: 0;
-
+  border-right:1px solid #1e4b61;
+}
+.menu a:last-child{
+ 
+ border-left: none;
 }
 
-li:nth-child(3n+0){
-  border-right: none;
-}
 
 .idBox{
-  float:left;
-  width: 200px;
-  padding-top: 15px;
+  display: inline-block;
+  padding-top: 5px;
   padding-bottom: 15px;
-
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .h1Student{
@@ -75,14 +80,6 @@ li:nth-child(3n+0){
    margin-top: -10px;
 }
 
-.navTestAndGrade{
-  margin-left:100px;
-}
-
-.logOut{
- float:right;
- margin-right: 10%;
-}
 
 #contentBox{
   margin-top: 150px;
@@ -90,6 +87,8 @@ li:nth-child(3n+0){
   position: relative;
 
 }
+
+
 
 #studentview .panel-style{
   background-color: #351919;
@@ -116,6 +115,7 @@ li:nth-child(3n+0){
 .img-circle{
 border-radius: 50%;
 width:100%;
+padding:3px;
 }
 
 #glyphicon-ring {
@@ -123,19 +123,30 @@ width:100%;
   height: 100px;
   border-radius: 50%;
   border: 4px solid #ccb692;
-  margin-top: 70px;
-  display: inline-table;
-  text-align: center;
-  vertical-align:middle;
-
+   
 }
 
+.list-group-item{
+  background-color: #592929;
+  font-family: verdana !important;
+  color: #FAFFBD !important;
+  border-radius: 20px !important;
+  border:none;
+}
+
+.list-group-item:hover{
+ background-color: #1f0e0e !important;
+ border: none !important;
+ cursor: pointer;
+ 
+}
 .mainContent{
   align-content: center;
+
 }
 
 #glyphicon{
-  margin-top: 12px;
+ 
   color:#ccb692;
   border-radius: 5px;
   display:block;
@@ -143,6 +154,7 @@ width:100%;
   font-size: 30px;
   padding: 0;
   vertical-align:middle;
+
 }
 
 /*för ikon utan bakgrund*/
@@ -155,11 +167,11 @@ width:100%;
 }
 
 .floatingImg{
-  width:110px;
-  height:110px;
-  text-align: center;
+  width:100px;
+  height:100px;
+  justify-content: center;
   position: absolute;
-    z-index: 1;
+  z-index: 1;
 }
 
 
@@ -168,3 +180,71 @@ width:100%;
     border-radius: 50%;
 
 }
+
+
+@media screen and (max-width: 376px){
+  .menu{
+
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center; 
+  }
+
+  .menu a{
+    border-left: none;
+    border-bottom: 1px solid #1e4b61;
+    border-top:  1px solid #1e4b61;
+    border-width: 100%;
+
+  }
+
+  .menu a:last-child{
+    border-bottom: none;
+  }
+
+  .menu-box{
+    padding: 0;
+  margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction:column;
+    height: auto;
+    width:100vw;
+  }
+
+.idBox{
+  text-align: center;
+}
+.h1Student{
+  text-align: center; 
+  
+}
+
+
+.navbarGrade{
+  border-right:none;
+}
+.h2StudentEmail{
+
+  text-align: center;
+  
+   
+}
+  
+}
+
+@media (min-width: 377px) and (max-width: 668px){
+
+#contentBox{
+  margin-top: 250px;
+ 
+
+}
+
+
+
+
+
+
+
+  }

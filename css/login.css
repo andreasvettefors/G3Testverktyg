@@ -47,7 +47,7 @@ body{
 
 .icon{
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 10px;
 }
 
@@ -160,10 +160,11 @@ border-top-right-radius: 0;
 
 .headerNewton{
   text-align: center;
-  font-family: 'Sanchez' ;
+  font-family: 'Vidaloka' ;
+  text-transform: uppercase;
   color:#d4c09f;
-  font-size:60px;
-  letter-spacing: 1px;
+  font-size:40px;
+  letter-spacing: 6px;
   margin-top: 110px;
 }
 
@@ -250,6 +251,7 @@ border-top-right-radius: 0;
   .container{
     flex-direction: column;
     display: flex;
+    margin-top: -90px;
     }
 
 
@@ -268,24 +270,8 @@ border-top-right-radius: 0;
   }
 
   .headerNewton{
-    margin-top: 0px;
+    margin-top: 10px;
     font-size:40px;
-  }
-
-  .icon{
-    margin-bottom: 10px;
-    margin-top: -70px;
-  }
-
-  .glyphicon-ring {
-    width: 60px;
-    height: 60px;
-
-  }
-
-  #glyphicon{
-    margin-top: 6px;
-    
   }
 
   .label1{

@@ -4,7 +4,8 @@
 } 
 
 .jumbotron{
-  background-color:white;
+  background: -webkit-linear-gradient( #000000, #7b3939);
+  background:linear-gradient( #000000, #7b3939);
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-style: 1px solid white;
   text-align: center;
@@ -14,13 +15,13 @@
 
  .currentQNumber{
   font-size: 80px;
-  color:#ff6a20;
+  color:#dcbf87;
   
 }
 
 .noQuestionLength{
   font-family: 'Vidaloka', serif;
-  color: lightgrey;
+  color: #985f5f;
   text-align:right;
   float:right;
 }
@@ -29,7 +30,7 @@
 .header1{
   font-family: 'Vidaloka', serif;
   font-size: 70px;
-  color:#b5bbca;
+  color:#dcbf87 !important;
   text-align:left;
   float:left;
 }
@@ -44,7 +45,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
-  color:#b5bbca;
+  color:#985f5f;
   text-align: left;
 }
 
@@ -58,7 +59,7 @@
   margin-top: 50px;
   text-align: left;
   margin-left: 15%;
-  color:#7c8495;
+  color:#985f5f;
   font-size: 23px;
   font-family: 'Vidaloka', serif;
   margin-top: 10px;
@@ -84,15 +85,15 @@
 
 
 .pager li>#nextButton{
-  background-color: #ff6a20 ;
-  color:white;
-  border-color: white;
+  background-color: #271629 ;
+  color:#FAFFBD;
+  border: 1px #FAFFBD solid;
 }
 
 .pager li>#nextButton:hover{
-  background-color: #ff6a20 ;
+  background-color: #442530;
   color:white;
-  border-color: white;
+  border: 1px #FAFFBD solid;
 }
 
 
@@ -101,7 +102,7 @@ input[type='radio'] {
   -webkit-appearance:none;
   width:15px;
   height:15px;
-  border:2px solid #ff6a20;
+  border:2px solid #FAFFBD;
   border-radius:50%;
   outline:none;
   margin-right: 10px;
@@ -118,7 +119,7 @@ input[type='radio']:before {
   border-radius:60%;    
 }
 input[type='radio']:checked:before {
-  background:#7c8495;
+  background:#985f5f;
 
 }
 input[type='radio']:focus {
@@ -165,7 +166,7 @@ input[type='radio']:focus {
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
-  color:#7c8495;
+  color:#9c8964;
 }
 
 #error-message{
