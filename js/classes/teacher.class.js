@@ -21,6 +21,8 @@ class Teacher extends Base {
 		});
 	}
 
+	
+
 	static get sqlQueries() {
 		return {
 			readTeacherData: `
