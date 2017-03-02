@@ -57,7 +57,7 @@ class Login extends Base {
 								tv.display('body');
 								
 								// För att ändra attributet data-click så det inte 
-								// använder sig att samma metod som när man trycker 
+								// använder sig av samma metod som när man trycker 
 								// på testet i studentview	
 								$('.testlist').each (function () {
 									var id = $(this).attr('data-id');

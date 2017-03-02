@@ -17,7 +17,6 @@ class StudentTest extends Base {
 
 	test0(e) {
 		var tests = new TestFormList();
-		window.t = tests;
 		tests.readAllFromDb(() => {
 
 			// Kollar vilket test som har blivit tryckt på och
@@ -73,28 +72,45 @@ class StudentTest extends Base {
 		return;
 	}
 
-	test1teacher(){
+	test1teacher(e){
 		console.log('idTest', this.idTest);
 		console.log('name', this.name);
-
-		/*var sa = new studentAnswer();
+		var el = $(e.target).closest('.testWrapper').find('.studentlink').text();
+		
+		var email;
+		var id;
+		// Loopa igenom listorna för att få reda på 
+		// vilket id studenten har för att kunna få fram rätt testresultat
+		for(let teacherclass of tv.teacher.classes){
+			for(let student of teacherclass.students){
+				if(el == student.email){
+					id = student.idUser;
+					email = student.email;
+				}
+			}
+		}
+		console.log('studentid',id);
+		
+		//Hämtar data för att kunna sätta ihop ett testresultat
+		var sa = new studentAnswer();
 		sa.getTestQuestionsCount(this.idTest, (total) => {
-			sa.studentCorrectsCount(sv.student.idUser, this.idTest, (correct) => {
-				sa.studentGradePercentage(sv.student.idUser, this.idTest, (grade) => {
+			sa.studentCorrectsCount(id, this.idTest, (correct) => {
+				sa.studentGradePercentage(id, this.idTest, (grade) => {
 					var tr = new TestResultView({
 						name: this.name,
-						student: sv.student.email,
+						student: email,
 						correctAnswers: correct,
 						totalQuestions: total,
 						grade: grade,
 						userType: 2
 					});
-					tr.testresultitem.readTestResultItem(sv.student.idUser,this.idTest, () => {
-						$('#studentview').remove();
+					//Skapar testresultatet
+					tr.testresultitem.readTestResultItem(id,this.idTest, () => {
+						$('#teacherview').remove();
 						tr.display('body');
 					});
 				});
 			});
-		});*/
+		});
 	}
 }
