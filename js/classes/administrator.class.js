@@ -1,7 +1,15 @@
 class Administrator extends Base {
 
+  static defaultPropertyValues() {
+    return {
+
+		}
+  }
+
+
   constructor(propertyValues){
     super(propertyValues);
+
   }
 
 
@@ -13,6 +21,7 @@ class Administrator extends Base {
   readAdminFromDbById(id, callback) {
     this.db.readAdminData([id], (data) => {
       this.email = data[0].email;
+
       console.log(data);
       callback();
     });
@@ -20,12 +29,11 @@ class Administrator extends Base {
 
   readAllUsers(callback) {
     this.db.getAllUsers((data) => {
-      for(var i of data){
-        console.log(i.email);
-      }
+      this.data = data;
       callback();
     });
   }
+
 
 
   static get sqlQueries() {

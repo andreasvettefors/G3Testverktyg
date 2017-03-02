@@ -10,7 +10,7 @@ class Teacher extends Base {
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-		
+
 	}
 
 	readTeacherFromDbById(id, callback) {
