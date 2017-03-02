@@ -32,27 +32,28 @@ TeacherView.addTemplate('default', function(){return `
 		<!--Start row-->
 		<div class="row space-above">
 
-			<div class="col-md-3 hidden-sm">
-			</div>
+			<!--<div class="col-md-3 hidden-sm">-->
+			<!--</div>-->
 
 			<!--Start maincontent-->
-			<div class="col-md-6 col-sm-12">
+			<div class="col-md-12 col-lg-8 col-sm-12">
 				<div id="bodyTemplate" class="panel panel-default panel-style">
 					<div class="panel-body">
-					<div class=" col-md-2 col-centered floatingImgT"><div id="glyphicon-ring"><img class="img-circle" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/10478217_10203259481002322_7308597286536689034_n.jpg?oh=56940860822b619b5d31873bc290a503&oe=594137EC"></div></div>
+					<!--<div class=" col-md-2 col-centered floatingImgT"><div id="glyphicon-ring"><img class="img-circle" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/10478217_10203259481002322_7308597286536689034_n.jpg?oh=56940860822b619b5d31873bc290a503&oe=594137EC"></div></div>-->
 						<!--<h3>${this.teacher.email}</h3>
 						<h4>Lärare</h4>-->
 						<hr class="line">
 						<div id="classes" class="list-group">
+
 							${this.teacher.classes.display()}
 						</div>
 					</div>
 				</div>
 			</div>
 			<!--end maincontent-->
-
+<!--
 			<div class="col-md-3 hidden-sm">
-			</div>
+			</div>-->
 
 		</div>
 	</section>

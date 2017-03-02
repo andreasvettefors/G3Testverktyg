@@ -93,6 +93,11 @@ border-right:1px solid #1e4b61;
 
 }
 
+.wrapperClass .listClasses{
+    margin: 4%;
+    text-align: center;
+}
+
 #teacherview .panel-style{
 background-color: #351919;
     border-color: #351919;
@@ -145,9 +150,9 @@ padding:3px;
 
 .list-group-item{
   background-color: #592929;
-  font-family: verdana !important;
-  color: #FAFFBD !important;
-  border-radius: 20px !important;
+  font-family: verdana;
+  color: #FAFFBD;
+  border-radius: 20px;
   border:none;
 }
 
@@ -183,14 +188,13 @@ padding:3px;
   display: table-cell;
 }
 
-.floatingImgT{
+.floatingStudentImages{
   width:100px;
   height:100px;
   justify-content: center;
   position: absolute;
   z-index: 1;
-  top: -15%;
-  right: 45%;
+  margin-top: -13.5%;
 }
 
 
@@ -202,37 +206,96 @@ padding:3px;
 
 .testWrapper{
    border: 1px solid #ccb692;
+   background-color: #926262;
    margin-bottom: 2%;
+   height:24vh;
 }
 
 .testWrapper .testlist{
     background-color: #15465f;
     width: 20%;
     text-align: center;
-    margin-left: 78%;
+    margin-top: -11%;
+    position: relative;
+    margin-left: 66%;
     margin-bottom: 1%;
     border-radius: 0px !important;
     padding-top: 3px;
     padding-bottom: 3px;
 }
+
+.testWrapper .emailAndPicture{
+    width: 10vw;
+    height: 25vh;
+    margin-top: 18%;
+    margin-left: 2%;
 }
 
-.testWrapper .studentlink{
-    background-color: #37676d;
-    border-radius:0px !important;
+.testWrapper .studentEmail{
+    background: none;
     text-align: center;
     width: 30%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: -30%;
+    display: block;
+    margin-left: -2%;
+    color: #FAFFBD;
+    font-family: 'Lato';
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.testWrapper .studentlink a:hover{
+    background:none;
+    text-align: center;
+    color:blue;
 }
 
 .testWrapper .testsDone{
-  margin-left: 50%;
+     font-family: 'Lato';
+    font-size: 15px;
+    color: #dcbf87;
+    margin-left: 20%;
+    margin-right: -45%;
+    margin-top: 1.5%;
 
+}
+
+.testWrapper .testStatus{
+    position: relative;
+    width: 100%;
+    height: 24vh;
+    margin: 0;
+    padding: 0;
+    border: solid 1px black;
+    //background-color: blue;
+    display: inline-flex;
+}
+
+.testWrapper .testToDos{
+  margin-top: 1.5%;
+  font-family: 'Lato';
+  font-size: 15px;
+  color:#dcbf87;
+  margin-left: 50%;
+}
+
+p{
+  margin: none;
 }
 
 @media screen and (max-width: 376px){
 
+
+.floatingStudentImages{
+      margin-top: -13%;
+      display: none;
+}
+
+.testWrapper .studentEmail{
+    margin-top: -115%;
+    margin-left: 25%;
+    }
   .dropbtn {
     background-color: #0b3042;
     color: white;
@@ -243,6 +306,24 @@ padding:3px;
     height: 70px;
 }
 
+.testWrapper .testsDone{
+  
+  margin-right: -56%;
+  margin-top: 15%;
+  margin-left: -9%;
+}
+
+.testWrapper .testToDos{
+  margin-top: 15%;
+  margin-left: 60%;
+}
+
+.testWrapper .testlist {
+
+    margin-top: -25%;
+    margin-left: 68%;
+
+}
 .dropdown {
     position: relative;
     display: inline-block;

@@ -1,10 +1,22 @@
 <!--shows a a-tag with students-->
 
 Student.addTemplate('default', function(){return `
-<div class="testWrapper"><a data-click="showTestResults" class="list-group-item studentlink">${this.email}</a>
-<p class="testsDone">Gjorda tester</p>
-<div>${this.finishedTests.display()}</div>
-<p class="testToDos">Tester att göra</p>
+<div class="testWrapper">
+
+<div class="testStatus">
+<div class="emailAndPicture">
+	<p class="studentEmail">${this.email}</p>
+
+	<div class=" col-md-2 col-centered floatingStudentImages">
+		<div id="glyphicon-ring">
+		<img class="img-circle" src="https://www.atomix.com.au/media/2015/06/atomix_user31.png"></div>
+		</div>
+	</div>
+<p class="testsDone">Gjorda tester: ${this.isDone}</p>
+<p>${this.finishedTests.display()}</p>
+<p class="testToDos">Tester att göra: </p>
+
+</div>
 <div>${this.testsToDo.display()}</div>
 </div>
 	`});

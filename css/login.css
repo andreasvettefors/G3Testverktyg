@@ -213,7 +213,7 @@ border-top-right-radius: 0;
 }
 
 /*design för stående mobil*/
-@media screen and (max-width: 376px){
+@media screen (max-width: 376px) {
 .container{
   width: 95%;
   display: flex;
@@ -225,6 +225,44 @@ border-top-right-radius: 0;
 
 .headerNewton{
   margin-top: 60px;
+}
+
+.icon{
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+
+.btn-primary:focus{
+  outline: 0;
+}
+
+.btn-primary:active{
+  border: 1px #FAFFBD solid;
+}
+.idBox{
+  padding-left: 55%;
+}
+}
+
+
+@media screen and (max-width: 321px){
+
+#login{
+    width:310px;
+    margin-top:-20%;
+  }
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.canvas>#space{
+  width:100vw;
+}
+
+.headerNewton{
+  font-size: 30px;
 }
 
 .icon{
