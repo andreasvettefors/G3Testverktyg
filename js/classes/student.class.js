@@ -17,12 +17,13 @@ class Student extends Base {
 
 	showTestResults(e) {
 		var el = $(e.target).text();
-		console.log(tv.teacher.classes[this.classes_idClasses].students);
-		for (var item of tv.teacher.classes[this.classes_idClasses].students) {
+		var studentList = tv.teacher.classes[this.classes_idClasses-1].students;
+		for (var item of studentList) {
 			if (el === item.email) {
 				var id = item.idUser;
 			}
 		}
+		console.log(id);
 
 		var finishedTests = new StudentFinishedTestList();
 
