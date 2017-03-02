@@ -8,17 +8,19 @@ StudentView.addTemplate('default', function(){return `
 <div class="container">
 		<nav class="menu">
 			<div class="menu-box">
-			<div class="idBox">
+			<div class="dropdown">
+			<button class="dropbtn"><div class="idBox">
 							<h1 class="h1Student">STUDENT</h1>
 							<h2 class="h2StudentEmail">${this.student.email}</h2>
-						</div>
-						
-							<a href="#" class="navbarTest">Test</a>
-							<a href="#" class="navbarGrade">Betyg</a>
-						<a href="#" class="navbarLogOut">Logga ut</a>
+						</div></button>
+							<div class="dropdown-content">
+			
+							  <a href="#" class="navbarTest">Test</a>
+							  <a href="#" class="navbarGrade">Betyg</a>
+							  <a href="#" class="navbarLogOut">Logga ut</a>
 				
-
-						
+							</div>
+						</div>
 					
 				</div>
 			</div>
