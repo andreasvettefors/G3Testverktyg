@@ -79,10 +79,15 @@ class Base {
     // Append the result to the chosen selector using jQuery
     if(selector){
       var el = $(rendered);
+			if(!el || el.length<1){
+				console.warn('appendTemplateToDom el missing for selector', selector);
+			}
       // append in the DOM
       if($.isReady){ el.appendTo(selector); ShowHideIf.show(el); }
       else { $(()=>{ el.appendTo(selector); ShowHideIf.show(el); }); }
-    }
+    }else{
+			console.warn('appendTemplateToDom selector missing for rendered', rendered);
+		}
   }
 
   upbind(path){ return Binder.upbind.apply(this,[path]); }
