@@ -12,7 +12,8 @@ class Student extends Base {
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-
+		this.testsToDo.readStudentTestFromDbById(this.idUser, () => {});
+		this.finishedTests.readStudentFinishedTestFromDbById(this.idUser,() => {});
 	}
 
 	showTestResults(e) {
@@ -67,9 +68,10 @@ class Student extends Base {
 
 	readStudentFromDbById(id, callback) {
 		this.db.readStudentData([id], (data) => {
-
 			this.idUser = data[0].idUser;
 			this.email = data[0].email;
+			this.testsToDo.readStudentTestFromDbById(data[0].idUser, () => {});
+			this.finishedTests.readStudentFinishedTestFromDbById(data[0].idUser,() => {});
 			callback();
 		});
 	}

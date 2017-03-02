@@ -3,6 +3,6 @@
 Class.addTemplate('default', function(){return `
 		
 		<a data-click="showStudentsInClass" class="list-group-item">${this.name}</a>	
-		<div class="students"></div>
-		<!--${this.students.display()}-->
+		<div class="students ${this.name}">${this.students.display()}</div>
+		
 	`});

@@ -7,7 +7,7 @@ class StudentTestList extends List {
 	readStudentTestFromDbById(id, callback) {
 		this.db.readTests([id], (data) => {
 			this.push.apply(this, data);
-			callback();
+			callback(data);
 		});
 	}
 

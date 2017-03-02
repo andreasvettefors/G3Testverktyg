@@ -15,9 +15,12 @@ class Class extends Base {
 	}
 	
 	showStudentsInClass(e){
-		$('.studentlink').remove();
-		$(e.target).after(this.students.display());
-
+		
+		$('.students').hide();
+		var a = $(e.target).text();
+		console.log('class',a);	
+		$(e.target).after($('.' + a).show());
+		
 	}
 
 

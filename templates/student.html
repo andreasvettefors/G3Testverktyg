@@ -1,7 +1,9 @@
 <!--shows a a-tag with students-->
 
 Student.addTemplate('default', function(){return `
-		
-		<a data-click="showTestResults" class="list-group-item studentlink">${this.email}</a>	
-
+<a data-click="showTestResults" class="list-group-item studentlink">${this.email}</a>
+<p>Gjorda tester</p>
+<div>${this.finishedTests.display()}</div>
+<p>Tester att göra</p>
+<div>${this.testsToDo.display()}</div>
 	`});

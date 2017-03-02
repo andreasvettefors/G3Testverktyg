@@ -32,33 +32,40 @@ class Login extends Base {
 					//Elev sida
 					//window.location.replace("http://facebook.se");
 					var sv = new StudentView();
-					sv.student.finishedTests.readStudentFinishedTestFromDbById(id, () => {
-						sv.student.testsToDo.readStudentTestFromDbById(id, () => {
-							sv.student.readStudentFromDbById(id, () => {
-								$('#login').remove();
-								$('canvas').remove();
-								$('.headerNewton').remove();
-								$('.wrongUserPass').remove();
-								sv.display('body');
-								window.sv = sv;
-							});
-
-						});
-					});
-				} else if (authorisation == 2) {
-					//lärare
-					var tv = new TeacherView();
-					tv.teacher.classes.readClassData(() => {
-						tv.teacher.readTeacherFromDbById(id, () => {
+					sv.student.readStudentFromDbById(id, () => {
+						$(function () {
 							$('#login').remove();
 							$('canvas').remove();
 							$('.headerNewton').remove();
 							$('.wrongUserPass').remove();
-							tv.display('body');
-							window.tv = tv;
+							sv.display('body');
+							window.sv = sv;
 						});
+
 					});
 
+				} else if (authorisation == 2) {
+					//lärare
+					var tv = new TeacherView();
+
+					tv.teacher.readTeacherFromDbById(id, () => {
+						setTimeout(function () {
+							$(function () {
+								$('#login').remove();
+								$('canvas').remove();
+								$('.headerNewton').remove();
+								$('.wrongUserPass').remove();
+
+								tv.display('body');
+								$('.testlist').attr('data-click','teacher');
+								$('.students').hide();
+								
+								window.tv = tv;
+							});
+						}, 1);
+
+					});
+//data-click="test${this.isDone}"
 					console.log('lärare')
 				} else if (authorisation == 3) {
 					//Administratör

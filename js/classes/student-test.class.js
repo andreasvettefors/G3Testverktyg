@@ -10,6 +10,10 @@ class StudentTest extends Base {
 		super(propertyValues);
 
 	}
+	
+	teacher(){
+		console.log('teacherseetest');
+	}
 
 	test0(e) {
 		var tests = new TestFormList();

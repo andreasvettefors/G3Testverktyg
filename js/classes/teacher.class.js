@@ -5,19 +5,18 @@ class Teacher extends Base {
 		return {
 		  ID: 0,
 			email: 'john@teacher.se',
-			classes:new ClassList()
+			classes: new ClassList()
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-		
+		this.classes.readClassData(() => {});
 	}
 
 	readTeacherFromDbById(id, callback) {
 		this.db.readTeacherData([id], (data) => {
 			this.ID = data[0].idUser;
 			this.email = data[0].email;
-			console.log();
 			callback();
 		});
 	}
