@@ -7,6 +7,7 @@ class Class extends Base {
 			name: 'A Great class',
 			students: new StudentList()
 		}
+		
 	}
 	constructor(propertyValues) {
 		super(propertyValues);

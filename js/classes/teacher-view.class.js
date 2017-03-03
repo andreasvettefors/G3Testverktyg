@@ -14,4 +14,6 @@ statistics(){
 	$('#bodyTemplate').remove();
 
 }
+
+
 }

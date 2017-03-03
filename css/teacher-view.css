@@ -205,23 +205,19 @@ padding:3px;
 }
 
 .testWrapper{
-   border: 1px solid #ccb692;
-   background-color: #926262;
+   border: 3px solid #7995a2;
+   background-color: #7995a2;
    margin-bottom: 2%;
    height:24vh;
 }
 
 .testWrapper .testlist{
-    background-color: #15465f;
     width: 20%;
+    margin-left: 68%;
     text-align: center;
-    margin-top: -11%;
-    position: relative;
-    margin-left: 66%;
-    margin-bottom: 1%;
-    border-radius: 0px !important;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    z-index: 1;
+    margin-top: -7%;
+    
 }
 
 .testWrapper .emailAndPicture{
@@ -253,36 +249,56 @@ padding:3px;
 
 .testWrapper .testsDone{
      font-family: 'Lato';
+     background: none;
+     border:none;
     font-size: 15px;
-    color: #dcbf87;
+    color: #FAFFBD;
     margin-left: 20%;
     margin-right: -45%;
     margin-top: 1.5%;
 
 }
 
+.testWrapper .testsDone a:hover{
+text-decoration: none ;
+background-color: none ;
+}
+
 .testWrapper .testStatus{
     position: relative;
     width: 100%;
-    height: 24vh;
+    height: 23vh;
     margin: 0;
     padding: 0;
-    border: solid 1px black;
-    //background-color: blue;
+    border: solid 2px #351919;
     display: inline-flex;
 }
 
 .testWrapper .testToDos{
-  margin-top: 1.5%;
+  border:none;
+   background: none;
   font-family: 'Lato';
+  height: 15vh;
   font-size: 15px;
-  color:#dcbf87;
+  color:#28566d;
   margin-left: 50%;
+}
+
+.glyphiconCircle{
+  font-size: 40px;
+  color:#FAFFBD;
+
+}
+
+.glyphiconTest{
+  font-size: 40px;
+  color:#28566d;
 }
 
 p{
   margin: none;
 }
+
 
 @media screen and (max-width: 376px){
 
@@ -310,12 +326,17 @@ p{
   
   margin-right: -56%;
   margin-top: 15%;
-  margin-left: -9%;
+  margin-left: -11%;
+}
+
+.testWrapper .testToDoP{
+  margin-top: -2%;
 }
 
 .testWrapper .testToDos{
   margin-top: 15%;
-  margin-left: 60%;
+  margin-left: 67%;
+  margin-right: 4%;
 }
 
 .testWrapper .testlist {
@@ -416,6 +437,15 @@ p{
 .floatingImgT {
     right: 40%;
 }
+
+.testWrapper{
+  height:26vh;
+}
+
+.testWrapper .testStatus{
+    height: 25vh;
+  
+}
   
 }
 
@@ -437,9 +467,27 @@ margin-top: 45%;
 
 }
 
+.testWrapper{
+  height:40vh;
+}
 
+.testWrapper .testStatus{
+    height: 38vh;
+  
+}
 
+.testWrapper .studentEmail{
+   
+    margin-bottom: -90%;
+    
+}
 
+.floatingStudentImages{
+      margin-top: -11%;
+}
 
+.testWrapper .emailAndPicture{
+  margin-top: 20%;
+}
 
   }
