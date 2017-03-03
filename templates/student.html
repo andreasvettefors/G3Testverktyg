@@ -12,13 +12,26 @@ Student.addTemplate('default', function(){return `
 		<img class="img-circle" src="https://www.atomix.com.au/media/2015/06/atomix_user31.png"></div>
 		</div>
 	</div>
-
-<button type="button" class="btn testsDone"><p><span class="glyphicon glyphicon-ok-circle glyphiconCircle" aria-hidden="true"></span></p class="testDoneP">Gjorda tester: ${this.isDone}</button>
-	<p>${this.finishedTests.display()}</p>
-<button type="button" class="btn testToDos"><p><span class="glyphicon glyphicon-edit glyphiconTest" aria-hidden="true"></span></p class="testToDoP">Tester att göra: </button>
+<div class="bothButtons">
+	<div class="buttonAndListLeft">
+		<button type="button" class="btn testsDone">
+			<p>
+			<span class="glyphicon glyphicon-ok-circle glyphiconCircle" aria-hidden="true"></span></p class="testDoneP">Gjorda tester: <strong>${this.finishedTests.length}</strong>
+			</button>
+		<div class="collapse">${this.finishedTests.display()}</div>
+	</div>
+	
+	
+	<div class="buttonAndList">
+		<button type="button" id="buttonRight" class="btn testToDos">
+			<p>
+			<span class="glyphicon glyphicon-edit glyphiconTest" aria-hidden="true"></span>
+			</p class="testToDoP">Tester att göra: <strong>${this.testsToDo.length}</strong>
+			</button>
+		<div class="collapse">${this.testsToDo.display()}</div>
+	</div>
 </div>
-	<div class="collapse">${this.testsToDo.display()}</div>
-
+</div>
 <script>
 
 	$(document).ready(function(){
