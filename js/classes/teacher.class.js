@@ -11,6 +11,7 @@ class Teacher extends Base {
 	constructor(propertyValues) {
 		super(propertyValues);
 		this.classes.readClassData(() => {});
+
 	}
 
 	readTeacherFromDbById(id, callback) {
