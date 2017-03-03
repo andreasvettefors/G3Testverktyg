@@ -69,11 +69,11 @@ class Student extends Base {
 
 	collapseTestsDone(e) {
 
-		$(e.target).closest('.testWrapper').find('.collapse').eq(0).collapse('toggle');
+		$(e.target).closest('.testWrapper').find('.collapse').eq(0).slideToggle('linear');
 	}
 
 	collapseTestToDos(e) {
-		$(e.target).closest('.testWrapper').find('.collapse').eq(1).collapse('toggle');
+		$(e.target).closest('.testWrapper').find('.collapse').eq(1).slideToggle('linear');
 	}
 
 
