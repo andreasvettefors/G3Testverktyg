@@ -5,13 +5,13 @@ window.load = `
     bootstrap-tricks.css
 
   css/
-	testForm.css
+	  testForm.css
   	main.css
-	userViews.css
+	  userViews.css
     finishedForm.css
     login.css
-    teacher-view.css
     student-view.css
+    teacher-view.css
     
 
 

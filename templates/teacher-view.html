@@ -1,44 +1,59 @@
 <!--Teacherview -->
 TeacherView.addTemplate('default', function(){return `
 <!--Start container-->
-<div id="wrapper">
-	<nav class="topNav"><a class="logOutButton" href="">Logga ut</a></nav>
-	
-	<nav class="sideNav">
-		<div class="icon"> <div class="glyphicon-ring"><img class="img-circle" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/33550_10150277904375612_99705_n.jpg?oh=51efb472a94b875ab8557e6ccd9757da&oe=5925F103"></div></div>
-		<a class="classButton" href="">Klasser</a>
-		<a class="createTestButton" href="">Skapa test</a>
-	</nav>
 
-	<nav class="topNavClasses"><a class="class1Button" href="">SYSJM2</a></nav>
 <div id="teacherview" class="container">
 
+
+
+<div class="container">
+		<nav class="menu">
+			<div class="menu-box">
+			<div class="dropdown">
+			<button class="dropbtn"><div class="idBox">
+							<h1 class="h1Teacher">LÄRARE</h1>
+							<h2 class="h2TeacherEmail">${this.teacher.email}</h2>
+						</div></button>
+							<div class="dropdown-content">
+			
+							  <a href="#" class="navbarClasses" checked>Klasser</a>
+							  <a href="#" data-click="statistics" class="navbarStatistics">Statistik</a>
+							  <a href="." class="navbarLogOut">Logga ut</a>
+				
+							</div>
+						</div>
+					
+				</div>
+			</div>
+		</nav>
 	<!--Start section-->
 	<section class="student-view">
 
 		<!--Start row-->
 		<div class="row space-above">
 
-			<div class="col-md-3 hidden-sm">
-			</div>
+			<!--<div class="col-md-3 hidden-sm">-->
+			<!--</div>-->
 
 			<!--Start maincontent-->
-			<div class="col-md-6 col-sm-12">
+			<div class="col-md-12 col-lg-8 col-sm-12">
 				<div id="bodyTemplate" class="panel panel-default panel-style">
 					<div class="panel-body">
-						<h3>${this.teacher.email}</h3>
-						<h4>Lärare</h4>
-						<hr>
+					<!--<div class=" col-md-2 col-centered floatingImgT"><div id="glyphicon-ring"><img class="img-circle" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/10478217_10203259481002322_7308597286536689034_n.jpg?oh=56940860822b619b5d31873bc290a503&oe=594137EC"></div></div>-->
+						<!--<h3>${this.teacher.email}</h3>
+						<h4>Lärare</h4>-->
+						<hr class="line">
 						<div id="classes" class="list-group">
+
 							${this.teacher.classes.display()}
 						</div>
 					</div>
 				</div>
 			</div>
 			<!--end maincontent-->
-
+<!--
 			<div class="col-md-3 hidden-sm">
-			</div>
+			</div>-->
 
 		</div>
 	</section>

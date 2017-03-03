@@ -10,6 +10,10 @@ class TeacherView extends Base {
 		super(propertyValues);
 	}
 
+statistics(){
+	$('#bodyTemplate').remove();
+
+}
 
 
 }

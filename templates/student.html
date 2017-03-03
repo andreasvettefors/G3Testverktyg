@@ -3,10 +3,39 @@
 Student.addTemplate('default', function(){return `
 
 <div class="testWrapper">
-	<a data-click="showTestResults" class="list-group-item studentlink">${this.email}</a>
-	<p>Gjorda tester</p>
-	<div>${this.finishedTests.display()}</div>
-	<p>Tester att göra</p>
-	<div>${this.testsToDo.display()}</div>
+<div class="testStatus">
+<div class="emailAndPicture">
+	<p class="studentEmail">${this.email}</p>
+
+	<div class=" col-md-2 col-centered floatingStudentImages">
+		<div id="glyphicon-ring">
+		<img class="img-circle" src="https://www.atomix.com.au/media/2015/06/atomix_user31.png"></div>
+		</div>
+	</div>
+
+<button type="button" class="btn testsDone"><p><span class="glyphicon glyphicon-ok-circle glyphiconCircle" aria-hidden="true"></span></p class="testDoneP">Gjorda tester: ${this.isDone}</button>
+	<p>${this.finishedTests.display()}</p>
+<button type="button" class="btn testToDos"><p><span class="glyphicon glyphicon-edit glyphiconTest" aria-hidden="true"></span></p class="testToDoP">Tester att göra: </button>
 </div>
+	<div class="collapse">${this.testsToDo.display()}</div>
+
+<script>
+
+	$(document).ready(function(){
+    $(".testToDos").click(function(){
+        $(".collapse").collapse('toggle');
+    });
+});
+
+	$(document).ready(function(){
+    $(".testDone").click(function(){
+        $(".collapse").collapse('toggle');
+    });
+});
+
+</script>
+
+</div>
+	`});
+
 `});
