@@ -16,25 +16,34 @@ class TestResultView extends Base {
 	}
 
 	goBack() {
-
+		// Om man är elev och vill gå tillbaka från sitt testresultat
 		if (this.userType == 1) {
-			
-			
-			sv.student.finishedTests.splice(0,sv.student.finishedTests.length);
-			sv.student.testsToDo.splice(0,sv.student.testsToDo.length);
+
+			// Rensar testlistorna
+			sv.student.finishedTests.splice(0, sv.student.finishedTests.length);
+			sv.student.testsToDo.splice(0, sv.student.testsToDo.length);
 
 			$('#testresultview').remove();
-			
-			// Get the list again from 
+
+			// Läser in listorna igen för att få rätt output när man går tillbaka
 			sv.student.testsToDo.readStudentTestFromDbById(sv.student.idUser, () => {
 				sv.student.finishedTests.readStudentFinishedTestFromDbById(sv.student.idUser, () => {
 					sv.display('body');
 				});
 			});
-
+			// Om man är lärare och vill gå tillbaka från sitt testresultat
 		} else if (this.userType == 2) {
+
 			$('#testresultview').remove();
 			tv.display('body');
+			// Ändrar data-click för att komma till rätt metod som lärare
+			$('.testlist').each(function () {
+				var id = $(this).attr('data-id');
+				var attrVal = $(this).attr('data-click');
+				var newAttrVal = `${attrVal}teacher`;
+				$(`[data-id=${id}]`).attr('data-click', newAttrVal);
+			});
+			$('.students').hide();
 		} else if (this.userType == 3) {
 			alert('Admin');
 		} else {

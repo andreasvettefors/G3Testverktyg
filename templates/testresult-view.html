@@ -2,21 +2,21 @@
 TestResultView.addTemplate('default', function(){return `
 <!--Start container-->
 <div id="testresultview" class="container">
-			<!--Start maincontent-->
-				<div class="panel panel-default panel-style">
-					<div class="panel-body">
+	<!--Start maincontent-->
+	<div class="panel panel-default panel-style">
+		<div class="panel-body">
 
-						<h3>Testresultat för ${this.name}</h3>
-						<h4>${this.student}</h4>
-					
-						<hr>
-						<div id="testresult">
-							${this.testresultitem.display()}
-						</div>
-						<p>Du hade <strong>${this.correctAnswers}</strong>/<strong>${this.totalQuestions}</strong> rätta svar vilket ger en procent på <strong>${this.grade}</strong></p>
-							<a data-click="goBack">Tillbaka</a>
-					</div>
-				</div>
+			<h3>Testresultat för ${this.name}</h3>
+			<h4>${this.student}</h4>
+
+			<hr>
+			<div id="testresult">
+				${this.testresultitem.display()}
+			</div>
+			<p>Du hade <strong>${this.correctAnswers}</strong>/<strong>${this.totalQuestions}</strong> rätta svar vilket ger en procent på <strong>${this.grade}</strong></p>
+			<a data-click="goBack">Tillbaka</a>
+		</div>
+	</div>
 </div>
 <!--end container-->
 `});
