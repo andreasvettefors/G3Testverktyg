@@ -56,7 +56,7 @@ class Login extends Base {
 							$('canvas').remove();
 							$('.wrongUserPass').remove();
 							tv.display('body');
-							cl.display('#classes');
+							cl.display('#classes');       
 							window.tv = tv;
 							window.cl = cl;
 						});

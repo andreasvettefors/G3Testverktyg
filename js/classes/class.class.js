@@ -14,9 +14,26 @@ class Class extends Base {
 	
 	showStudentsInClass(e){
 		$('.studentlink').remove();
+        $('.stats').remove();
 		var sl = new StudentList();
+        var stats = new Statistic();
+        var pBar = new StatisticProgressBar();
 		sl.readStudentData(this.idClasses,()=>{
 			$(e.target).after(sl.display());
+            var stats = new Statistic();
+            stats.display('#statistics');
+            this.getStudentGrades(1,1,(element) => {
+                for(var i = 0; i < element.length;i++){
+                    var email = element[i].email;
+                    var grade = element[i].text;
+                    pBar.display('.klassBar');
+                    //document.getElementById("MyElement").className.replace('gradeName'+i);
+                    document.getElementById("MyElement").className = "gradeName"+i;
+                    $('.gradeBar'+i).css('width', grade).attr('aria-valuenow', grade).text(grade);
+                    $('.gradeName'+i).text(email);
+                }
+                 });
+            //$('.gradeBar').css('width', gradePerc+'%').attr('aria-valuenow', gradePerc).text(gradePerc+'%');
 			//sl.display('.students');
                  this.avarageGradeCalculator(1,(element) => {
 				console.log(element+'% medelvärde');
@@ -26,7 +43,6 @@ class Class extends Base {
                          }
                      });
           }); 
-			window.sl = sl;
 		});
 	}
     avarageGradeCalculator(testID,callback){
@@ -57,7 +73,7 @@ class Class extends Base {
     static get sqlQueries(){
 			return {
 				getGrades: `
-    select text from grade,users where user_idUser = idUser && classes_idClasses = ? && test_idTest =?`,
+    select text, email from grade,users where user_idUser = idUser && classes_idClasses = ? && test_idTest =?`,
                 getUndoneTests:`
     select isDone from test_has_users,users where user_idUser=idUser && classes_idClasses =? && test_idTest = ? && isDone=0`
         }
