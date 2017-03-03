@@ -33,16 +33,18 @@ class Login extends Base {
 					//window.location.replace("http://facebook.se");
 					var sv = new StudentView();
 					sv.student.readStudentFromDbById(id, () => {
-						$(function () {
-							$('#login').remove();
-							$('canvas').remove();
-							$('.headerNewton').remove();
-							$('.wrongUserPass').remove();
-							sv.display('body');
-							window.sv = sv;
-						});
+						setTimeout(function () {
+							$(function () {
+								$('#login').remove();
+								$('canvas').remove();
+								$('.headerNewton').remove();
+								$('.wrongUserPass').remove();
+								sv.display('body');
+								window.sv = sv;
+							});
 
-					});
+						});
+					}, 1);
 
 				} else if (authorisation == 2) {
 					//lärare
@@ -55,15 +57,25 @@ class Login extends Base {
 								$('.headerNewton').remove();
 								$('.wrongUserPass').remove();
 								tv.display('body');
-								$('.testlist').attr('data-click','teacher');
+
+								// För att ändra attributet data-click så det inte 
+								// använder sig av samma metod som när man trycker 
+								// på testet i studentview	
+								$('.testlist').each(function () {
+									var id = $(this).attr('data-id');
+									var attrVal = $(this).attr('data-click');
+									var newAttrVal = `${attrVal}teacher`;
+									$(`[data-id=${id}]`).attr('data-click', newAttrVal);
+								});
+
 								$('.students').hide();
-								
+
 								window.tv = tv;
 							});
 						}, 1);
 
 					});
-//data-click="test${this.isDone}"
+					//data-click="test${this.isDone}"
 					console.log('lärare')
 				} else if (authorisation == 3) {
 					//Administratör

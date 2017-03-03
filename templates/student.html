@@ -3,20 +3,22 @@
 Student.addTemplate('default', function(){return `
 
 <div class="testWrapper">
-<div class="testStatus">
-<div class="emailAndPicture">
-	<p class="studentEmail">${this.email}</p>
+	<div class="testStatus">
+		<div class="emailAndPicture">
+			<p class="studentEmail">${this.email}</p>
 
-	<div class=" col-md-2 col-centered floatingStudentImages">
-		<div id="glyphicon-ring">
-		<img class="img-circle" src="https://www.atomix.com.au/media/2015/06/atomix_user31.png"></div>
+			<div class=" col-md-2 col-centered floatingStudentImages">
+				<div id="glyphicon-ring">
+					<img class="img-circle" src="https://www.atomix.com.au/media/2015/06/atomix_user31.png"></div>
+			</div>
 		</div>
+
 	</div>
 <div class="bothButtons">
 	<div class="buttonAndListLeft">
 		<button type="button" class="btn testsDone">
 			<p>
-			<span class="glyphicon glyphicon-ok-circle glyphiconCircle" aria-hidden="true"></span></p class="testDoneP">Gjorda tester: <strong>${this.finishedTests.length}</strong>
+			<span class="glyphicon glyphicon-ok-circle glyphiconCircle" aria-hidden="true"></span></p class="testDoneP"  data-click="collapseTestsDone">Gjorda tester: <strong>${this.finishedTests.length}</strong>
 			</button>
 		<div class="collapse">${this.finishedTests.display()}</div>
 	</div>
@@ -26,27 +28,12 @@ Student.addTemplate('default', function(){return `
 		<button type="button" id="buttonRight" class="btn testToDos">
 			<p>
 			<span class="glyphicon glyphicon-edit glyphiconTest" aria-hidden="true"></span>
-			</p class="testToDoP">Tester att göra: <strong>${this.testsToDo.length}</strong>
+			</p class="testToDoP" data-click="collapseTestToDos" >Tester att göra: <strong>${this.testsToDo.length}</strong>
 			</button>
 		<div class="collapse">${this.testsToDo.display()}</div>
 	</div>
 </div>
 </div>
-<script>
 
-	$(document).ready(function(){
-    $(".testToDos").click(function(){
-        $(".collapse").collapse('toggle');
-    });
-});
 
-	$(document).ready(function(){
-    $(".testDone").click(function(){
-        $(".collapse").collapse('toggle');
-    });
-});
-
-</script>
-
-</div>
-	`});
+`});

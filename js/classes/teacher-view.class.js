@@ -10,10 +10,11 @@ class TeacherView extends Base {
 		super(propertyValues);
 	}
 
-statistics(){
-	$('#bodyTemplate').remove();
+	statistics() {
+		$('#bodyTemplate').hide();
+	}
 
-}
-
-
+	classes() {
+		$('#bodyTemplate').show();
+	}
 }
