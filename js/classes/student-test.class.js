@@ -74,7 +74,7 @@ class StudentTest extends Base {
 	test1teacher(e){
 		console.log('idTest', this.idTest);
 		console.log('name', this.name);
-		var el = $(e.target).closest('.testWrapper').find('.studentlink').text();
+		var el = $(e.target).closest('.testWrapper').find('.studentEmail').text();
 		
 		var email;
 		var id;

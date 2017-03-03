@@ -65,6 +65,16 @@ class Student extends Base {
 		});
 
 	}
+	
+collapseTestToDos(e){
+	console.log($(e.target).next('.collapse'));
+	$(e.target).next('.collapse').collapse('toggle');  
+}
+	
+collapseTestsDone(e){	
+				console.log($(e.target).next('.collapse'));
+				$(e.target).next('.collapse').collapse('toggle');
+}
 
 	readStudentFromDbById(id, callback) {
 		this.db.readStudentData([id], (data) => {
