@@ -1,4 +1,4 @@
-class TeacherView extends Base {
+class AdministratorView extends Base {
 
 	static defaultPropertyValues() {
 		return {
