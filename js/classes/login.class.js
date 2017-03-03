@@ -78,8 +78,20 @@ class Login extends Base {
 					//data-click="test${this.isDone}"
 					console.log('lärare')
 				} else if (authorisation == 3) {
-					//Administratör
+
 					console.log('Administratör');
+					var admin = new Administrator();
+					admin.readAdminFromDbById(id,()=>{
+						admin.readAllUsers(()=>{
+							$('#login').remove();
+							$('canvas').remove();
+							$('.headerNewton').remove();
+							$('.wrongUserPass').remove();
+							admin.display('body');
+						});
+					});
+
+
 				}
 
 
