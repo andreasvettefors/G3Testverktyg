@@ -212,11 +212,14 @@ padding:3px;
 }
 
 .testWrapper .testlist{
-    width: 20%;
-    margin-left: 68%;
+    
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #0b3042;
+    border-radius: 0px !important;
     text-align: center;
     z-index: 1;
-    margin-top: -7%;
+    margin-top: 20%;
     
 }
 
@@ -255,7 +258,7 @@ padding:3px;
     color: #FAFFBD;
     margin-left: 20%;
     margin-right: -45%;
-    margin-top: 1.5%;
+    height: 15vh;
 
 }
 
@@ -281,7 +284,6 @@ background-color: none ;
   height: 15vh;
   font-size: 15px;
   color:#28566d;
-  margin-left: 50%;
 }
 
 .glyphiconCircle{
@@ -299,6 +301,49 @@ p{
   margin: none;
 }
 
+.testToDos:hover{
+color:#592929;
+outline: 0;
+}
+
+.btn:active {
+  outline: none;
+}
+
+.testsDone:hover{
+color:#592929;
+outline: 0;
+}
+
+.parent-container{
+      display: flex;
+    justify-content: center;
+}
+
+.yourClasses{
+  font-family: 'Lato';
+  font-size: 20px;
+  color:#dcbf87;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.buttonAndList{
+  width: 150px;
+  height: 100vh;
+  margin-left: 15%;
+}
+
+.buttonAndListLeft{
+  width: 150px;
+  height: 100vh;
+ margin-left: 15%;
+}
+
+.bothButtons{
+  width: 100%;
+  display: inherit;
+}
 
 @media screen and (max-width: 376px){
 
@@ -306,6 +351,10 @@ p{
 .floatingStudentImages{
       margin-top: -13%;
       display: none;
+}
+
+.yourClasses{
+  margin-top: 2%;
 }
 
 .testWrapper .studentEmail{
@@ -335,14 +384,11 @@ p{
 
 .testWrapper .testToDos{
   margin-top: 15%;
-  margin-left: 67%;
   margin-right: 4%;
 }
 
 .testWrapper .testlist {
-
-    margin-top: -25%;
-    margin-left: 68%;
+  margin-top: -5%;
 
 }
 .dropdown {
@@ -445,6 +491,17 @@ p{
 .testWrapper .testStatus{
     height: 25vh;
   
+}
+.panel-body {
+   
+    margin-top: -5%;
+}
+.testWrapper .testlist {
+    margin-top: -5%;
+}
+
+.buttonAndList{
+  margin-left: 55%;
 }
   
 }

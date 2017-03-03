@@ -5,6 +5,7 @@ window.load = `
     bootstrap-tricks.css
 
   css/
+    reset.css
 	  testForm.css
   	main.css
 	  userViews.css

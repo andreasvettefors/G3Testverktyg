@@ -13,17 +13,26 @@ Student.addTemplate('default', function(){return `
 			</div>
 		</div>
 
-		<button  type="button" class="btn testsDone">
-			<span class="glyphicon glyphicon-ok-circle glyphiconCircle" aria-hidden="true"></span>
-				<p class="testDoneP" data-click="collapseTestsDone">Gjorda tester:</p>
-		</button>
+	</div>
+<div class="bothButtons">
+	<div class="buttonAndListLeft">
+		<button type="button" class="btn testsDone">
+			<p>
+			<span class="glyphicon glyphicon-ok-circle glyphiconCircle" aria-hidden="true"></span></p class="testDoneP"  data-click="collapseTestsDone">Gjorda tester: <strong>${this.finishedTests.length}</strong>
+			</button>
 		<div class="collapse">${this.finishedTests.display()}</div>
-
-		<button data-click="collapseTestToDos" type="button" class="btn testToDos"><span class="glyphicon glyphicon-edit glyphiconTest" aria-hidden="true"></span>
-			<p class=testDoneP>Tester att göra: </p>
-		</button>
+	</div>
+	
+	
+	<div class="buttonAndList">
+		<button type="button" id="buttonRight" class="btn testToDos">
+			<p>
+			<span class="glyphicon glyphicon-edit glyphiconTest" aria-hidden="true"></span>
+			</p class="testToDoP" data-click="collapseTestToDos" >Tester att göra: <strong>${this.testsToDo.length}</strong>
+			</button>
 		<div class="collapse">${this.testsToDo.display()}</div>
 	</div>
+</div>
 </div>
 
 
