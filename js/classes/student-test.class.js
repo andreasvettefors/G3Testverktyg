@@ -8,7 +8,6 @@ class StudentTest extends Base {
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-
 	}
 	
 	teacher(){			
