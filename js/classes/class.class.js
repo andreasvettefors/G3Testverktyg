@@ -17,10 +17,9 @@ class Class extends Base {
 	
 	showStudentsInClass(e){
 		
-		$('.students').hide();
 		var a = $(e.target).text();
 		console.log('class',a);	
-		$(e.target).after($('.' + a).show());
+		$(e.target).after($('.' + a).slideToggle("linear"));
 		
 	}
 

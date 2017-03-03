@@ -3,9 +3,6 @@ TeacherView.addTemplate('default', function(){return `
 <!--Start container-->
 
 <div id="teacherview" class="container">
-
-
-
 <div class="container">
 		<nav class="menu">
 			<div class="menu-box">
@@ -24,16 +21,15 @@ TeacherView.addTemplate('default', function(){return `
 						</div>
 					
 				</div>
-			</div>
+		
 		</nav>
+		</div>
 	<!--Start section-->
 	<section class="student-view">
 
 		<!--Start row-->
 		<div class="row space-above parent-container">
 
-			<div class="col-lg-2 hidden-md hidden-sm">
-			</div>-->
 
 			<!--Start maincontent-->
 			<div class="col-xs-12 col-md-9 col-lg-8 main-content">
@@ -45,7 +41,6 @@ TeacherView.addTemplate('default', function(){return `
 						<h4>Lärare</h4>-->
 						<hr class="line">
 						<div id="classes" class="list-group">
-
 							${this.teacher.classes.display()}
 						</div>
 					</div>
@@ -53,14 +48,11 @@ TeacherView.addTemplate('default', function(){return `
 			</div>
 			<!--end maincontent-->
 
-			<div class="col-lg-2 hidden-md hidden-sm">
-			</div>
-
 		</div>
 	</section>
 	<!--end content-->
 
 </div>
-</div>
+
 <!--end container-->
 `});
