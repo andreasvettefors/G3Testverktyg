@@ -3,20 +3,23 @@ TeacherView.addTemplate('default', function(){return `
 <!--Start container-->
 
 <div id="teacherview" class="container">
+
 <div class="container">
 		<nav class="menu">
-			<div class="menu-box">
+			<div class="menu-box" >
 			<div class="dropdown">
-			<button class="dropbtn"><div class="idBox">
+			<a class="dropbtn" data-click="showDropDownMenu"><div class="idBox">
 							<h1 class="h1Teacher">LÄRARE</h1>
 							<h2 class="h2TeacherEmail">${this.teacher.email}</h2>
-						</div></button>
+							<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+						</div></a>
 							<div class="dropdown-content">
 			
 							  <a href="#" data-click="classes" class="navbarClasses" checked>Klasser</a>
 							  <a href="#" data-click="statistics" class="navbarStatistics">Statistik</a>
 							  <a href="." class="navbarLogOut">Logga ut</a>
-				
+							
+
 							</div>
 						</div>
 					
