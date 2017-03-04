@@ -3,6 +3,17 @@
 
 }
 
-#testresultview p,#testresultview h3,#testresultview h4{
+#testview p,#testview h3,#testview h4{
   color: #dcbf87;
+}
+
+#testview hr {
+  border-color:darkkhaki;
+}
+
+.container .panel-body{
+  border: 1px #351919 solid;
+}
+#testview a{
+  background-color: #ccae7c;
 }
