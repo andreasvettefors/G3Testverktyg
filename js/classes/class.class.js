@@ -14,37 +14,57 @@ class Class extends Base {
 	
 	showStudentsInClass(e){
 		$('.studentlink').remove();
-        $('.stats').remove();
+        $('.statsGroup').remove();
 		var sl = new StudentList();
         var stats = new Statistic();
-        var pBar = new StatisticProgressBar();
 		sl.readStudentData(this.idClasses,()=>{
-			$(e.target).after(sl.display());
-            var stats = new Statistic();
-            stats.display('#statistics');
-            this.getStudentGrades(1,1,(element) => {
-                for(var i = 0; i < element.length;i++){
-                    var email = element[i].email;
-                    var grade = element[i].text;
-                    pBar.display('.klassBar');
-                    //document.getElementById("MyElement").className.replace('gradeName'+i);
-                    document.getElementById("MyElement").className = "gradeName"+i;
-                    $('.gradeBar'+i).css('width', grade).attr('aria-valuenow', grade).text(grade);
-                    $('.gradeName'+i).text(email);
-                }
-                 });
-            //$('.gradeBar').css('width', gradePerc+'%').attr('aria-valuenow', gradePerc).text(gradePerc+'%');
-			//sl.display('.students');
-                 this.avarageGradeCalculator(1,(element) => {
-				console.log(element+'% medelvärde');
-                     this.getUndoneTests(this.idClasses,1,(element1) => {
-                         if(element1>0){
-                         console.log(element1+' has not finnished the test yet');
-                         }
-                     });
-          }); 
+			$(e.target).after(sl.display());   
+            this.getStats(1);
 		});
 	}
+    
+    getStats(testID){
+        var pBar = new StatisticProgressBar();
+                    this.getStudentGrades(this.idClasses,testID,(element) => {
+                var stats = new Statistic();
+                stats.display('#statistics');
+                var i = 0;
+                for(i;i < element.length;i++){
+                    var email = element[i].email;
+                    var grade = element[i].text;;
+                    pBar.display('.studentBar');
+                    $('#MyElement').attr('id', 'gradeName'+i);
+                     $('#MyElement2').attr('id', 'gradeBar'+i);
+                    $('#gradeBar'+i).css('width', grade).attr('aria-valuenow', grade).text(grade);
+                    var gradeNumber = parseInt(grade);
+                    if(gradeNumber>59){
+                        $('#gradeBar'+i).addClass('progress-bar-success');
+                    }
+                     else if(gradeNumber>29){
+                        $('#gradeBar'+i).addClass('progress-bar-warning');
+                    }else{
+                        $('#gradeBar'+i).addClass('progress-bar-danger');
+                    }                        
+                    $('#gradeName'+i).text(email);
+                }
+                this.getUndoneTests(this.idClasses,testID,(element) => {
+                    for(var j = 0; j < element.length;j++){
+                        pBar.display('.studentBar');
+                        $('#MyElement').attr('id', 'gradeName'+i);
+                        $('#MyElement2').attr('id', 'notDone'+i);
+                        $('#gradeName'+i).text(element[j].email);
+                        $('#notDone'+i).text('Test ej genomfört än');
+                        $('#notDone'+i).addClass('progress-bar-info');
+                        }
+                    });
+                this.avarageGradeCalculator(testID,(element) => {
+                     pBar.display('.klassBar');
+                $('#MyElement2').attr('id', 'gradeBar');
+                $('#gradeBar').css('width', element+'%').attr('aria-valuenow', element).text(element+'%');
+                    });
+                
+                 });
+    }
     avarageGradeCalculator(testID,callback){
         this.getStudentGrades(this.idClasses,testID,(element) => {
                 var avgGrade=0;
@@ -64,10 +84,7 @@ class Class extends Base {
     getUndoneTests(classID,testID, callback) {
 			var a = 0;
 			this.db.getUndoneTests([classID,testID], (data) => {
-				data.forEach(function (element) {
-					a++;
-				});
-				return callback(a);
+				return callback(data);
 			});
 		};
     static get sqlQueries(){
@@ -75,7 +92,7 @@ class Class extends Base {
 				getGrades: `
     select text, email from grade,users where user_idUser = idUser && classes_idClasses = ? && test_idTest =?`,
                 getUndoneTests:`
-    select isDone from test_has_users,users where user_idUser=idUser && classes_idClasses =? && test_idTest = ? && isDone=0`
+    select email from test_has_users,users where user_idUser=idUser && classes_idClasses =? && test_idTest = ? && isDone=0`
         }
     }
 }
