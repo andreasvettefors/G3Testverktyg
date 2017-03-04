@@ -4,7 +4,8 @@ class TestResultItem extends Base {
 
 		return {
 			question: 'Hur?',
-			answer: 'Perfekt!'
+			answer: 'Perfekt!',
+			isCorrect: 0
 		}
 	}
 	constructor(propertyValues) {

@@ -1,13 +1,7 @@
 /*design för desktop*/ 
 body{
   margin: 0;
-  height: 100vh;
-  width:100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  position: relative;
   background: -webkit-linear-gradient( #000000, #7b3939);
   background:linear-gradient( #000000, #7b3939);
 
@@ -53,7 +47,7 @@ body{
 
 .icon{
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 10px;
 }
 
@@ -166,10 +160,11 @@ border-top-right-radius: 0;
 
 .headerNewton{
   text-align: center;
-  font-family: 'Sanchez' ;
+  font-family: 'Vidaloka' ;
+  text-transform: uppercase;
   color:#d4c09f;
-  font-size:60px;
-  letter-spacing: 1px;
+  font-size:40px;
+  letter-spacing: 6px;
   margin-top: 110px;
 }
 
@@ -218,7 +213,7 @@ border-top-right-radius: 0;
 }
 
 /*design för stående mobil*/
-@media screen and (max-width: 376px){
+@media screen (max-width: 376px) {
 .container{
   width: 95%;
   display: flex;
@@ -230,6 +225,44 @@ border-top-right-radius: 0;
 
 .headerNewton{
   margin-top: 60px;
+}
+
+.icon{
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+
+.btn-primary:focus{
+  outline: 0;
+}
+
+.btn-primary:active{
+  border: 1px #FAFFBD solid;
+}
+.idBox{
+  padding-left: 55%;
+}
+}
+
+
+@media screen and (max-width: 321px){
+
+#login{
+    width:310px;
+    margin-top:-20%;
+  }
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.canvas>#space{
+  width:100vw;
+}
+
+.headerNewton{
+  font-size: 30px;
 }
 
 .icon{
@@ -256,6 +289,7 @@ border-top-right-radius: 0;
   .container{
     flex-direction: column;
     display: flex;
+    margin-top: -90px;
     }
 
 
@@ -274,24 +308,8 @@ border-top-right-radius: 0;
   }
 
   .headerNewton{
-    margin-top: 0px;
+    margin-top: 10px;
     font-size:40px;
-  }
-
-  .icon{
-    margin-bottom: 10px;
-    margin-top: -70px;
-  }
-
-  .glyphicon-ring {
-    width: 60px;
-    height: 60px;
-
-  }
-
-  #glyphicon{
-    margin-top: 6px;
-    
   }
 
   .label1{

@@ -32,9 +32,9 @@ class Login extends Base {
 					//Elev sida
 					//window.location.replace("http://facebook.se");
 					var sv = new StudentView();
-					sv.student.finishedTests.readStudentFinishedTestFromDbById(id, () => {
-						sv.student.testsToDo.readStudentTestFromDbById(id, () => {
-							sv.student.readStudentFromDbById(id, () => {
+					sv.student.readStudentFromDbById(id, () => {
+						setTimeout(function () {
+							$(function () {
 								$('#login').remove();
 								$('canvas').remove();
 								$('.headerNewton').remove();
@@ -44,28 +44,57 @@ class Login extends Base {
 							});
 
 						});
-					});
+					}, 1);
+
 				} else if (authorisation == 2) {
 					//lärare
 					var tv = new TeacherView();
-					var cl = new ClassList();
+					tv.teacher.readTeacherFromDbById(id, () => {
+						setTimeout(function () {
+							$(function () {
+								$('#login').remove();
+								$('canvas').remove();
+								$('.headerNewton').remove();
+								$('.wrongUserPass').remove();
+								tv.display('body');
 
-					cl.readClassData(() => {
-						tv.teacher.readTeacherFromDbById(id, () => {
+								// För att ändra attributet data-click så det inte 
+								// använder sig av samma metod som när man trycker 
+								// på testet i studentview	
+								$('.testlist').each(function () {
+									var id = $(this).attr('data-id');
+									var attrVal = $(this).attr('data-click');
+									var newAttrVal = `${attrVal}teacher`;
+									$(`[data-id=${id}]`).attr('data-click', newAttrVal);
+								});
+
+								$('.students').hide();
+
+								window.tv = tv;
+							});
+						}, 1);
+
+					});
+					//data-click="test${this.isDone}"
+					console.log('lärare')
+				} else if (authorisation == 3) {
+
+					console.log('Administratör');
+					var admin = new Administrator();
+					admin.readAdminFromDbById(id,()=>{
+						admin.readAllUsers(()=>{
 							$('#login').remove();
 							$('canvas').remove();
+							$('.headerNewton').remove();
 							$('.wrongUserPass').remove();
-							tv.display('body');
-							cl.display('#classes');       
-							window.tv = tv;
-							window.cl = cl;
+
+							admin.display('body');
+
+
 						});
 					});
 
-					console.log('lärare')
-				} else if (authorisation == 3) {
-					//Administratör
-					console.log('Administratör');
+
 				}
 
 

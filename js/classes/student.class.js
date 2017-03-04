@@ -5,22 +5,26 @@ class Student extends Base {
 		return {
 			idUser: 0,
 			email: 'john@student.se',
+			classes_idClasses: 0,
 			testsToDo: new StudentTestList(),
 			finishedTests: new StudentFinishedTestList()
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-
+		this.testsToDo.readStudentTestFromDbById(this.idUser, () => {});
+		this.finishedTests.readStudentFinishedTestFromDbById(this.idUser, () => {});
 	}
 
 	showTestResults(e) {
 		var el = $(e.target).text();
-		for (var item of sl) {
+		var studentList = tv.teacher.classes[this.classes_idClasses - 1].students;
+		for (var item of studentList) {
 			if (el === item.email) {
 				var id = item.idUser;
 			}
 		}
+		console.log(id);
 
 		var finishedTests = new StudentFinishedTestList();
 
@@ -28,7 +32,7 @@ class Student extends Base {
 
 		finishedTests.readStudentFinishedTestFromDbById(id, () => {
 			if (finishedTests === undefined || finishedTests.length == 0) {
-					return;
+				return;
 			}
 			// Loop through finishedtest to find id and 
 			// name of the test the teacher want to look at
@@ -51,7 +55,7 @@ class Student extends Base {
 							grade: grade,
 							userType: 2
 						});
-						tr.testresultitem.readTestResultItem(id,idTest, () => {
+						tr.testresultitem.readTestResultItem(id, idTest, () => {
 							$('#teacherview').remove();
 							tr.display('body');
 						});
@@ -62,11 +66,23 @@ class Student extends Base {
 
 	}
 
+
+	collapseTestsDone(e) {
+
+		$(e.target).closest('.testWrapper').find('.collapse').eq(0).slideToggle('linear');
+	}
+
+	collapseTestToDos(e) {
+		$(e.target).closest('.testWrapper').find('.collapse').eq(1).slideToggle('linear');
+	}
+
+
 	readStudentFromDbById(id, callback) {
 		this.db.readStudentData([id], (data) => {
-
 			this.idUser = data[0].idUser;
 			this.email = data[0].email;
+			this.testsToDo.readStudentTestFromDbById(data[0].idUser, () => {});
+			this.finishedTests.readStudentFinishedTestFromDbById(data[0].idUser, () => {});
 			callback();
 		});
 	}

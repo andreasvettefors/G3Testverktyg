@@ -11,10 +11,11 @@ class TestResultItemList extends List {
 		});
 	}
 
+
 		static get sqlQueries() {
 		return {
 			readTestResultItem: `
-       SELECT question,answer FROM testresults WHERE user_idUser = ? AND test_idTest = ? 
+       SELECT question,answer,isCorrect FROM testresults WHERE user_idUser = ? AND test_idTest = ? 
       `
 		}
 	}

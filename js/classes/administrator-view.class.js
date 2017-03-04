@@ -1,8 +1,8 @@
-class StudentView extends Base {
+class AdministratorView extends Base {
 
 	static defaultPropertyValues() {
 		return {
-			student: new Student()
+			admin: new Administrator()
 		}
 	}
 	constructor(propertyValues) {

@@ -1,0 +1,314 @@
+
+.menu{
+
+  right:0;
+  left:0;
+  top:0;
+  background-color: #0b3042;
+  text-decoration:none;
+  position: fixed;
+  display:flex;
+  z-index:999;
+}
+
+
+.menu a{
+  padding:25px;
+  text-decoration: none;
+  font-family: 'Lato' !important;
+  color:#dcbf87 !important;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-right: -5px;
+  border-left:1px solid #1e4b61;
+ 
+}
+
+.menu-box{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height:70px;
+}
+
+.menu a:hover{
+  background-color: #210f0f;
+  color:#9e6262 !important;
+  margin:none !important;
+  border: none !important;
+  padding:none !important;
+  text-decoration: none !important;
+}
+
+.menu a:last-child{
+ border-left: none;
+ margin-left: 10%;
+
+}
+
+.navbarGrade { 
+border-right:1px solid #1e4b61;
+}
+
+
+.dropbtn{
+  background-color:#0b3042 !important; 
+  cursor:auto;
+  height:20px;
+  border:none;
+  margin-left: -300px !important;
+}
+
+.dropdown-content {
+    display: inline-block;
+    position: absolute;
+    background-color: #0b3042;
+    min-width: 100vw;
+    z-index: 1;
+}
+
+.h1Student{
+  font-family: 'Vidaloka', serif;
+  letter-spacing: 3px;
+  color:#dcbf87;
+  margin-top: 5px;
+  font-size: 30px;
+  text-align: left; 
+}
+
+.h2StudentEmail{
+  font-family: 'Lato';
+  color:#985050;
+  text-align: left;
+  font-size: 15px;
+  margin-top: -10px;
+}
+
+
+#contentBox{
+  margin-top: 150px;
+  background-color: #985050;
+  position: relative;
+
+}
+
+#studentview .panel-style{
+  background-color: #351919;
+  border-color: #351919;
+}
+
+.line{
+  border:1px #985050 solid !important;
+}
+
+.student-view-test-info{
+  font-family: 'Lato' !important;
+  color:#dcbf87 !important;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.icon{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.img-circle{
+border-radius: 50%;
+width:100%;
+padding:3px;
+}
+
+#glyphicon-ring {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #ccb692;
+   
+}
+
+.list-group-item{
+  background-color: #592929;
+  font-family: verdana !important;
+  color: #FAFFBD !important;
+  border-radius: 20px !important;
+  border:none;
+}
+
+.list-group-item:hover{
+ background-color: #1f0e0e !important;
+ border: none !important;
+ cursor: pointer;
+ 
+}
+.mainContent{
+  align-content: center;
+
+}
+
+#glyphicon{
+ 
+  color:#ccb692;
+  border-radius: 5px;
+  display:block;
+  text-align:center;
+  font-size: 30px;
+  padding: 0;
+  vertical-align:middle;
+
+}
+
+/*för ikon utan bakgrund*/
+
+#glyphicon-ring .glyphicon-bordered {
+
+  font-size: 50px;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.floatingImg{
+  width:100px;
+  height:100px;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: -30%;
+  right: 45%;
+}
+
+
+.img-circle{
+    background-size: 50% 50%;
+    border-radius: 50%;
+
+}
+
+
+@media screen and (max-width: 376px){
+
+  .dropbtn {
+    background-color: #0b3042;
+    color: white;
+    padding: 0px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 70px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0b3042;
+    min-width: 100vw;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #3e1e1e;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:  #0b3042;
+  outline: 0;
+}
+
+.menu a:last-child{
+ border-left: none;
+ margin-left: 0;
+
+}
+
+  .menu{
+
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center; 
+  }
+
+  .menu a{
+    border-left: none;
+    border-bottom: 1px solid #1e4b61;
+    border-top:  1px solid #1e4b61;
+    border-width: 100%;
+
+  }
+
+  .menu a:last-child{
+    border-bottom: none;
+  }
+
+  .menu-box{
+    padding: 0;
+  margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction:column;
+    height: auto;
+    width:100vw;
+  }
+
+.idBox{
+  text-align: center;
+  padding-left: 45%;
+}
+.h1Student{
+  text-align: center; 
+  
+}
+
+
+.navbarGrade{
+  border-right:none;
+}
+.h2StudentEmail{
+
+  text-align: center;
+  
+   
+}
+
+.floatingImg {
+    right: 40%;
+}
+  
+}
+
+@media (min-width: 377px) and (max-width: 668px){
+
+#contentBox{
+  margin-top: 260px;
+ 
+
+}
+
+.dropdown:hover .dropbtn {
+  background-color:  #0b3042;
+  outline: 0;
+}
+
+
+
+
+
+  }

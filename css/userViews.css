@@ -13,30 +13,30 @@ body{
   background: linear-gradient( #000000, #7b3939);
   z-index: 1;
 }
-#studentview,#teacherview,#testresultview{
+#studentview,#testresultview{
 	font-family:'Verdana';
 }
 
-#studentview .panel-style ,#teacherview .panel-style,#testresultview .panel-style{
+#studentview .panel-style ,#testresultview .panel-style{
 	background-color: white;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-style: 1px solid white;
 	border-radius:0;
 }
 
-#studentview h3,h4 ,#teacherview h3,h4 ,#testresultview h3,h4{
+#studentview h3,h4 ,h4 ,#testresultview h3,h4{
 	font-family: 'Vidaloka', serif;
   color:#b5bbca;
 }
 
-#studentview hr,#teacherview hr,#testresultview hr{
+#studentview hr,#testresultview hr{
 	border-color: #ff6a20;
 }
 #studentview  .student-view-test-info{
 	color:#b5bbca;
 }
 
-#studentview a:hover, #teacherview a:hover{
+#studentview a:hover{
   color:#ff6a20 ;
   border: 1px solid #ff6a20 ;
   text-decoration: none;
@@ -58,10 +58,18 @@ body{
 }
 
 
-#studentview .list-group-item, #teacherview .list-group-item{
+#studentview .list-group-item{
 	margin-top: 2%;
 }
 
 .studentlink{
 	margin-left:20%;
+}
+
+.isCorrect0{
+	color: red;
+}
+
+.isCorrect1{
+	color:green;
 }
