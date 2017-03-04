@@ -1,7 +1,8 @@
 #testview{
   background-color: #351919 ;
+
 }
 
-p{
+#testresultview p,#testresultview h3,#testresultview h4{
   color: #dcbf87;
 }
