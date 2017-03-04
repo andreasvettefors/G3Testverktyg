@@ -30,7 +30,8 @@
 }
 
 
-.header1{
+
+#testForm .header1{
   font-family: 'Vidaloka', serif;
   font-size: 70px;
   color:#dcbf87 !important;
@@ -39,7 +40,7 @@
 }
 
 .nameOfTest{
-  margin-top: 110px;
+  margin-top: 120px;
   margin-left: 5px;
   margin-bottom: 0px;
   font-family: Verdana;
@@ -173,7 +174,7 @@ input[type='radio']:focus {
 }
 
 #error-message{
-  color:red;
+  color:#c19191;
   font-family: verdana;
   font-size: 14px;
 }
