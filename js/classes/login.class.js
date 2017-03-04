@@ -87,7 +87,10 @@ class Login extends Base {
 							$('canvas').remove();
 							$('.headerNewton').remove();
 							$('.wrongUserPass').remove();
+
 							admin.display('body');
+
+
 						});
 					});
 

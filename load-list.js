@@ -20,6 +20,7 @@ window.load = `
     diffDom.js
 
 
+
   js/classes/base-and-utility-classes/
     jQuery-dom-events.class.js
     generic-dom-event-handler.class.js
@@ -66,6 +67,9 @@ window.load = `
 		testresult-item.class.js
 		testresult-item-list.class.js
 
+        statistic.class.js
+        statisticProgressBar.class.js
+
 
 templates/
     bootstrap-size.html
@@ -86,8 +90,10 @@ templates/
 		testresult-item.html
 		class.html
 		student.html
+    statistic.html
+    statisticProgressBar.html
 
   js/main.js
   js/canvas.js
-
+ 
 `;
