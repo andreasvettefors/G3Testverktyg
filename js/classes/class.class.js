@@ -34,9 +34,10 @@ class Class extends Base {
                     var grade = element[i].text;;
                     pBar.display('.studentBar');
                     $('#MyElement').attr('id', 'gradeName'+i);
-                     $('#MyElement2').attr('id', 'gradeBar'+i);
+                    $('#MyElement2').attr('id', 'gradeBar'+i);
                     $('#gradeBar'+i).css('width', grade).attr('aria-valuenow', grade).text(grade);
                     var gradeNumber = parseInt(grade);
+                    
                     if(gradeNumber>59){
                         $('#gradeBar'+i).addClass('progress-bar-success');
                     }
@@ -44,25 +45,28 @@ class Class extends Base {
                         $('#gradeBar'+i).addClass('progress-bar-warning');
                     }else{
                         $('#gradeBar'+i).addClass('progress-bar-danger');
-                    }                        
+                    }          
+                    
                     $('#gradeName'+i).text(email);
+                    
                 }
-                this.getUndoneTests(this.idClasses,testID,(element) => {
-                    for(var j = 0; j < element.length;j++){
+                this.getUndoneTests(this.idClasses,testID,(element2) => {
+                    for(var j = 0; j < element2.length;j++){
                         pBar.display('.studentBar');
                         $('#MyElement').attr('id', 'gradeName'+i);
                         $('#MyElement2').attr('id', 'notDone'+i);
-                        $('#gradeName'+i).text(element[j].email);
+                        $('#gradeName'+i).text(element2[j].email);
                         $('#notDone'+i).text('Test ej genomfört än');
                         $('#notDone'+i).addClass('progress-bar-info');
+                        i++;
                         }
                     });
-                this.avarageGradeCalculator(testID,(element) => {
-                     pBar.display('.klassBar');
-                $('#MyElement2').attr('id', 'gradeBar');
-                $('#gradeBar').css('width', element+'%').attr('aria-valuenow', element).text(element+'%');
+                this.avarageGradeCalculator(testID,(element3) => {
+                    pBar.display('.klassBar');
+                    $('#MyElement2').attr('id', 'gradeBar');
+                    var avgGrade = Math.ceil(element3);
+                    $('#gradeBar').css('width', avgGrade+'%').attr('aria-valuenow', avgGrade).text(avgGrade+'%');
                     });
-                
                  });
     }
     avarageGradeCalculator(testID,callback){
