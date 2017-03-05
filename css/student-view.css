@@ -15,13 +15,13 @@
 .menu a{
   padding:25px;
   text-decoration: none;
-  font-family: 'Lato' !important;
-  color:#dcbf87 !important;
+  font-family: 'Lato';
+  color:#dcbf87 ;
   font-size: 14px;
   letter-spacing: 1px;
   display: inline-block;
   margin-right: -5px;
-  //border-left:1px solid #1e4b61;
+  
  
 }
 

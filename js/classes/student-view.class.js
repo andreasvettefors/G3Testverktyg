@@ -15,6 +15,4 @@ class StudentView extends Base {
 		}
 	}
 
-
-
 }
