@@ -51,10 +51,19 @@
 
 }
 
+.menu a:nth-last-child(3){
+  border-left: 1px #1e4b61 solid;
+    border-right: 1px #1e4b61 solid;
+}
+
 .navbarGrade { 
+
 border-right:1px solid #1e4b61;
 }
 
+.active{
+  background-color: #492222;
+}
 
 .dropbtn{
   background-color:#0b3042 !important; 
@@ -229,6 +238,11 @@ padding:3px;
  border-left: none;
  margin-left: 0;
 
+}
+
+.menu a:nth-last-child(2){
+  border-top: 1px #1e4b61 solid;
+    border-bottom: 1px #1e4b61 solid;
 }
 
 .dropbtn {

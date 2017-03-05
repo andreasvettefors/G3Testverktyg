@@ -16,6 +16,13 @@ class TeacherView extends Base {
 		}
 	}
 
+	activate(){
+		$('div a').click(function(){
+			$('a').removeClass("active");
+			$(this).addClass("active");
+		});
+	}
+
 	statistics() {
 		$('#bodyTemplate').hide();
 	}

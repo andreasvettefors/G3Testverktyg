@@ -39,6 +39,11 @@
 
 }
 
+.menu a:nth-last-child(3){
+  border-left: 1px #1e4b61 solid;
+    border-right: 1px #1e4b61 solid;
+}
+
 .navbarStatistics { 
 border-right:1px solid #1e4b61;
 }
@@ -100,8 +105,8 @@ a:hover:not(.navbarClasses){
   background-color: #210f0f;
 }
 
-.navbarClasses{
-   background-color: #210f0f;
+.active{
+  background-color: #492222;
 }
 
 #teacherview .panel-style{
@@ -392,6 +397,10 @@ outline: 0;
 
 }
 
+.menu a:nth-last-child(2){
+  border-top: 1px #1e4b61 solid;
+    border-bottom: 1px #1e4b61 solid;
+}
 .dropbtn {
   display: block;
   height: 70px;
