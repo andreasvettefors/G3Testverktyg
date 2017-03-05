@@ -18,7 +18,7 @@ Student.addTemplate('default', function(){return `
 			<div class="buttonAndListLeft">
 				<button type="button" class="btn testsDone">
 					<span class="glyphicon glyphicon-ok-circle glyphiconCircle" aria-hidden="true"></span>
-					<p data-click="collapseTestsDone">Gjorda tester:<strong>${this.finishedTests.length}</strong></p>
+					<p data-click="collapseTestsDone">Gjorda tester: <strong>${this.finishedTests.length}</strong></p>
 				</button>
 				<div class="collapse">${this.finishedTests.display()}</div>
 			</div>

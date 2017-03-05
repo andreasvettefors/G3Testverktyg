@@ -362,6 +362,11 @@ padding:3px;
   
   margin-top: 20%;
 }
+
+.droplist{
+  display: none;
+}
+  
   
 }
 

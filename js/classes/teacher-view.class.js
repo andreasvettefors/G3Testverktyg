@@ -12,6 +12,7 @@ class TeacherView extends Base {
 
 	showDropDownMenu(e){
 		if($(window).width() <=375) {
+			
 			$('.droplist').slideToggle("linear");
 		}
 	}

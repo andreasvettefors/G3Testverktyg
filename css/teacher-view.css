@@ -347,6 +347,8 @@ p{
   display: inherit;
 }
 
+
+
 @media screen and (max-width: 376px){
 
 
@@ -485,6 +487,10 @@ p{
   width:200vw;
   margin-left: 45%;
   margin-top: -1%;
+}
+
+.droplist{
+  display: none;
 }
   
 }
