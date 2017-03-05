@@ -1,5 +1,6 @@
-.menu{
 
+.menu{
+  height: 70px;
   right:0;
   left:0;
   top:0;
@@ -31,9 +32,19 @@
   height:70px;
 }
 
+.menu a:hover{
+  background-color: #210f0f;
+  color:#9e6262 !important;
+  margin:none !important;
+  border: none !important;
+  padding:none !important;
+  text-decoration: none !important;
+}
+
 .menu a:first-child{
   border-left:none;
-}
+} 
+
 .menu a:last-child{
  border-left: none;
  margin-left: 10%;
@@ -79,14 +90,11 @@ border-right:1px solid #1e4b61;
 }
 
 
-#bodyTemplate{
+#contentBox{
   margin-top: 150px;
   background-color: #985050;
   position: relative;
 
-}
-#studentview .idBox{
-  margin-top: -15%;
 }
 
 #studentview .panel-style{
@@ -182,6 +190,9 @@ padding:3px;
 
 }
 
+.idBox{
+  margin-top: -15%;
+}
 
 
 @media screen and (max-width: 376px){
@@ -255,21 +266,22 @@ padding:3px;
   
   width: 200vw;
   margin-top: -1%;
-  
+  margin-left: 5%;
 }
-.h1Student{
+.h1Teacher{
   text-align: left; 
   
 }
 
-.navbarGrade{
+
+.navbarStatistics{
   border-right:none;
 }
-
-.h2StudentEmail{
+.h2TeacherEmail{
 
   text-align: left;
-    
+  
+   
 }
 
 .floatingImgT {
@@ -302,6 +314,13 @@ padding:3px;
 
 }
 
+#studentview .glyphicon-menu-hamburger{
+  color: #dcbf87;
+    display: inherit;
+    margin-top: -7%;
+    margin-left: 82%;
+    font-size: 160%;
+}
   .h1Student{
   text-align: center; 
   
@@ -321,6 +340,14 @@ padding:3px;
 .floatingImg {
     right: 40%;
 }
+
+#studentview .glyphicon-menu-hamburger {
+    color: #dcbf87;
+    display: inherit;
+    margin-top: -7%;
+    margin-left: 76%;
+    font-size: 160%;
+}
   
 }
 
@@ -338,7 +365,8 @@ padding:3px;
 }
 
 
-
-
-
   }
+
+  @media screen and (min-width:667px) {
+       .dropdown-content { display:inline-block !important;
+}

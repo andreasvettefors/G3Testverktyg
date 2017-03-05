@@ -480,6 +480,7 @@ outline: 0;
     font-size: 160%;
 }
 #teacherview .idBox{
+  width:200vw;
   margin-left: 45%;
   margin-top: -1%;
 }
