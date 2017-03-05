@@ -22,12 +22,7 @@ class Teacher extends Base {
 		});
 	}
 
-//showDropDownMenu(e){
-		
-	//	var a = $(e.target).text();	
-	//	$(e.target).after($('.' + a).slideToggle("linear"));
-		
-	//}
+
 
 	static get sqlQueries() {
 		return {

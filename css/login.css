@@ -213,7 +213,7 @@ border-top-right-radius: 0;
 }
 
 /*design för stående mobil*/
-@media screen (max-width: 376px) {
+@media screen and(max-width: 376px) {
 .container{
   width: 95%;
   display: flex;
@@ -229,7 +229,7 @@ border-top-right-radius: 0;
 
 .icon{
   margin-bottom: 10px;
-  margin-top: -20px;
+  margin-top: -15%;
 }
 
 .btn-primary:focus{

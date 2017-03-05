@@ -6,25 +6,31 @@ StudentView.addTemplate('default', function(){return `
 
 	<section class="student-view">
 <div class="container">
-		<nav class="menu">
-			<div class="menu-box">
+				<nav class="menu">
+		<div class="menu-box" >
 			<div class="dropdown">
-			<button class="dropbtn"><div class="idBox">
-							<h1 class="h1Student">STUDENT</h1>
-							<h2 class="h2StudentEmail">${this.student.email}</h2>
-						</div></button>
-							<div class="dropdown-content">
-			
-							  <a href="#" class="navbarTest">Test</a>
-							  <a href="#" class="navbarGrade">Betyg</a>
-							  <a href="." class="navbarLogOut">Logga ut</a>
 				
-							</div>
-						</div>
-					
+				<a class="dropbtn" data-click="showDropDownMenu">
+				<div class="idBox">
+					<h1 class="h1Student">STUDENT</h1>
+					<h2 class="h2StudentEmail">${this.student.email}</h2>
+					<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+				</div></a>
+				<div class="dropdown-content droplist">
+
+					<a href="#" data-click="classes" class="navbarTest" checked>Test</a>
+					<a href="#" data-click="statistics" class="navbarGrade">Betyg</a>
+					<a href="." class="navbarLogOut">Logga ut</a>
+
+
 				</div>
 			</div>
-		</nav>
+
+		</div>
+		
+	</nav>
+			</div> 
+		
 		<!--Start row-->
 		<div class="row space-above">
 			<div class="col-md-3 hidden-sm">

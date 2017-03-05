@@ -65,3 +65,28 @@
   margin-top: 10%;
   font-size: 30px;
 }
+
+@media (min-width: 377px) and (max-width: 668px){
+
+.jumbotron2{
+     margin-top: 10%;
+  }
+
+.header1{
+  font-size:40px;
+  color:#ad9782;
+  font-family: 'Vidaloka', serif;
+  text-align:center;
+}
+.header2{
+   
+    font-size: 16px;
+  
+}
+
+.glyphicon-hand-down{
+
+  margin-top: 5%;
+
+}
+  }
