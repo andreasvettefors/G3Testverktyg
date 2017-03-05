@@ -47,7 +47,7 @@ body{
 
 .icon{
   text-align: center;
-  margin-top: 0px;
+  margin-top: -15%;
   margin-bottom: 10px;
 }
 
@@ -227,11 +227,6 @@ border-top-right-radius: 0;
   margin-top: 60px;
 }
 
-.icon{
-  margin-bottom: 10px;
-  margin-top: -15%;
-}
-
 .btn-primary:focus{
   outline: 0;
 }
@@ -242,6 +237,7 @@ border-top-right-radius: 0;
 .idBox{
   padding-left: 55%;
 }
+
 }
 
 
@@ -265,10 +261,6 @@ border-top-right-radius: 0;
   font-size: 30px;
 }
 
-.icon{
-  margin-bottom: 10px;
-  margin-top: -20px;
-}
 
 .btn-primary:focus{
   outline: 0;
@@ -309,7 +301,7 @@ border-top-right-radius: 0;
 
   .headerNewton{
     margin-top: 10px;
-    font-size:40px;
+    font-size:30px;
   }
 
   .label1{
@@ -323,6 +315,11 @@ border-top-right-radius: 0;
 .btn-primary:hover{
   border: 1px #FAFFBD solid;
   
+}
+
+.icon {
+    margin-top: 10%;
+    
 }
 
 }

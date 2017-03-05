@@ -15,11 +15,6 @@ class StudentView extends Base {
 		}
 	}
 
-	activate(){
-		$('div a').click(function(){
-			$('a').removeClass("active");
-			$(this).addClass("active");
-		});
-	}
+
 
 }

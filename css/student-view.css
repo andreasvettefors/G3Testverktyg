@@ -113,6 +113,7 @@ border-right:1px solid #1e4b61;
 
 .line{
   border:1px #985050 solid !important;
+  margin-top: 10%;
 }
 
 .student-view-test-info{
@@ -122,11 +123,6 @@ border-right:1px solid #1e4b61;
   letter-spacing: 1px;
 }
 
-.icon{
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
 
 .img-circle{
 border-radius: 50%;
@@ -188,8 +184,8 @@ padding:3px;
   justify-content: center;
   position: absolute;
   z-index: 1;
-  top: -30%;
-  right: 45%;
+  top: -50px;
+  right: 43%;
 }
 
 
@@ -361,6 +357,10 @@ padding:3px;
     margin-top: -7%;
     margin-left: 76%;
     font-size: 160%;
+}
+.line{
+  
+  margin-top: 20%;
 }
   
 }
