@@ -22,7 +22,7 @@ class Teacher extends Base {
 		});
 	}
 
-	
+
 
 	static get sqlQueries() {
 		return {
@@ -33,3 +33,4 @@ class Teacher extends Base {
 	}
 
 }
+

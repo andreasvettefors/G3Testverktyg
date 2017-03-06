@@ -3,42 +3,44 @@ TeacherView.addTemplate('default', function(){return `
 <!--Start container-->
 
 <div id="teacherview" class="container">
+
 <div class="container">
-		<nav class="menu">
-			<div class="menu-box">
+	<nav class="menu">
+		<div class="menu-box" >
 			<div class="dropdown">
-			<button class="dropbtn"><div class="idBox">
-							<h1 class="h1Teacher">LÄRARE</h1>
-							<h2 class="h2TeacherEmail">${this.teacher.email}</h2>
-						</div></button>
-							<div class="dropdown-content">
-			
-							  <a href="#" data-click="classes" class="navbarClasses" checked>Klasser</a>
-							  <a href="#" data-click="statistics" class="navbarStatistics">Statistik</a>
-							  <a href="." class="navbarLogOut">Logga ut</a>
 				
-							</div>
-						</div>
-					
+				<a class="dropbtn" data-click="showDropDownMenu">
+				<div class="idBox">
+					<h1 class="h1Teacher">LÄRARE</h1>
+					<h2 class="h2TeacherEmail">${this.teacher.email}</h2>
+					<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+				</div></a>
+				<div class="dropdown-content droplist">
+
+					<a href="#"  data-click="classes" class="navbarClasses" checked>Klasser</a>
+					<a href="#"  data-click="statistics" class="navbarStatistics">Statistik</a>
+					<a href="."  class="navbarLogOut">Logga ut</a>
+
+
 				</div>
-		
-		</nav>
+			</div>
+
 		</div>
-	<!--Start section-->
-	<section class="student-view">
+		
+	</nav>
+</div>
+<!--Start section-->
+<section class="student-view">
 
-		<!--Start row-->
-		<div class="row space-above parent-container">
+	<!--Start row-->
+	<div class="row space-above parent-container">
 
 
-			<!--Start maincontent-->
-			<div class="col-xs-12 col-md-9 col-lg-8 main-content">
-				<div id="bodyTemplate" class="panel panel-default panel-style">
-					<div class="panel-body">
+		<!--Start maincontent-->
+		<div class="col-xs-12 col-md-9 col-lg-8 main-content">
+			<div id="bodyTemplate" class="panel panel-default panel-style">
+				<div class="panel-body">
 					<p class="yourClasses">Dina klasser</p>
-					<!--<div class=" col-md-2 col-centered floatingImgT"><div id="glyphicon-ring"><img class="img-circle" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/10478217_10203259481002322_7308597286536689034_n.jpg?oh=56940860822b619b5d31873bc290a503&oe=594137EC"></div></div>-->
-						<!--<h3>${this.teacher.email}</h3>
-						<h4>Lärare</h4>-->
 						<hr class="line">
 						<div id="classes" class="list-group">
 							${this.teacher.classes.display()}

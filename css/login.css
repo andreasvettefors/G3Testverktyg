@@ -47,7 +47,7 @@ body{
 
 .icon{
   text-align: center;
-  margin-top: 0px;
+  margin-top: -15%;
   margin-bottom: 10px;
 }
 
@@ -111,6 +111,10 @@ margin-bottom: 10px;
   margin-top: 0;
 }
 
+.form-control{
+  border-radius: 50px;
+}
+
 .label1, .label2{
   font-family: 'Lato';
   font-size: 12px;
@@ -160,12 +164,21 @@ border-top-right-radius: 0;
 
 .headerNewton{
   text-align: center;
+  font-family: Times ;
+  color:#f3e3cc;
+  font-size:40px;
+  letter-spacing: 1px;
+  margin-top: 100px;
+}
+
+.headerNewton2{
+  text-align: center;
   font-family: 'Vidaloka' ;
   text-transform: uppercase;
   color:#d4c09f;
   font-size:40px;
   letter-spacing: 6px;
-  margin-top: 110px;
+  margin-top: -1%;
 }
 
 #buttonSign{
@@ -213,7 +226,7 @@ border-top-right-radius: 0;
 }
 
 /*design för stående mobil*/
-@media screen (max-width: 376px) {
+@media screen and(max-width: 376px) {
 .container{
   width: 95%;
   display: flex;
@@ -227,11 +240,6 @@ border-top-right-radius: 0;
   margin-top: 60px;
 }
 
-.icon{
-  margin-bottom: 10px;
-  margin-top: -20px;
-}
-
 .btn-primary:focus{
   outline: 0;
 }
@@ -242,6 +250,7 @@ border-top-right-radius: 0;
 .idBox{
   padding-left: 55%;
 }
+
 }
 
 
@@ -265,10 +274,6 @@ border-top-right-radius: 0;
   font-size: 30px;
 }
 
-.icon{
-  margin-bottom: 10px;
-  margin-top: -20px;
-}
 
 .btn-primary:focus{
   outline: 0;
@@ -309,7 +314,7 @@ border-top-right-radius: 0;
 
   .headerNewton{
     margin-top: 10px;
-    font-size:40px;
+    font-size:30px;
   }
 
   .label1{
@@ -323,6 +328,11 @@ border-top-right-radius: 0;
 .btn-primary:hover{
   border: 1px #FAFFBD solid;
   
+}
+
+.icon {
+    margin-top: 10%;
+    
 }
 
 }
