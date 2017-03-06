@@ -8,10 +8,46 @@ class StudentTest extends Base {
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
+
+
 	}
 
 	teacher() {
 		console.log('teacherseetest');
+	}
+	
+	teacher(){			
+		console.log('teacherseetest');
+	}
+
+	test0(e) {
+		var tests = new TestFormList();
+		tests.readAllFromDb(() => {
+
+			// Kollar vilket test som har blivit tryckt på och
+			// var i listan det ligger 
+			var el = $(e.target).text();
+			for (var item of tests) {
+				if (el === item.name) {
+					var id = item.idTest;
+					var index = tests.indexOf(item);
+				}
+			}
+
+			var test = tests[index];
+			//hämtar question och answerAlternative från databasen
+			test.questions.readAllFromDb(id, () => {
+				$(function () {
+					$('#studentview').remove();
+					test.display('body');
+					window.test = test;
+				});
+
+			});
+		});
+
+
+
 	}
 
 	test0(e) {
@@ -74,6 +110,8 @@ class StudentTest extends Base {
 						grade: grade,
 						userType: 1
 					});
+
+
 					tr.testresultitem.readTestResultItem(sv.student.idUser, this.idTest, () => {
 						$('#studentview').remove();
 						tr.display('body');
@@ -81,6 +119,10 @@ class StudentTest extends Base {
 				});
 			});
 		});
+	}
+	
+	test0teacher(){
+		return;
 	}
 
 	test0teacher() {
@@ -96,14 +138,17 @@ class StudentTest extends Base {
 		var id;
 		// Loopa igenom listorna för att få reda på 
 		// vilket id studenten har för att kunna få fram rätt testresultat
+
 		for (let teacherclass of tv.teacher.classes) {
 			for (let student of teacherclass.students) {
 				if (el == student.email) {
+
 					id = student.idUser;
 					email = student.email;
 				}
 			}
 		}
+
 		console.log('studentid', id);
 
 		//Hämtar data för att kunna sätta ihop ett testresultat
@@ -120,6 +165,7 @@ class StudentTest extends Base {
 						userType: 2
 					});
 					//Skapar testresultatet
+
 					tr.testresultitem.readTestResultItem(id, this.idTest, () => {
 						$('#teacherview').remove();
 						tr.display('body');

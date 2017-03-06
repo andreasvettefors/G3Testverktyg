@@ -8,6 +8,7 @@ class TeacherView extends Base {
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
+        
 	}
 
 	showDropDownMenu(e){
@@ -17,12 +18,14 @@ class TeacherView extends Base {
 		}
 	}
 
-
+    
 	statistics() {
 		$('#bodyTemplate').hide();
+       $('#bodyTemplate2').show();
 	}
 
 	classes() {
+      $('#bodyTemplate2').hide();
 		$('#bodyTemplate').show();
 	}
 }

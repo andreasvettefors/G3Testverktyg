@@ -50,12 +50,19 @@ class Login extends Base {
 				} else if (authorisation == 2) {
 					//lärare
 					var tv = new TeacherView();
+          var stats = new StatisticView();       
+
 					tv.teacher.readTeacherFromDbById(id, () => {
 						setTimeout(function () {
 							$(function () {
 								$('#login').remove();
 								$('canvas').remove();
 								$('.headerNewton').remove();
+								$('.wrongUserPass').remove();
+								tv.display('body');
+                                stats.display('.main-content');
+                                $('#bodyTemplate2').hide();
+
 								$('.headerNewton2').remove();
 								$('.wrongUserPass').remove();
 								tv.display('body');
@@ -80,7 +87,6 @@ class Login extends Base {
 					//data-click="test${this.isDone}"
 					console.log('lärare')
 				} else if (authorisation == 3) {
-
 					console.log('Administratör');
 					var admin = new Administrator();
 					admin.readAdminFromDbById(id,()=>{
