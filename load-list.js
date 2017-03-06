@@ -44,7 +44,7 @@ window.load = `
     question.class.js
     answerOption.class.js
     finishedForm.class.js  
-    
+    timer.class.js
 
     login.class.js
 		student-view.class.js
@@ -72,7 +72,7 @@ templates/
     question.html
     answerOption.html
     finishedForm.html
-
+    timer.html
 
 		student-view.html
 		student-tests.html
@@ -84,5 +84,6 @@ templates/
 		student.html
     
   js/main.js
+  js/timer.js
 
 `;
