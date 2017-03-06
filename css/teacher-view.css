@@ -351,6 +351,9 @@ p{
   display: inherit;
 }
 
+.testlist:nth-child(even) {
+    background-color: #1b678c;
+}
 
 
 @media screen and (max-width: 376px){
@@ -370,7 +373,10 @@ p{
   margin-left: 25%;
 
 }
-
+#bodyTemplate {
+    margin-top: 80px;
+   
+}
 
 .testWrapper .testsDone{
   margin-right: -56%;
@@ -481,6 +487,16 @@ p{
 
 }
 
+.testWrapper .buttonAndListLeft .testlist {
+    margin-left: -8%;
+   
+}
+
+.testWrapper .buttonAndList .testlist {
+    margin-left: 8%;
+   
+}
+
 .glyphicon-menu-hamburger {
   color: #dcbf87;
   display: inherit;
@@ -498,6 +514,7 @@ p{
 .droplist{
   display: none;
 }
+
   
 }
 
@@ -553,6 +570,14 @@ p{
 #bodyTemplate{
   margin-top: 80px;
 }
+.testWrapper .studentEmail {
+    margin-top: -6%;
+   
+}
+#teacherview .panel-style {
+    margin-top: 33%;
+}
+
 }
 
 @media screen and (min-height:1024px) {
