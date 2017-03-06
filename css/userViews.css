@@ -67,7 +67,7 @@ body{
 }
 
 .isCorrect0{
-	color:#ec1717;
+	color:#da5055;
 }
 
 .isCorrect1{
@@ -84,6 +84,7 @@ body{
 #testresultview .goBack{
 text-decoration: none;
 color: #FAFFBD;
+border-radius: 30px;
 border: 1px #FAFFBD solid;
 margin-top: 20%;
 }

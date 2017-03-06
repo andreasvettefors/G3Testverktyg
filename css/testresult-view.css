@@ -53,7 +53,13 @@ border: 1px #FAFFBD solid !important;
 
 }
 
+#testresult {
+    margin-top: 5%;
+}
 
+#testresultview .paragraphCorrect {
+    margin-bottom: 5%;
+}
 @media (min-width: 377px) and (max-width: 668px){
 
 #testresultview .panel-style {
