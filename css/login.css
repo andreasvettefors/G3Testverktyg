@@ -1,4 +1,4 @@
-/*design för desktop*/ 
+/*design för desktop*/
 body{
   margin: 0;
   position: relative;
@@ -25,11 +25,11 @@ body{
 .container{
   position: relative;
   z-index: 3;
-  
+
 }
 
 #login{
-  width:340px; 
+  width:340px;
 }
 
 .canvas>#space{
@@ -188,7 +188,7 @@ border-top-right-radius: 0;
   font-weight: bold;
   font-size: 14px;
   padding:10px;
-  
+
 }
 
 .btn-primary:hover{
@@ -295,7 +295,7 @@ border-top-right-radius: 0;
 
   #login{
     height: 100vh;
-    width:300px; 
+    width:300px;
   }
 
   .canvas>#space{
@@ -322,8 +322,7 @@ border-top-right-radius: 0;
 
 .btn-primary:hover{
   border: 1px #FAFFBD solid;
-  
-}
 
 }
 
+}
