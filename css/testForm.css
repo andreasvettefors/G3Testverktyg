@@ -161,6 +161,10 @@
   text-align: center;
 }
 
+#testForm img{
+	width:100%;
+}
+
 #testForm .radioAlternatives{
   display:flex;
 }
