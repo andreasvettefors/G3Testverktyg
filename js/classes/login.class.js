@@ -33,7 +33,7 @@ class Login extends Base {
 					//window.location.replace("http://facebook.se");
 					var sv = new StudentView();
 					sv.student.readStudentFromDbById(id, () => {
-						//setTimeout(function () {
+						setTimeout(function () {
 							$(function () {
 								$('#login').remove();
 								$('canvas').remove();
@@ -45,7 +45,7 @@ class Login extends Base {
 							});
 
 						});
-					//}, 1);
+					}, 1);
 
 				} else if (authorisation == 2) {
 					//lärare
