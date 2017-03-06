@@ -555,6 +555,42 @@ p{
 }
 }
 
+@media screen and (min-height:1024px) {
+.testWrapper .testStatus{
+  height:16vh;
+}
+
+#glyphiconring{
+  margin-top: -15%;
+}
+
+.floatingStudentImages {
+  margin-top: -15%;
+}
+.bothButtons{
+  margin-left: 13%;
+}
+
+.testWrapper .testToDos .testsDone{
+  height:10vh;
+}
+
+
+.testWrapper .buttonAndListLeft .testlist {
+    margin-left: 23%;
+}
+.testWrapper .testToDos {
+
+    height: 10vh;
+    
+}
+.testWrapper .testsDone {
+   
+    height: 10vh;
+}
+
+}
+
 @media screen and (min-width:667px) {
        .dropdown-content { display:inline-block !important;
 }
