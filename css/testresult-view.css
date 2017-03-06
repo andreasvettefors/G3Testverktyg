@@ -1,0 +1,30 @@
+#testview{
+  background-color: #351919 ;
+
+}
+
+#testview p,#testview h4{
+  color: #dcbf87;
+  font-family: 'Lato';
+}
+#testview h3{
+  color: #ad9782;
+  font-size: 50px;
+  text-align: left;
+}
+#testview hr {
+  border: 1px  #985050 solid;
+}
+
+.goBack{
+text-decoration: none !important;
+color: #FAFFBD !important;
+border: 1px #FAFFBD solid !important;
+}
+
+.goBack:hover{
+  color: white !important;
+}
+#testresultview .panel-style{
+  border: none !important ;
+}

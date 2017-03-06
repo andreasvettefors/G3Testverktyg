@@ -4,17 +4,17 @@ TestResultView.addTemplate('default', function(){return `
 <div id="testresultview" class="container">
 	<!--Start maincontent-->
 	<div class="panel panel-default panel-style">
-		<div class="panel-body">
+		<div class="panel-body" id ="testview">
 
 			<h3>Testresultat för ${this.name}</h3>
 			<h4>${this.student}</h4>
 
-			<hr>
+			<hr class="line">
 			<div id="testresult">
 				${this.testresultitem.display()}
 			</div>
 			<p>Du hade <strong>${this.correctAnswers}</strong>/<strong>${this.totalQuestions}</strong> rätta svar vilket ger en procent på <strong>${this.grade}</strong></p>
-			<a data-click="goBack">Tillbaka</a>
+			<a class="btn-primary goBack" data-click="goBack">Tillbaka</a>
 		</div>
 	</div>
 </div>

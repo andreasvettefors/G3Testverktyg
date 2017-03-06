@@ -13,6 +13,7 @@ window.load = `
     login.css
     student-view.css
     teacher-view.css
+    testresult-view.css
 
   js/libs/
     jquery.js
