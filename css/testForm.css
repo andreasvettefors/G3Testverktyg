@@ -11,7 +11,7 @@
   padding-top:20px;
   padding-bottom: 20px;
   margin-top: 100px;
-  }
+  } 
 
 
 
@@ -188,6 +188,34 @@
   margin-left: 15%;
 }
 
+#showtime{
+  color: #dcbf87;
+  margin-top: 30px;
+  font-size: 12px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-family: 'Lato';
+  letter-spacing: 2px;
+}
+
+.timerBox{
+  width:50%;
+  margin:0 auto;
+}
+
+.timeBox{
+    background-color: #0b3042;
+
+    width: 100px;
+    height: 100px;
+    margin:0 auto;
+    border-radius: 50%;
+    border:4px #dcbf87 dotted;
+}
+
+#testForm .clockImg{
+  width:100%;
+}
 
 /* design för stående mobil */
 @media screen and (max-width: 376px){
