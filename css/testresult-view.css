@@ -3,17 +3,21 @@
 
 }
 
-#testview p,#testview h4{
-  color: #dcbf87;
+#testview p{
+    color: #c1ae8f;
+    font-family: 'Lato';
+}
   font-family: 'Lato';
 }
-#testview h3{
-  color: #ad9782;
-  font-size: 50px;
-  text-align: left;
-}
+
 #testview hr {
   border: 1px  #985050 solid;
+  margin-top: -10%;
+}
+
+#testview .line2{
+  border: 1px  #985050 solid;
+  margin-top: 5%;
 }
 
 .goBack{
@@ -27,4 +31,24 @@ border: 1px #FAFFBD solid !important;
 }
 #testresultview .panel-style{
   border: none !important ;
+}
+
+#testresultview .paragraphCorrect{
+	margin-bottom: 15%;
+}
+
+#testview .paragraphCorrect{
+	color: #c16c6c;
+    font-family: 'Lato';
+    font-size: 20px;
+}
+
+#testresult{
+	margin-top: 15%;
+}
+
+#testview h4{
+	 color:#c16c6c;
+    font-family: 'Lato';
+
 }

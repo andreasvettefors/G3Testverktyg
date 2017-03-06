@@ -24,7 +24,7 @@ body{
 	border-radius:0;
 }
 
-#studentview h3,h4 ,h4 ,#testresultview h3,h4{
+#studentview h3,h4 ,h4 {
 	font-family: 'Vidaloka', serif;
   color:#b5bbca;
 }
@@ -67,9 +67,23 @@ body{
 }
 
 .isCorrect0{
-	color: red;
+	color:#ec1717;
 }
 
 .isCorrect1{
-	color:green;
+	color: #faffbd;
+}
+
+#testresultview .header3{
+  color: #ad9782 ;
+  font-size: 50px;
+  text-align: left;
+  font-family: 'Vidaloka';
+}
+
+#testresultview .goBack{
+text-decoration: none;
+color: #FAFFBD;
+border: 1px #FAFFBD solid;
+margin-top: 20%;
 }
