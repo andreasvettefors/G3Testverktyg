@@ -159,6 +159,7 @@
 
 #testForm .questionImage{
   text-align: center;
+
 }
 
 #testForm img{
@@ -217,7 +218,6 @@
 
   #testForm #finishButton{
    margin-left: 60%;
-
   }
 
   #testForm .jumbotron{

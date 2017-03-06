@@ -24,6 +24,7 @@ body{
 	border-radius:0;
 }
 
+
 #studentview h3,h4 ,h4 {
 	font-family: 'Vidaloka', serif;
   color:#b5bbca;
@@ -68,6 +69,7 @@ body{
 
 .isCorrect0{
 	color:#ec4242;
+
 }
 
 .isCorrect1{

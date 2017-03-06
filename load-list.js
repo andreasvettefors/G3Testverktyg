@@ -16,6 +16,7 @@ window.load = `
     testresult-view.css
     administrator.css
 
+
   js/libs/
     jquery.js
     bootstrap.min.js
@@ -68,6 +69,10 @@ window.load = `
 		testresult-item.class.js
 		testresult-item-list.class.js
 
+        statistic.class.js
+        statisticProgressBar.class.js
+        statistic-view.class.js
+
 
 templates/
     bootstrap-size.html
@@ -88,8 +93,12 @@ templates/
 		testresult-item.html
 		class.html
 		student.html
+    statistic.html
+    statisticProgressBar.html
+    statistic-view.html
 
   js/main.js
   js/canvas.js
+ 
 
 `;

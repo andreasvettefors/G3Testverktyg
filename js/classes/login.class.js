@@ -50,6 +50,8 @@ class Login extends Base {
 				} else if (authorisation == 2) {
 					//lärare
 					var tv = new TeacherView();
+					var stats = new StatisticView();
+
 					tv.teacher.readTeacherFromDbById(id, () => {
 						setTimeout(function () {
 							$(function () {
@@ -59,6 +61,8 @@ class Login extends Base {
 								$('.headerNewton2').remove();
 								$('.wrongUserPass').remove();
 								tv.display('body');
+								stats.display('.main-content');
+								$('#bodyTemplate2').hide();
 
 								// För att ändra attributet data-click så det inte 
 								// använder sig av samma metod som när man trycker 
@@ -80,11 +84,10 @@ class Login extends Base {
 					//data-click="test${this.isDone}"
 					console.log('lärare')
 				} else if (authorisation == 3) {
-
 					console.log('Administratör');
 					var admin = new Administrator();
-					admin.readAdminFromDbById(id,()=>{
-						admin.readAllUsers(()=>{
+					admin.readAdminFromDbById(id, () => {
+						admin.readAllUsers(() => {
 							$('#login').remove();
 							$('canvas').remove();
 							$('.headerNewton').remove();

@@ -23,5 +23,4 @@ class Class extends Base {
 		
 	}
 
-
 }
