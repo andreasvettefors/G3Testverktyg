@@ -3,7 +3,7 @@
 }
 
   .jumbotron2{
-    background-color: white;
+    background-color: #351919;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-style: 1px solid white;
     text-align: center;
@@ -14,20 +14,24 @@
   }
 
  #finishButton2{
-    background-color: white;
-    border: 2px #ff6a20 solid;
+    background: #271629 ;
+    border: 1px #FAFFBD solid;
     border-radius: 20px;
-    color:#ff6a20;
+    color: #FAFFBD;
+    width: 110px;
     font-family: verdana;
+    letter-spacing: 1px;
     text-transform: uppercase;
-  	font-weight: bold;
-  	font-size: 10px;
-  	padding:10px;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 10px;
   }
 
   #finishButton2:hover{
-    background-color: #ff6a20;
-  	color:white;
+   
+  border: 1px #FAFFBD solid;
+  background: #442530;
+
   }
 
   #finishButton2:focus{
@@ -35,20 +39,54 @@
   }
 
 .line2{
-   margin-top: 130px;
-   border-top: 2px solid #ff6a20;
+ 
+  border:1px #985050 solid;
 }
 
 .header1{
   font-size: 50px;
-  color:#ff6a20;
+  color:#ad9782;
   font-family: 'Vidaloka', serif;
   text-align:center;
 }
 .header2{
-  font-family: 'Vidaloka';
-  font-size: 20px;
-  color:#b5bbca;
-  text-align:center;
+    font-family: 'Lato';
+    font-size: 15px;
+    display: block;
+    margin-top: 10%;
+    color: #ab6b6b;
+    text-align: center;
   
 }
+
+.glyphicon-hand-down{
+  color:#ab6b6b;
+  text-align: center;
+  margin-top: 10%;
+  font-size: 30px;
+}
+
+@media (min-width: 377px) and (max-width: 668px){
+
+.jumbotron2{
+     margin-top: 10%;
+  }
+
+.header1{
+  font-size:40px;
+  color:#ad9782;
+  font-family: 'Vidaloka', serif;
+  text-align:center;
+}
+.header2{
+   
+    font-size: 16px;
+  
+}
+
+.glyphicon-hand-down{
+
+  margin-top: 5%;
+
+}
+  }

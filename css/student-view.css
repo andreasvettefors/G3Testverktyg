@@ -1,6 +1,6 @@
 
 .menu{
-
+  height: 70px;
   right:0;
   left:0;
   top:0;
@@ -15,13 +15,13 @@
 .menu a{
   padding:25px;
   text-decoration: none;
-  font-family: 'Lato' !important;
-  color:#dcbf87 !important;
+  font-family: 'Lato';
+  color:#dcbf87 ;
   font-size: 14px;
   letter-spacing: 1px;
   display: inline-block;
   margin-right: -5px;
-  border-left:1px solid #1e4b61;
+  
  
 }
 
@@ -41,16 +41,29 @@
   text-decoration: none !important;
 }
 
+.menu a:first-child{
+  border-left:none;
+} 
+
 .menu a:last-child{
  border-left: none;
  margin-left: 10%;
 
 }
 
+.menu a:nth-last-child(3){
+  border-left: 1px #1e4b61 solid;
+    border-right: 1px #1e4b61 solid;
+}
+
 .navbarGrade { 
+
 border-right:1px solid #1e4b61;
 }
 
+.active{
+  background-color: #492222;
+}
 
 .dropbtn{
   background-color:#0b3042 !important; 
@@ -100,6 +113,7 @@ border-right:1px solid #1e4b61;
 
 .line{
   border:1px #985050 solid !important;
+  margin-top: 10%;
 }
 
 .student-view-test-info{
@@ -109,11 +123,6 @@ border-right:1px solid #1e4b61;
   letter-spacing: 1px;
 }
 
-.icon{
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
 
 .img-circle{
 border-radius: 50%;
@@ -175,8 +184,8 @@ padding:3px;
   justify-content: center;
   position: absolute;
   z-index: 1;
-  top: -30%;
-  right: 45%;
+  top: -50px;
+  right: 43%;
 }
 
 
@@ -186,23 +195,55 @@ padding:3px;
 
 }
 
+.idBox{
+  margin-top: -15%;
+}
+
 
 @media screen and (max-width: 376px){
 
-  .dropbtn {
-    background-color: #0b3042;
-    color: white;
-    padding: 0px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    height: 70px;
+.testWrapper .studentEmail{
+    margin-top: -115%;
+    margin-left: 25%;
+    }
+
+
+.testWrapper .testsDone{
+  
+  margin-right: -56%;
+  margin-top: 15%;
+  margin-left: -11%;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.testWrapper .testToDoP{
+  margin-top: -2%;
+}
 
+.testWrapper .testToDos{
+  margin-top: 15%;
+  margin-right: 4%;
+}
+
+.testWrapper .testlist {
+  margin-top: -5%;
+  margin-left: -10%;
+}
+
+
+.menu a:last-child{
+ border-left: none;
+ margin-left: 0;
+
+}
+
+.menu a:nth-last-child(2){
+  border-top: 1px #1e4b61 solid;
+    border-bottom: 1px #1e4b61 solid;
+}
+
+.dropbtn {
+  display: block;
+  height: 70px;
 }
 
 .dropdown-content {
@@ -211,68 +252,86 @@ padding:3px;
     background-color: #0b3042;
     min-width: 100vw;
     z-index: 1;
+    
 }
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #3e1e1e;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color:  #0b3042;
-  outline: 0;
-}
-
-.menu a:last-child{
- border-left: none;
- margin-left: 0;
-
-}
-
-  .menu{
-
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center; 
-  }
 
   .menu a{
-    border-left: none;
-    border-bottom: 1px solid #1e4b61;
-    border-top:  1px solid #1e4b61;
-    border-width: 100%;
-
+  display: block;
+  padding:10px;
+  
   }
 
-  .menu a:last-child{
-    border-bottom: none;
-  }
+.menu a:first-child{
+  border:none;
+}
 
-  .menu-box{
-    padding: 0;
-  margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction:column;
-    height: auto;
-    width:100vw;
-  }
+.dropdown {
+    position: fixed;
+    display: inline-block;
+    
+}
+ 
 
 .idBox{
-  text-align: center;
-  padding-left: 45%;
+  
+  width: 200vw;
+  margin-top: -1%;
+  margin-left: 5%;
 }
-.h1Student{
+.h1Teacher{
+  text-align: left; 
+  
+}
+
+
+.navbarStatistics{
+  border-right:none;
+}
+.h2TeacherEmail{
+
+  text-align: left;
+  
+   
+}
+
+.floatingImgT {
+    right: 40%;
+}
+
+.testWrapper{
+  height:26vh;
+}
+
+.testWrapper .testStatus{
+    height: 25vh;
+  
+}
+.panel-body {
+   
+    margin-top: -5%;
+}
+.testWrapper .testlist {
+    margin-top: -5%;
+}
+
+.buttonAndList{
+    margin-left: -15%;
+}
+
+
+.bothButtons{
+  margin-left: -14%;
+
+}
+
+#studentview .glyphicon-menu-hamburger{
+  color: #dcbf87;
+    display: inherit;
+    margin-top: -7%;
+    margin-left: 82%;
+    font-size: 160%;
+}
+  .h1Student{
   text-align: center; 
   
 }
@@ -291,6 +350,23 @@ padding:3px;
 .floatingImg {
     right: 40%;
 }
+
+#studentview .glyphicon-menu-hamburger {
+    color: #dcbf87;
+    display: inherit;
+    margin-top: -7%;
+    margin-left: 76%;
+    font-size: 160%;
+}
+.line{
+  
+  margin-top: 20%;
+}
+
+.droplist{
+  display: none;
+}
+  
   
 }
 
@@ -308,7 +384,8 @@ padding:3px;
 }
 
 
-
-
-
   }
+
+  @media screen and (min-width:667px) {
+       .dropdown-content { display:inline-block !important;
+}

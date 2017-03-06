@@ -10,6 +10,14 @@ class TeacherView extends Base {
 		super(propertyValues);
 	}
 
+	showDropDownMenu(e){
+		if($(window).width() <=375) {
+			
+			$('.droplist').slideToggle("linear");
+		}
+	}
+
+
 	statistics() {
 		$('#bodyTemplate').hide();
 	}
