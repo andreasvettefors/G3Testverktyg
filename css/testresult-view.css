@@ -11,6 +11,15 @@
   border-color:darkkhaki;
 }
 
-.container .panel-body{
-  border: 1px #351919 solid;
+.contentA{
+  border: none !important ;
+}
+.goBack{
+text-decoration: none !important;
+color: #FAFFBD !important;
+border: 1px #FAFFBD solid !important;
+}
+
+.goBack:hover{
+  color: white !important;
 }
