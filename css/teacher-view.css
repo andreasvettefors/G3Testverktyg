@@ -362,9 +362,37 @@ p{
     background-color: #1b678c;
 }
 
+#teacherview .studentResult {
+    font-size: 16px;
+    font-family: 'Lato';
+    color: #bd5c5c;
+}
 
+#teacherview .averageResult {
+    font-size: 16px;
+    font-family: 'Lato';
+    color: #bd5c5c;
+}
+
+.panel-default>.panel-heading {
+    color: #555555;
+    background-color: #592929;
+    border-color: #592929;
+}
+
+#teacherview .statisticContainer{
+  background-color: #2c6682;
+}
+
+#teacherview .panel-default {
+   
+    border: none;
+}
 @media screen and (max-width: 376px){
 
+#teacherview .statisticContainer{
+  margin-top: 4%;
+}
 
 .floatingStudentImages{
   margin-top: -13%;
