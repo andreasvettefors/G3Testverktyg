@@ -38,6 +38,7 @@ class Login extends Base {
 								$('#login').remove();
 								$('canvas').remove();
 								$('.headerNewton').remove();
+								$('.headerNewton2').remove();
 								$('.wrongUserPass').remove();
 								sv.display('body');
 								window.sv = sv;
@@ -55,6 +56,7 @@ class Login extends Base {
 								$('#login').remove();
 								$('canvas').remove();
 								$('.headerNewton').remove();
+								$('.headerNewton2').remove();
 								$('.wrongUserPass').remove();
 								tv.display('body');
 
