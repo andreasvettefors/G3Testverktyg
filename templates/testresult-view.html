@@ -5,17 +5,22 @@ TestResultView.addTemplate('default', function(){return `
 	<!--Start maincontent-->
 	<div class="panel panel-default panel-style">
 		<div class="panel-body" id ="testview">
-
+		<div class="topColoredBox">
 			<h3 class="header3">Testresultat för ${this.name}</h3>
 			<h4>${this.student}</h4>
-
+			</div>
+			
 			<!--<hr class="line">-->
 			<div id="testresult">
 				${this.testresultitem.display()}
 			</div>
-			<hr class="line2">
+			
+			
 			<p class="paragraphCorrect">Du hade <strong>${this.correctAnswers}</strong>/<strong>${this.totalQuestions}</strong> rätta svar vilket ger en procent på <strong>${this.grade}</strong></p>
-			<a class="btn-primary goBack" data-click="goBack">Tillbaka</a>
+			<div class="bottomPart">
+			<p class="information">Correct svar  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>  Fel svar  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></p>
+			<a class="goBack" data-click="goBack">Tillbaka</a>
+			</div>
 		</div>
 	</div>
 </div>

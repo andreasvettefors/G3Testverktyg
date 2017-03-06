@@ -67,18 +67,19 @@ body{
 }
 
 .isCorrect0{
-	color:#da5055;
+	color:#ec4242;
 }
 
 .isCorrect1{
-	color: #faffbd;
+	color:#2e9e2e;
 }
 
 #testresultview .header3{
   color: #ad9782 ;
-  font-size: 50px;
+  font-size: 40px;
   text-align: left;
   font-family: 'Vidaloka';
+  margin-left: 5%;
 }
 
 #testresultview .goBack{
@@ -87,4 +88,13 @@ color: #FAFFBD;
 border-radius: 30px;
 border: 1px #FAFFBD solid;
 margin-top: 20%;
+margin-left: 5%;
+background-color: #271629;
 }
+
+#testresultview .goBack:hover {
+  border: 1px #FAFFBD solid;
+  background: #442530 !important;
+}
+
+

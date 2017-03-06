@@ -162,7 +162,7 @@
 }
 
 #testForm img{
-	width:100%;
+	width:25%;
 }
 
 #testForm .radioAlternatives{
@@ -223,6 +223,10 @@
   #testForm .jumbotron{
     margin-top: 10px;
   }
+
+  #testForm img{
+  width:50%;
+}
 
 }
 

@@ -11,7 +11,6 @@ class TestResultItemList extends List {
 		});
 	}
 
-
 		static get sqlQueries() {
 		return {
 			readTestResultItem: `
