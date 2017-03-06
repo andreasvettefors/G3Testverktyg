@@ -38,6 +38,7 @@ class Login extends Base {
 								$('#login').remove();
 								$('canvas').remove();
 								$('.headerNewton').remove();
+								$('.headerNewton2').remove();
 								$('.wrongUserPass').remove();
 								sv.display('body');
 								window.sv = sv;
@@ -49,7 +50,8 @@ class Login extends Base {
 				} else if (authorisation == 2) {
 					//lärare
 					var tv = new TeacherView();
-                           var stats = new StatisticView();       
+          var stats = new StatisticView();       
+
 					tv.teacher.readTeacherFromDbById(id, () => {
 						setTimeout(function () {
 							$(function () {
@@ -61,6 +63,10 @@ class Login extends Base {
                                 stats.display('.main-content');
                                 $('#bodyTemplate2').hide();
 
+								$('.headerNewton2').remove();
+								$('.wrongUserPass').remove();
+								tv.display('body');
+
 								// För att ändra attributet data-click så det inte 
 								// använder sig av samma metod som när man trycker 
 								// på testet i studentview	
@@ -70,8 +76,9 @@ class Login extends Base {
 									var newAttrVal = `${attrVal}teacher`;
 									$(`[data-id=${id}]`).attr('data-click', newAttrVal);
 								});
+
 								$('.students').hide();
-                         
+
 								window.tv = tv;
 							});
 						}, 1);
@@ -80,7 +87,6 @@ class Login extends Base {
 					//data-click="test${this.isDone}"
 					console.log('lärare')
 				} else if (authorisation == 3) {
-
 					console.log('Administratör');
 					var admin = new Administrator();
 					admin.readAdminFromDbById(id,()=>{

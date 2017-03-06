@@ -13,12 +13,13 @@ window.load = `
     login.css
     student-view.css
     teacher-view.css
+    testresult-view.css
+
 
   js/libs/
     jquery.js
     bootstrap.min.js
     diffDom.js
-
 
 
   js/classes/base-and-utility-classes/
@@ -93,9 +94,10 @@ templates/
 		student.html
     statistic.html
     statisticProgressBar.html
-        statistic-view.html
+    statistic-view.html
 
   js/main.js
   js/canvas.js
  
+
 `;

@@ -17,17 +17,15 @@ class TeacherView extends Base {
 			$('.droplist').slideToggle("linear");
 		}
 	}
-    
 
     
 	statistics() {
-
 		$('#bodyTemplate').hide();
        $('#bodyTemplate2').show();
 	}
 
 	classes() {
-        $('#bodyTemplate2').hide();
+      $('#bodyTemplate2').hide();
 		$('#bodyTemplate').show();
 	}
 }

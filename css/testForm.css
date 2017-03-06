@@ -159,6 +159,12 @@
 
 #testForm .questionImage{
   text-align: center;
+
+}
+
+#testForm img{
+	width:100%;
+
 }
 
 #testForm .radioAlternatives{
@@ -212,8 +218,7 @@
 
 
   #testForm #finishButton{
-   margin-left: 73%;
-
+   margin-left: 60%;
   }
 
   #testForm .jumbotron{

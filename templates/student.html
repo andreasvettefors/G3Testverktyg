@@ -16,18 +16,18 @@ Student.addTemplate('default', function(){return `
 
 		<div class="bothButtons">
 			<div class="buttonAndListLeft">
-				<button type="button" class="btn testsDone">
+				<button data-click="collapseTestsDone" type="button" class="btn testsDone" >
 					<span class="glyphicon glyphicon-ok-circle glyphiconCircle" aria-hidden="true"></span>
-					<p data-click="collapseTestsDone">Gjorda tester: <strong>${this.finishedTests.length}</strong></p>
+					<p >Gjorda tester: <strong>${this.finishedTests.length}</strong></p>
 				</button>
 				<div class="collapse">${this.finishedTests.display()}</div>
 			</div>
 
 
 			<div class="buttonAndList">
-				<button type="button" id="buttonRight" class="btn testToDos">
+				<button data-click="collapseTestToDos" type="button" id="buttonRight" class="btn testToDos">
 					<span class="glyphicon glyphicon-edit glyphiconTest" aria-hidden="true"></span>
-					<p data-click="collapseTestToDos">Tester att göra: <strong>${this.testsToDo.length}</strong></p>
+					<p>Tester att göra: <strong>${this.testsToDo.length}</strong></p>
 				</button>
 				<div class="collapse">${this.testsToDo.display()}</div>
 			</div>

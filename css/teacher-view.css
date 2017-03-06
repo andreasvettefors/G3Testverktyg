@@ -221,7 +221,11 @@ padding:3px;
   text-align: center;
   z-index: 1;
   width:80%;
-  margin-left: 10%;
+  //margin-left: 10%;
+
+.testWrapper .buttonAndListLeft .testlist{
+  margin-left:23%;
+
 }
 
 .testWrapper .emailAndPicture{
@@ -356,6 +360,10 @@ p{
 }
 
 
+.testlist:nth-child(even) {
+    background-color: #1b678c;
+}
+
 
 @media screen and (max-width: 376px){
 
@@ -375,6 +383,10 @@ p{
 
 }
 
+#bodyTemplate {
+    margin-top: 80px;
+   
+}
 
 .testWrapper .testsDone{
   margin-right: -56%;
@@ -394,8 +406,14 @@ p{
 .testWrapper .testlist {
   margin-top: -5%;
   margin-left: 5%;
-}
 
+.buttonAndListLeft .testlist {
+  margin-top: -5%;
+  margin-left: -7%;
+  padding-bottom: 10px;
+  padding-top: 5px;
+
+}
 
 .menu a:last-child{
  border-left: none;
@@ -483,6 +501,17 @@ p{
 
 }
 
+
+.testWrapper .buttonAndListLeft .testlist {
+    margin-left: -8%;
+   
+}
+
+.testWrapper .buttonAndList .testlist {
+    margin-left: 8%;
+   
+}
+
 .glyphicon-menu-hamburger {
   color: #dcbf87;
   display: inherit;
@@ -500,8 +529,7 @@ p{
 .droplist{
   display: none;
 }
-  
-}
+  }
 
 @media (min-width: 377px) and (max-width: 668px){
 
@@ -545,6 +573,60 @@ p{
 
 .testWrapper .testlist {
   margin-top: 20%;
+
+  margin-bottom: -21%;
+}
+
+.buttonAndListLeft .testlist{
+  margin-left: 23%;
+}
+
+#bodyTemplate{
+  margin-top: 80px;
+}
+.testWrapper .studentEmail {
+    margin-top: -6%;
+   
+}
+#teacherview .panel-style {
+    margin-top: 33%;
+}
+
+}
+
+@media screen and (min-height:1024px) {
+.testWrapper .testStatus{
+  height:16vh;
+}
+
+#glyphiconring{
+  margin-top: -15%;
+}
+
+.floatingStudentImages {
+  margin-top: -15%;
+}
+.bothButtons{
+  margin-left: 13%;
+}
+
+.testWrapper .testToDos .testsDone{
+  height:10vh;
+}
+
+
+.testWrapper .buttonAndListLeft .testlist {
+    margin-left: 23%;
+}
+.testWrapper .testToDos {
+
+    height: 10vh;
+    
+}
+.testWrapper .testsDone {
+   
+    height: 10vh;
+
 }
 
 }
