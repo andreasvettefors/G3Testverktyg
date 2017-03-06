@@ -1,9 +1,59 @@
 Administrator.addTemplate('default', function(){return `
 
-    <div class="container">
-      <div class="jumbotron">
-        <p>VÄLKOMMEN!!! ${this.email} ${this.data}</p>
-      </div>
-    </div>
+
+<div id="adminview" class="container">
+
+<div class="container">
+	<nav class="menu">
+		<div class="menu-box" >
+			<div class="dropdown">
+				
+				<a class="dropbtn" data-click="showDropDownMenu">
+				<div class="idBox">
+					<h1 class="h1Admin">Administratör</h1>
+					<h2 class="h2AdminEmail">${this.email}</h2>
+					<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+				</div></a>
+				<div class="dropdown-content droplist">
+
+					<a href="#"  data-click="classes" class="navbarClasses" checked>Klasser</a>
+					<a href="."  class="navbarLogOut">Logga ut</a>
+
+
+				</div>
+			</div>
+
+		</div>
+		
+	</nav>
+</div>
+<!--Start section-->
+<section class="student-view">
+
+	<!--Start row-->
+	<div class="row space-above parent-container">
+
+
+		<!--Start maincontent-->
+		<!--<div class="col-xs-12 col-md-9 col-lg-8 main-content">
+			<div id="bodyTemplate" class="panel panel-default panel-style">
+				<div class="panel-body">
+					<p class="yourClasses">Dina klasser</p>
+						<hr class="line">
+						
+					</div>
+				</div>
+			</div>
+			end maincontent-->
+
+		</div>
+	</section>
+	<!--end content-->
+
+</div>
+
+<!--end container-->
+
+
 
 `});

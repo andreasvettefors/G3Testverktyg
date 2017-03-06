@@ -14,6 +14,7 @@ window.load = `
     student-view.css
     teacher-view.css
     testresult-view.css
+    administrator.css
 
 
   js/libs/

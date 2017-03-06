@@ -44,7 +44,7 @@ StudentView.addTemplate('default', function(){return `
 
 						<!--List with tests to do-->
 						<article class="student-view-test-info">
-							<p class="testTextP"><strong>Kunskapstester att göra</strong></p>
+							<p class="testTextP">Kunskapstester att göra: <strong> ${this.student.testsToDo.length}</strong></p>
 
 							<div class="list-group testToDoList">
 								${this.student.testsToDo.display()}
@@ -54,7 +54,7 @@ StudentView.addTemplate('default', function(){return `
 
 						<!--List with finished tests-->
 						<article class="student-view-test-info">
-							<p class="testTextP"><strong>Kunskapstester du genomfört</strong></p>
+							<p class="testTextP">Kunskapstester du genomfört: <strong>${this.student.finishedTests.length}</strong></p>
 
 							<div class="list-group">
 								${this.student.finishedTests.display()}
