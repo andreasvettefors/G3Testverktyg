@@ -12,7 +12,8 @@ class Question extends Base {
 	}
 	constructor(propertyValues){
 		super(propertyValues);
-   
+   	this.answerOptions.readFromDb(this.idQuestion,(data) => { 
+		});
 	}
 
 
@@ -46,7 +47,7 @@ class Question extends Base {
         INSERT questions SET ?
       `,
       readQuestion: `
-      select * from questions
+        select * from questions
       ` 
   		    
 

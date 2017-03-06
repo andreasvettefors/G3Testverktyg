@@ -4,11 +4,13 @@ class Teacher extends Base {
 
 		return {
 		  ID: 0,
-			email: 'john@teacher.se'
+			email: 'john@teacher.se',
+			classes: new ClassList()
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
+		this.classes.readClassData(() => {});
 
 	}
 
@@ -16,10 +18,11 @@ class Teacher extends Base {
 		this.db.readTeacherData([id], (data) => {
 			this.ID = data[0].idUser;
 			this.email = data[0].email;
-			console.log();
 			callback();
 		});
 	}
+
+
 
 	static get sqlQueries() {
 		return {
@@ -30,3 +33,4 @@ class Teacher extends Base {
 	}
 
 }
+

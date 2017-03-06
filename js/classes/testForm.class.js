@@ -47,7 +47,7 @@
  				studAns.addAnswer(sv.student.idUser, answerID, questID);
  				/////////////////////////////////////////////////
  				this.currentQIndex++;
- 			}
+ 			} 
 
  			if (this.currentQIndex == this.questions.length - 1) {
  				$('#nextButton').remove();

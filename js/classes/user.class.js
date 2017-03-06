@@ -1,15 +1,15 @@
-class TestResultItem extends Base {
+class User extends Base {
 
 	static defaultPropertyValues() {
 
 		return {
-			question: 'Hur?',
-			answer: 'Perfekt!',
-			isCorrect: 0
+			idUser: 0,
+			email: 'john@student.se',
+			authorisation: ''
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-
 	}
+
 }

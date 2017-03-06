@@ -1,39 +1,60 @@
 <!--Teacherview -->
 TeacherView.addTemplate('default', function(){return `
 <!--Start container-->
+
 <div id="teacherview" class="container">
 
-	<!--Start section-->
-	<section class="student-view">
+<div class="container">
+	<nav class="menu">
+		<div class="menu-box" >
+			<div class="dropdown">
+				
+				<a class="dropbtn" data-click="showDropDownMenu">
+				<div class="idBox">
+					<h1 class="h1Teacher">LÄRARE</h1>
+					<h2 class="h2TeacherEmail">${this.teacher.email}</h2>
+					<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+				</div></a>
+				<div class="dropdown-content droplist">
 
-		<!--Start row-->
-		<div class="row space-above">
+					<a href="#"  data-click="classes" class="navbarClasses" checked>Klasser</a>
+					<a href="#"  data-click="statistics" class="navbarStatistics">Statistik</a>
+					<a href="."  class="navbarLogOut">Logga ut</a>
 
-			<div class="col-md-3 hidden-sm">
+
+				</div>
 			</div>
 
-			<!--Start maincontent-->
-			<div class="col-md-6 col-sm-12">
-				<div class="panel panel-default panel-style">
-					<div class="panel-body">
-						<h3>${this.teacher.email}</h3>
-						<h4>Lärare</h4>
-						<hr>
+		</div>
+		
+	</nav>
+</div>
+<!--Start section-->
+<section class="student-view">
+
+	<!--Start row-->
+	<div class="row space-above parent-container">
+
+
+		<!--Start maincontent-->
+		<div class="col-xs-12 col-md-9 col-lg-8 main-content">
+			<div id="bodyTemplate" class="panel panel-default panel-style">
+				<div class="panel-body">
+					<p class="yourClasses">Dina klasser</p>
+						<hr class="line">
 						<div id="classes" class="list-group">
-								
-							</div>
+							${this.teacher.classes.display()}
+						</div>
 					</div>
 				</div>
 			</div>
 			<!--end maincontent-->
-
-			<div class="col-md-3 hidden-sm">
-			</div>
 
 		</div>
 	</section>
 	<!--end content-->
 
 </div>
+
 <!--end container-->
 `});

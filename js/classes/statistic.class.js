@@ -1,15 +1,11 @@
-class TestResultItem extends Base {
+class Statistic extends Base {
 
 	static defaultPropertyValues() {
 
 		return {
-			question: 'Hur?',
-			answer: 'Perfekt!',
-			isCorrect: 0
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-
 	}
 }

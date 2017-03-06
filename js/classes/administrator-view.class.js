@@ -1,15 +1,14 @@
-class TestResultItem extends Base {
+class AdministratorView extends Base {
 
 	static defaultPropertyValues() {
-
 		return {
-			question: 'Hur?',
-			answer: 'Perfekt!',
-			isCorrect: 0
+			admin: new Administrator()
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-
 	}
+
+
+
 }

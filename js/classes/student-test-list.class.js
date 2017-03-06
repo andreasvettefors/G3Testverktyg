@@ -7,14 +7,14 @@ class StudentTestList extends List {
 	readStudentTestFromDbById(id, callback) {
 		this.db.readTests([id], (data) => {
 			this.push.apply(this, data);
-			callback();
+			callback(data);
 		});
 	}
 
 	static get sqlQueries() {
 		return {
 			readTests: `
-       SELECT name,isDone FROM test JOIN test_has_users ON test_idTest = idTest WHERE user_idUser = ? AND isDone= 0
+       SELECT idTest,name,isDone FROM test JOIN test_has_users ON test_idTest = idTest WHERE user_idUser = ? AND isDone= 0
       `
 		}
 	}

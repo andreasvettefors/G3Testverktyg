@@ -1,40 +1,44 @@
-
-
+/*design för desktop*/
 .container .jumbotron{
-      border-radius: 0px;
-}
-.jumbotron{
-  background-color: white;
+  border-radius: 0px;
+} 
+
+#testForm .jumbotron{
+  background-color: #351919;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-style: 1px solid white;
   text-align: center;
   padding-top:20px;
   padding-bottom: 20px;
+  margin-top: 100px;
   }
 
- .number{
+
+
+ #testForm .currentQNumber{
   font-size: 80px;
-  color:#ff6a20;
+  color:#dcbf87;
   
 }
 
-.display-3{
+#testForm .noQuestionLength{
   font-family: 'Vidaloka', serif;
-  color: lightgrey;
+  color: #985f5f;
   text-align:right;
   float:right;
 }
 
 
-.jumbotron h1{
+
+#testForm .header1{
   font-family: 'Vidaloka', serif;
   font-size: 70px;
-  color:#b5bbca;
+  color:#dcbf87;
   text-align:left;
   float:left;
 }
 
-.jumbotron h3{
+#testForm .nameOfTest{
   margin-top: 120px;
   margin-left: 5px;
   margin-bottom: 0px;
@@ -44,222 +48,177 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
-  color:#b5bbca;
+  color:#985f5f;
   text-align: left;
 }
 
-.jumbotron>hr {
+#testForm .line{
 
-  margin-top: 20px;
-  border-color: #ff6a20;
+  margin-top: 30px;
+  border: 1px #ff6a20 solid;
 }
 
-.jumbotron p{
+#testForm .questionP{
   margin-top: 50px;
   text-align: left;
   margin-left: 15%;
-  color:#7c8495;
+  color:#985f5f;
   font-size: 23px;
   font-family: 'Vidaloka', serif;
   margin-top: 10px;
 }
 
-.line{
-  margin-top: 130px;
-   border-top: 2px solid #ff6a20;
-}
-.alt{
-  text-decoration: none;
-  font-size: 20px;
-  text-align: left;
-  font-family: verdana;
-  padding-left: 0px;
-  list-style-type: none;
-}
 
-.alt a{
-  display:block;
-  cursor: pointer;
-}
-.alt1{
-  color:#b5bbca;
-  margin-top: 15px;
-  margin-bottom: 15px;
-
-}
-
-a:hover{
+#testForm #nextButton:hover{
   color:#ff6a20 ;
   border: 2px solid #ff6a20 ;
   text-decoration: none;
   
 }
 
-a:checked{
+#testForm #nextButton:checked{
   color:#ff6a20 ;
   border: 2px solid #ff6a20 ;
   text-decoration: none;    
 }
 
-a{
+#testForm #nextButton{
   color:#ff6a20;
 }
 
 
+#testForm .pager li>#nextButton{
+  background-color: #271629 ;
+  color:#FAFFBD;
+  border: 1px #FAFFBD solid;
+}
 
-.pager li>a{
-  background-color: #ff6a20 ;
+#testForm .pager li>#nextButton:hover{
+  background-color: #442530;
   color:white;
-  border-color: white;
+  border: 1px #FAFFBD solid;
 }
 
-.pager li>a:hover{
-  background-color: #ff6a20 ;
-  color:white;
-  border-color: white;
-}
 
-#myOption{
-  font-family:  verdana bold;
-  margin-top: 10px;
-  margin-left: 100px;
-  text-align: center left;
-  color:#7c8495;
-  text-align: center;
-
-}
-
-input[type='radio'] {
+#testForm input[type='radio'] {
 
   -webkit-appearance:none;
   width:15px;
   height:15px;
-  border:2px solid #ff6a20;
+  border:2px solid #FAFFBD;
   border-radius:50%;
   outline:none;
   margin-right: 10px;
   margin-bottom: -5px;
 }
 
-input[type='radio']:before {
+#testForm input[type='radio']:before {
   content:'';
   display: block;
-
   width:80%;
   height:80%;
   margin: 8% auto;  
   margin-left: 1.5px;  
   border-radius:60%;    
 }
-input[type='radio']:checked:before {
-  background:#7c8495;
+#testForm input[type='radio']:checked:before {
+  background:#985f5f;
 
 }
-input[type='radio']:focus {
+#testForm input[type='radio']:focus {
   outline: 0;
 
 }
 
-#finishButton {
- margin-left: 87%;
- background-color: white;
- border-radius: 20px;
- border: 2px #ff6a20 solid ;
- padding:5px;
- padding-left:10px;
- padding-right: 10px;
- font-family: verdana;
- font-weight: bold;
- text-transform: uppercase;
- letter-spacing: 1px;
- color:#ff6a20;
- font-size: 10px;
- display:none;
-}
 
-#finishButton:hover{
-  background-color: #ff6a20;
-  color:white;
-}
+#testForm #finishButton{
+    background: #271629 ;
+    border: 1px #FAFFBD solid;
+    border-radius: 20px;
+    color: #FAFFBD;
+    width: 110px;
+    font-family: verdana;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 10px;
+    display:none;
+  }
 
-#finishButton:focus{
+ #testForm #finishButton:hover{
+   
+  border: 1px #FAFFBD solid;
+  background: #442530;
+
+  }
+
+#testForm #finishButton:focus{
   outline: 0; 
 }
 
-
-.image{
-text-align: center;
+#testForm .questionImage{
+  text-align: center;
 }
 
-.alternatives{
+#testForm .radioAlternatives{
   display:flex;
 }
-.answerAlternatives{
-    display: inline;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color:#7c8495;
+
+#testForm .answerAlternatives{
+  display: inline;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color:#ccbc9e;
 }
 
-#error-message{
-  color:red;
+#testForm #error-message{
+  color:#c19191;
   font-family: verdana;
   font-size: 14px;
 }
 
-#form{
+#testForm #form{
   margin-left: 15%;
 }
 
-/*clock design*/
-#clock{
-  font-family: lato;
-}
 
-/* design for mobile */
+/* design för stående mobil */
 @media screen and (max-width: 376px){
 
-.jumbotron h1{
-  margin-top: 70px;
-  font-size: 50px;  
-}
+  #testForm .header1{
+    margin-top: 70px;
+    font-size: 50px;  
+  }
 
-.jumbotron p{
-  text-align: left; 
-  margin-left: 15%;
-}
+  #testForm .questionP{
+    text-align: left; 
+    margin-left: 15%;
+  }
 
-.display-3{
-  
-  font-size: 30px;
-  margin-top: -150px;
-}
+  #testForm .noQuestionLength{
+    font-size: 30px;
+    margin-top: -150px;
+  }
 
-.number{
-  font-size: 50px;
-}
+  #testForm .currentQNumber{
+    font-size: 50px;
+  }
 
-.jumbotron h3{
-  margin-top: 140px;
-}
+  #testForm .nameOfTest{
+    margin-top: 140px;
+  }
 
 
-.alt{
-  justify-content: center;
-}
-#myOption{
-  font-family: verdana;
-  margin-top: 10px;
-  margin-left: 50px;
-  text-align: center left;
-}
+  #testForm #finishButton{
+   margin-left: 73%;
 
-#finishButton{
- margin-left: 73%;
+  }
 
-}
-
+  #testForm .jumbotron{
+    margin-top: 10px;
+  }
 
 }
 

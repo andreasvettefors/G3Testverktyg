@@ -1,0 +1,339 @@
+/*design för desktop*/ 
+body{
+  margin: 0;
+  position: relative;
+  background: -webkit-linear-gradient( #000000, #7b3939);
+  background:linear-gradient( #000000, #7b3939);
+
+}
+
+#background{
+  background-size: cover;
+  height: 100vh;
+  width:100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background: -webkit-linear-gradient( #000000, #7b3939);
+  background: linear-gradient( #000000, #7b3939);
+  z-index: 1;
+}
+
+.container{
+  position: relative;
+  z-index: 3;
+  
+}
+
+#login{
+  width:340px; 
+}
+
+.canvas>#space{
+ top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  position: absolute;
+  z-index: 2;
+  width:100vw;
+  height:100vh;
+
+}
+
+.icon{
+  text-align: center;
+  margin-top: -15%;
+  margin-bottom: 10px;
+}
+
+.glyphicon-ring {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px solid #ccb692;
+  margin-top: 70px;
+  display: inline-table;
+  text-align: center;
+  vertical-align:middle;
+
+}
+
+#glyphicon{
+  margin-top: 12px;
+  color:#ccb692;
+  border-radius: 5px;
+  display:block;
+  text-align:center;
+  font-size: 30px;
+  padding: 0;
+  vertical-align:middle;
+}
+
+/*för ikon utan bakgrund*/
+
+.glyphicon-ring .glyphicon-bordered {
+
+  font-size: 50px;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.center{
+  color: #f1dbb6;
+  text-align: left;
+  font-family: 'Lato', serif;
+  margin-top: 10px;
+}
+
+.form-signin {
+max-width: 330px;
+padding: 15px;
+margin: 0 auto;
+margin-top: -800px;
+}
+
+.form-signin ,
+.form-signin .checkbox {
+margin-bottom: 10px;
+
+}
+
+.form-signin-heading{
+  font-family: 'Lato', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color:#d4c09f;
+  margin-top: 0;
+}
+
+.form-control{
+  border-radius: 50px;
+}
+
+.label1, .label2{
+  font-family: 'Lato';
+  font-size: 12px;
+  text-align: left;
+  color:#e0cfb1;
+}
+.form-signing h2{
+  font-size: 40px;
+  font-family: 'Lato';
+}
+
+.form-signin h2{
+  color:#ccae7c;
+  text-align: center;
+  font-family: 'Lato';
+  color:#e0cfb1;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.form-signin .checkbox {
+font-weight: normal;
+}
+
+.form-signin .form-control {
+position: relative;
+height: auto;
+padding: 10px;
+font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+z-index: 2;
+}
+
+.form-signin input[type="email"] {
+margin-bottom: -1px;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+margin-bottom: 10px;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+}
+
+.headerNewton{
+  text-align: center;
+  font-family: Times ;
+  color:#f3e3cc;
+  font-size:40px;
+  letter-spacing: 1px;
+  margin-top: 100px;
+}
+
+.headerNewton2{
+  text-align: center;
+  font-family: 'Vidaloka' ;
+  text-transform: uppercase;
+  color:#d4c09f;
+  font-size:40px;
+  letter-spacing: 6px;
+  margin-top: -1%;
+}
+
+#buttonSign{
+  margin:0 auto;
+  width:100px;
+  margin-top: 15px;
+}
+
+
+
+.btn-primary{
+  background: #271629 !important;
+  border: 1px #FAFFBD solid;
+  border-radius: 20px;
+  color:#FAFFBD;
+  width:110px;
+  font-family: verdana;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  padding:10px;
+  
+}
+
+.btn-primary:hover{
+  border: 1px #FAFFBD solid;
+  background: #442530 !important;
+}
+
+.btn-primary:focus{
+  outline: 0;
+}
+
+.label2{
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.label1{
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+/*design för stående mobil*/
+@media screen and(max-width: 376px) {
+.container{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+.canvas>#space{
+  width:100vw;
+}
+
+.headerNewton{
+  margin-top: 60px;
+}
+
+.btn-primary:focus{
+  outline: 0;
+}
+
+.btn-primary:active{
+  border: 1px #FAFFBD solid;
+}
+.idBox{
+  padding-left: 55%;
+}
+
+}
+
+
+@media screen and (max-width: 321px){
+
+#login{
+    width:310px;
+    margin-top:-20%;
+  }
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.canvas>#space{
+  width:100vw;
+}
+
+.headerNewton{
+  font-size: 30px;
+}
+
+
+.btn-primary:focus{
+  outline: 0;
+}
+
+.btn-primary:active{
+  border: 1px #FAFFBD solid;
+}
+
+}
+/*design för liggande mobil vy*/
+@media (min-width: 377px) and (max-width: 668px){
+
+  body{
+    width:100vw;
+    }
+
+  .container{
+    flex-direction: column;
+    display: flex;
+    margin-top: -90px;
+    }
+
+
+  #login{
+    height: 100vh;
+    width:300px; 
+  }
+
+  .canvas>#space{
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .form-signin-heading{
+    font-size:30px;
+  }
+
+  .headerNewton{
+    margin-top: 10px;
+    font-size:30px;
+  }
+
+  .label1{
+    margin-top:-2px;
+  }
+
+  .btn-primary:focus{
+  outline: 0;
+}
+
+.btn-primary:hover{
+  border: 1px #FAFFBD solid;
+  
+}
+
+.icon {
+    margin-top: 10%;
+    
+}
+
+}
+
