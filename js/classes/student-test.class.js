@@ -75,16 +75,26 @@ class StudentTest extends Base {
 
 					// Tidsgränsen för att klara testet sätts här. 
 					var totalSec = test.timeLimit;
-					var x = setInterval(function () {
+					// Funktionn körs varje sekund vilket gör att det ser ut som en timer
+					var x = setInterval(function (){
+						//Räknar ut minuter och sekunder till timern
 						var min = parseInt(totalSec / 60, 10);
 						var sec = totalSec - (min * 60);
-
+						
+						// Visar tiden
 						$('#showtime').html("Tid kvar: " + min + "m " + sec + "s");
 
+						// Minskar tiden med
 						totalSec--;
+						
+						
+						//Om tiden blir noll så körs detta block
 						if (totalSec < 0) {
 							$('#testForm').remove();
-							console.log(test.questions);
+							var timesUp = new Modal({
+      						content: 'Tyvärr, tiden tog slut!',
+      						okButton: 'Ok'
+							});
 
 							clearInterval(x);
 							//console.log(sv.student.idUser);

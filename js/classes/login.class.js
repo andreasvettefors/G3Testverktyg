@@ -50,7 +50,7 @@ class Login extends Base {
 				} else if (authorisation == 2) {
 					//lärare
 					var tv = new TeacherView();
-					var stats = new StatisticView();
+					var statv = new StatisticView();
 
 					tv.teacher.readTeacherFromDbById(id, () => {
 						setTimeout(function () {
@@ -61,7 +61,9 @@ class Login extends Base {
 								$('.headerNewton2').remove();
 								$('.wrongUserPass').remove();
 								tv.display('body');
-								stats.display('.main-content');
+								statv.display('.main-content');
+								statv.getStats(1);
+								$('#statistics').hide();
 								$('#bodyTemplate2').hide();
 
 								// För att ändra attributet data-click så det inte 
@@ -77,7 +79,7 @@ class Login extends Base {
 								$('.students').hide();
 
 								window.tv = tv;
-								window.stats = stats;
+								window.statv = statv;
 							});
 						}, 1);
 

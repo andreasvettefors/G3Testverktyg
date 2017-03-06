@@ -7,20 +7,23 @@ class Class extends Base {
 			name: 'A Great class',
 			students: new StudentList()
 		}
-		
+
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-		this.students.readStudentData(this.idClasses,()=>{	
-		});
+		this.students.readStudentData(this.idClasses, () => {});
 	}
+
+	showStudentsInClass(e) {
+
+			var a = $(e.target).text();
 	
-	showStudentsInClass(e){
-		
-		var a = $(e.target).text();
-		console.log('class',a);	
-		$(e.target).after($('.' + a).slideToggle("linear"));
-		
+			// Visar statistik för en klass
+			$(e.target).closest('#bodyTemplate2').find('#statistics').slideToggle('linear');
+			// Visar elever ri en klass
+			$(e.target).after($('.' + a).slideToggle("linear"));
+
+
 	}
 
 }
