@@ -87,14 +87,13 @@ border-right:1px solid #1e4b61;
   position: relative;
 
 }
+
 #bodyTemplate2{
   margin-top: 150px;
   background-color: #985050;
   position: relative;
-    z-index:3000;
 
 }
-
 
 .wrapperClass .listClasses{
   margin: 4%;
@@ -222,10 +221,10 @@ padding:3px;
   z-index: 1;
   width:80%;
   //margin-left: 10%;
+}
 
 .testWrapper .buttonAndListLeft .testlist{
   margin-left:23%;
-
 }
 
 .testWrapper .emailAndPicture{
@@ -359,7 +358,6 @@ p{
   display: inherit;
 }
 
-
 .testlist:nth-child(even) {
     background-color: #1b678c;
 }
@@ -382,7 +380,6 @@ p{
   margin-left: 25%;
 
 }
-
 #bodyTemplate {
     margin-top: 80px;
    
@@ -403,17 +400,13 @@ p{
   margin-right: 4%;
 }
 
-.testWrapper .testlist {
-  margin-top: -5%;
-  margin-left: 5%;
-
 .buttonAndListLeft .testlist {
   margin-top: -5%;
   margin-left: -7%;
   padding-bottom: 10px;
   padding-top: 5px;
-
 }
+
 
 .menu a:last-child{
  border-left: none;
@@ -501,7 +494,6 @@ p{
 
 }
 
-
 .testWrapper .buttonAndListLeft .testlist {
     margin-left: -8%;
    
@@ -529,7 +521,9 @@ p{
 .droplist{
   display: none;
 }
-  }
+
+  
+}
 
 @media (min-width: 377px) and (max-width: 668px){
 
@@ -573,7 +567,6 @@ p{
 
 .testWrapper .testlist {
   margin-top: 20%;
-
   margin-bottom: -21%;
 }
 
@@ -626,7 +619,6 @@ p{
 .testWrapper .testsDone {
    
     height: 10vh;
-
 }
 
 }

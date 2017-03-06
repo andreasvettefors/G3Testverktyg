@@ -3,7 +3,8 @@ class StudentTest extends Base {
 		return {
 			idTest: 0,
 			name: 'Java',
-			isDone: 0
+			isDone: 0,
+			timeLimit: 0
 		}
 	}
 	constructor(propertyValues) {
@@ -15,8 +16,8 @@ class StudentTest extends Base {
 	teacher() {
 		console.log('teacherseetest');
 	}
-	
-	teacher(){			
+
+	teacher() {
 		console.log('teacherseetest');
 	}
 
@@ -71,29 +72,48 @@ class StudentTest extends Base {
 					$('#studentview').remove();
 					test.display('body');
 					window.test = test;
-					var d = 5;
-					var myVar = setInterval(function () {
-						console.log(d);
-						d--;
-						if(d<0){
+
+					// Tidsgränsen för att klara testet sätts här. 
+					var totalSec = test.timeLimit;
+					var x = setInterval(function () {
+						var min = parseInt(totalSec / 60, 10);
+						var sec = totalSec - (min * 60);
+
+						$('#showtime').html("Tid kvar: " + min + "m " + sec + "s");
+
+						totalSec--;
+						if (totalSec < 0) {
 							$('#testForm').remove();
-							alert("timeUp");
-							clearInterval(myVar);
-						
+							console.log(test.questions);
+
+							clearInterval(x);
+							//console.log(sv.student.idUser);
+							var studAns = new studentAnswer();
+		
+							//////adds student choosen-answer to database////
+							/////////////////////////////////////////////////
+							
+							console.log("studid",sv.student.idUser,"testid",test.idTest);
+							studAns.studentGradePercentage(sv.student.idUser, test.idTest, (element) => {
+								console.log(element);
+								//Adds final testresult to "grade" database
+								studAns.addGrade(element, test.idTest, sv.student.idUser);
+								////////////////////////////////////////////////
+							});
+							studAns.updateUserCompletedTest(sv.student.idUser, test.idTest);
+							
 							var finish = new FinishedForm();
- 							finish.display('body');
+							finish.display('body');
 						}
 					}, 1000);
-				
-
-
 				});
 			});
 		});
-
 	}
 
-	
+
+
+
 	test1() {
 		console.log('idTest', this.idTest);
 		console.log('name', this.name);
@@ -120,8 +140,8 @@ class StudentTest extends Base {
 			});
 		});
 	}
-	
-	test0teacher(){
+
+	test0teacher() {
 		return;
 	}
 
