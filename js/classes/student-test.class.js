@@ -87,7 +87,7 @@ class StudentTest extends Base {
 						// Minskar tiden med
 						totalSec--;
 						
-						
+						console.log(totalSec);
 						//Om tiden blir noll så körs detta block
 						if (totalSec < 0) {
 							$('#testForm').remove();
@@ -111,7 +111,7 @@ class StudentTest extends Base {
 								////////////////////////////////////////////////
 							});
 							studAns.updateUserCompletedTest(sv.student.idUser, test.idTest);
-							
+							window.x = x;
 							var finish = new FinishedForm();
 							finish.display('body');
 						}
@@ -149,10 +149,6 @@ class StudentTest extends Base {
 				});
 			});
 		});
-	}
-
-	test0teacher() {
-		return;
 	}
 
 	test0teacher() {

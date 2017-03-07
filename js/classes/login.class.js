@@ -30,22 +30,22 @@ class Login extends Base {
 			if (validate) {
 				if (authorisation == 1) {
 					//Elev sida
-					//window.location.replace("http://facebook.se");
+
 					var sv = new StudentView();
 					sv.student.readStudentFromDbById(id, () => {
-						setTimeout(function () {
+						$(function () {
+							$('#login').remove();
+							$('canvas').remove();
+							$('.headerNewton').remove();
+							$('.headerNewton2').remove();
+							$('.wrongUserPass').remove();
 							$(function () {
-								$('#login').remove();
-								$('canvas').remove();
-								$('.headerNewton').remove();
-								$('.headerNewton2').remove();
-								$('.wrongUserPass').remove();
 								sv.display('body');
 								window.sv = sv;
 							});
-
 						});
-					}, 1);
+
+					});
 
 				} else if (authorisation == 2) {
 					//lärare
@@ -53,13 +53,15 @@ class Login extends Base {
 					var statv = new StatisticView();
 
 					tv.teacher.readTeacherFromDbById(id, () => {
-						setTimeout(function () {
+		
+						$(function () {
+							$('#login').remove();
+							$('canvas').remove();
+							$('.headerNewton').remove();
+							$('.headerNewton2').remove();
+							$('.wrongUserPass').remove();
+
 							$(function () {
-								$('#login').remove();
-								$('canvas').remove();
-								$('.headerNewton').remove();
-								$('.headerNewton2').remove();
-								$('.wrongUserPass').remove();
 								tv.display('body');
 								statv.display('.main-content');
 								statv.getStats(1);
@@ -81,7 +83,8 @@ class Login extends Base {
 								window.tv = tv;
 								window.statv = statv;
 							});
-						}, 1);
+						});
+		
 
 					});
 					//data-click="test${this.isDone}"
