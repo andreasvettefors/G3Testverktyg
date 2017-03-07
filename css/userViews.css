@@ -1,52 +1,98 @@
-#studentview,#teacherview,#testresultview{
-	font-family:'Verdana';
+body {
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: auto;
+	background: -webkit-linear-gradient( #000000, #7b3939);
+	background: linear-gradient( #000000, #7b3939);
+	z-index: 1;
 }
 
-#studentview .panel-style ,#teacherview .panel-style,#testresultview .panel-style{
+#studentview,
+#testresultview {
+	font-family: 'Verdana';
+}
+
+#studentview .panel-style,
+#testresultview .panel-style {
 	background-color: white;
-  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-style: 1px solid white;
-	border-radius:0;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-style: 1px solid white;
+	border-radius: 0;
 }
 
-#studentview h3,h4 ,#teacherview h3,h4 ,#testresultview h3,h4{
+#studentview h3,
+h4,
+h4 {
 	font-family: 'Vidaloka', serif;
-  color:#b5bbca;
+	color: #b5bbca;
 }
 
-#studentview hr,#teacherview hr,#testresultview hr{
+#studentview hr,
+#testresultview hr {
 	border-color: #ff6a20;
 }
-#studentview  .student-view-test-info{
-	color:#b5bbca;
+
+#studentview .student-view-test-info {
+	color: #b5bbca;
 }
 
-#studentview a:hover, #teacherview a:hover{
-  color:#ff6a20 ;
-  border: 1px solid #ff6a20 ;
-  text-decoration: none;
-}
-
-#testresultview a{
-	background-color: #ff6a20 ;
-  color:white;
-  border-color: white;
-	padding:6px 10px;
+#testresultview a {
+	background-color: #ff6a20;
+	color: white;
+	border-color: white;
+	padding: 6px 10px;
 	border-radius: 10px;
 }
 
-#testresultview a:hover{
+#testresultview a:hover {
 	background-color: lightgrey;
-  color:#ff6a20;
-  border-color: white;
-	cursor:pointer;
+	color: #ff6a20;
+	border-color: white;
+	cursor: pointer;
 }
 
-
-#studentview .list-group-item, #teacherview .list-group-item{
+#studentview .list-group-item {
 	margin-top: 2%;
 }
 
-.studentlink{
-	margin-left:20%;
+.studentlink {
+	margin-left: 20%;
+}
+
+.isCorrect0 {
+	color: #ec4242;
+}
+
+.isCorrect1 {
+	color: #2e9e2e;
+}
+
+#testresultview .header3 {
+	color: #ad9782;
+	font-size: 40px;
+	text-align: left;
+	font-family: 'Vidaloka';
+	margin-left: 5%;
+}
+
+#testresultview .goBack {
+	text-decoration: none;
+	color: #FAFFBD;
+	border-radius: 30px;
+	border: 1px #FAFFBD solid;
+	margin-top: 20%;
+	margin-left: 5%;
+	background-color: #271629;
+}
+
+#testresultview .goBack:hover {
+	border: 1px #FAFFBD solid;
+	background: #442530 !important;
 }

@@ -30,44 +30,84 @@ class Login extends Base {
 			if (validate) {
 				if (authorisation == 1) {
 					//Elev sida
-					//window.location.replace("http://facebook.se");
+
 					var sv = new StudentView();
-					sv.student.finishedTests.readStudentFinishedTestFromDbById(id, () => {
-						sv.student.testsToDo.readStudentTestFromDbById(id, () => {
-							sv.student.readStudentFromDbById(id, () => {
-								$('#login').remove();
-								$('.wrongUserPass').remove();
+					sv.student.readStudentFromDbById(id, () => {
+						$(function () {
+							$('#login').remove();
+							$('canvas').remove();
+							$('.headerNewton').remove();
+							$('.headerNewton2').remove();
+							$('.wrongUserPass').remove();
+							$(function () {
 								sv.display('body');
 								window.sv = sv;
 							});
-
 						});
+
 					});
+
 				} else if (authorisation == 2) {
 					//lärare
 					var tv = new TeacherView();
-					var cl = new ClassList();
+					var statv = new StatisticView();
 
-					cl.readClassData(() => {
-						tv.teacher.readTeacherFromDbById(id, () => {
+					tv.teacher.readTeacherFromDbById(id, () => {
+
+						$(function () {
 							$('#login').remove();
+							$('canvas').remove();
+							$('.headerNewton').remove();
+							$('.headerNewton2').remove();
 							$('.wrongUserPass').remove();
-							tv.display('body');
-							cl.display('#classes');
-							window.tv = tv;
-							window.cl = cl;
+
+							$(function () {
+								tv.display('body');
+								statv.display('.main-content');
+								statv.getStats(1);
+								$('#statistics').hide();
+								$('#bodyTemplate2').hide();
+
+								// För att ändra attributet data-click så det inte 
+								// använder sig av samma metod som när man trycker 
+								// på testet i studentview	
+								$('.testlist').each(function () {
+									var id = $(this).attr('data-id');
+									var attrVal = $(this).attr('data-click');
+									var newAttrVal = `${attrVal}teacher`;
+									$(`[data-id=${id}]`).attr('data-click', newAttrVal);
+								});
+
+								$('.students').hide();
+
+								window.tv = tv;
+								window.statv = statv;
+							});
+						});
+
+
+					});
+					//data-click="test${this.isDone}"
+					console.log('lärare')
+				} else if (authorisation == 3) {
+					console.log('Administratör');
+					var admin = new Administrator();
+					admin.readAdminFromDbById(id, () => {
+						admin.readAllUsers(() => {
+							$('#login').remove();
+							$('canvas').remove();
+							$('.headerNewton').remove();
+							$('.wrongUserPass').remove();
+							admin.display('body');
 						});
 					});
 
-					console.log('lärare')
-				} else if (authorisation == 3) {
-					//Administratör
-					console.log('Administratör');
+
 				}
 
 
 			} else {
-				$(".wrongUserPass").html(` <p style="text-align:center;color:red;font-size:25px">${this.wrongUserPass()} </p>`);
+				$(".wrongUserPass").html(` <p class="center">${this.wrongUserPass()} </p>`);
 			}
 		});
 	}

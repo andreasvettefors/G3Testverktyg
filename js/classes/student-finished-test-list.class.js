@@ -14,7 +14,7 @@ class StudentFinishedTestList extends List {
 	static get sqlQueries() {
 		return {
 			readFinishedTests: `
-       SELECT name,isDone FROM test JOIN test_has_users ON test_idTest = idTest WHERE user_idUser = ? AND isDone= 1
+       SELECT idTest,name,isDone FROM test JOIN test_has_users ON test_idTest = idTest WHERE user_idUser = ? AND isDone= 1
       `
 		}
 	}

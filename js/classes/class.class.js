@@ -4,23 +4,26 @@ class Class extends Base {
 
 		return {
 			idClasses: 0,
-			name: 'A special class'
+			name: 'A Great class',
+			students: new StudentList()
 		}
+
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-
-	}
-	
-	showStudentsInClass(e){
-		$('.studentlink').remove();
-		var sl = new StudentList();
-		sl.readStudentData(this.idClasses,()=>{
-			$(e.target).after(sl.display());
-			//sl.display('.students');
-			window.sl = sl;
-		});
+		this.students.readStudentData(this.idClasses, () => {});
 	}
 
+	showStudentsInClass(e) {
+
+		var a = $(e.target).text();
+
+		// Visar statistik för en klass
+		$(e.target).closest('#bodyTemplate2').find('#statistics').slideToggle('linear');
+		// Visar elever ri en klass
+		$(e.target).after($('.' + a).slideToggle("linear"));
+
+
+	}
 
 }

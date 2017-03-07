@@ -4,19 +4,18 @@ class TestResultItemList extends List {
 		super(TestResultItem, items);
 	}
 
-	readTestResultItem(userId,callback) {
-		this.db.readTestResultItem([userId],(data) => {
+	readTestResultItem(userId, testId, callback) {
+		this.db.readTestResultItem([userId, testId], (data) => {
 			this.push.apply(this, data);
 			callback();
 		});
 	}
 
-		static get sqlQueries() {
+	static get sqlQueries() {
 		return {
 			readTestResultItem: `
-       SELECT question,answer FROM testresults WHERE user_idUser = ?
+       SELECT question,answer,isCorrect FROM testresults WHERE user_idUser = ? AND test_idTest = ? 
       `
 		}
 	}
 }
-

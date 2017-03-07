@@ -5,49 +5,84 @@ class Student extends Base {
 		return {
 			idUser: 0,
 			email: 'john@student.se',
+			classes_idClasses: 0,
 			testsToDo: new StudentTestList(),
-			finishedTests:new StudentFinishedTestList()
+			finishedTests: new StudentFinishedTestList()
 		}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);
-
+		this.testsToDo.readStudentTestFromDbById(this.idUser, () => {});
+		this.finishedTests.readStudentFinishedTestFromDbById(this.idUser, () => {});
 	}
 
 	showTestResults(e) {
 		var el = $(e.target).text();
-		for (var item of sl) {
+		var studentList = tv.teacher.classes[this.classes_idClasses - 1].students;
+		for (var item of studentList) {
 			if (el === item.email) {
 				var id = item.idUser;
 			}
 		}
+		console.log(id);
+
+		var finishedTests = new StudentFinishedTestList();
 
 		var sa = new studentAnswer();
-		sa.getTestQuestionsCount(1, (total) => {
-			sa.studentCorrectsCount(id, 1, (correct) => {
-				sa.studentGradePercentage(id, 1,(grade) => {
-					var tr = new TestResultView({
-						student: el,
-						correctAnswers: correct,
-						totalQuestions: total,
-						grade: grade
-					});
-					tr.testresultitem.readTestResultItem(id, () => {
-						$('#teacherview').remove();
-						tr.display('body');
+
+		finishedTests.readStudentFinishedTestFromDbById(id, () => {
+			if (finishedTests === undefined || finishedTests.length == 0) {
+				return;
+			}
+			// Loop through finishedtest to find id and 
+			// name of the test the teacher want to look at
+			for (let i = 0; i < finishedTests.length; i++) {
+				if (finishedTests[i].name == 'Java 1') {
+					var name = finishedTests[i].name;
+					var idTest = finishedTests[i].idTest;
+				}
+
+			}
+
+			sa.getTestQuestionsCount(idTest, (total) => {
+				sa.studentCorrectsCount(id, idTest, (correct) => {
+					sa.studentGradePercentage(id, idTest, (grade) => {
+						var tr = new TestResultView({
+							name: name,
+							student: el,
+							correctAnswers: correct,
+							totalQuestions: total,
+							grade: grade,
+							userType: 2
+						});
+						tr.testresultitem.readTestResultItem(id, idTest, () => {
+							$('#teacherview').remove();
+							tr.display('body');
+						});
 					});
 				});
 			});
-
 		});
 
 	}
 
+	// "Dropdown" för att visa tester som är gjorda
+	collapseTestsDone(e) {
+		$(e.target).closest('.testWrapper').find('.collapse').eq(0).slideToggle('linear');
+	}
+
+	// "Dropdown" för att visa tester som är gjorda
+	collapseTestToDos(e) {
+		$(e.target).closest('.testWrapper').find('.collapse').eq(1).slideToggle('linear');
+	}
+
+
 	readStudentFromDbById(id, callback) {
 		this.db.readStudentData([id], (data) => {
-
 			this.idUser = data[0].idUser;
 			this.email = data[0].email;
+			this.testsToDo.readStudentTestFromDbById(data[0].idUser, () => {});
+			this.finishedTests.readStudentFinishedTestFromDbById(data[0].idUser, () => {});
 			callback();
 		});
 	}

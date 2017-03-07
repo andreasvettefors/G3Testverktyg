@@ -1,266 +1,270 @@
+/*design för desktop*/
 
-
-.container .jumbotron{
-      border-radius: 0px;
-}
-.jumbotron{
-  background-color: white;
-  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-style: 1px solid white;
-  text-align: center;
-  padding-top:20px;
-  padding-bottom: 20px;
-  }
-
- .number{
-  font-size: 80px;
-  color:#ff6a20;
-  
+.container .jumbotron {
+	border-radius: 0px;
 }
 
-.display-3{
-  font-family: 'Vidaloka', serif;
-  color: lightgrey;
-  text-align:right;
-  float:right;
+#testForm .jumbotron {
+	background-color: #351919;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-style: 1px solid white;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 100px;
 }
 
-
-.jumbotron h1{
-  font-family: 'Vidaloka', serif;
-  font-size: 70px;
-  color:#b5bbca;
-  text-align:left;
-  float:left;
+#testForm .currentQNumber {
+	font-size: 80px;
+	color: #dcbf87;
 }
 
-.jumbotron h3{
-  margin-top: 120px;
-  margin-left: 5px;
-  margin-bottom: 0px;
-  font-family: Verdana;
-  font-size: 11px;
-  line-height: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-  color:#b5bbca;
-  text-align: left;
+#testForm .noQuestionLength {
+	font-family: 'Vidaloka', serif;
+	color: #985f5f;
+	text-align: right;
+	float: right;
 }
 
-.jumbotron>hr {
-
-  margin-top: 20px;
-  border-color: #ff6a20;
+#testForm .header1 {
+	font-family: 'Vidaloka', serif;
+	font-size: 70px;
+	color: #dcbf87;
+	text-align: left;
+	float: left;
 }
 
-.jumbotron p{
-  margin-top: 50px;
-  text-align: left;
-  margin-left: 15%;
-  color:#7c8495;
-  font-size: 23px;
-  font-family: 'Vidaloka', serif;
-  margin-top: 10px;
+#testForm .nameOfTest {
+	margin-top: 120px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+	font-family: Verdana;
+	font-size: 11px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #985f5f;
+	text-align: left;
 }
 
-.line{
-  margin-top: 130px;
-   border-top: 2px solid #ff6a20;
-}
-.alt{
-  text-decoration: none;
-  font-size: 20px;
-  text-align: left;
-  font-family: verdana;
-  padding-left: 0px;
-  list-style-type: none;
+#testForm .line {
+	margin-top: 30px;
+	border: 1px #ff6a20 solid;
 }
 
-.alt a{
-  display:block;
-  cursor: pointer;
-}
-.alt1{
-  color:#b5bbca;
-  margin-top: 15px;
-  margin-bottom: 15px;
-
-}
-
-a:hover{
-  color:#ff6a20 ;
-  border: 2px solid #ff6a20 ;
-  text-decoration: none;
-  
+#testForm .questionP {
+	margin-top: 50px;
+	text-align: left;
+	margin-left: 15%;
+	color: #985f5f;
+	font-size: 23px;
+	font-family: 'Vidaloka', serif;
+	margin-top: 10px;
 }
 
-a:checked{
-  color:#ff6a20 ;
-  border: 2px solid #ff6a20 ;
-  text-decoration: none;    
+.modal-content {
+	background-color: #351919;
+	padding: 5%;
+	border-radius: 0;
 }
 
-a{
-  color:#ff6a20;
+.modal-content h2 {
+	color: #ad9782;
+	font-family: 'Vidaloka', serif;
 }
 
-
-
-.pager li>a{
-  background-color: #ff6a20 ;
-  color:white;
-  border-color: white;
+.modalstyle .btnstyle{
+	background: #271629;
+	border: 1px #FAFFBD solid;
+	border-radius: 20px;
+	color: #FAFFBD;
+	width: 110px;
+	font-family: verdana;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 10px;
+	padding: 10px;
 }
 
-.pager li>a:hover{
-  background-color: #ff6a20 ;
-  color:white;
-  border-color: white;
+.modalstyle .btnstyle:hover{
+	border: 1px #FAFFBD solid;
+	background: #442530;
 }
 
-#myOption{
-  font-family:  verdana bold;
-  margin-top: 10px;
-  margin-left: 100px;
-  text-align: center left;
-  color:#7c8495;
-  text-align: center;
-
+.modalstyle .btnstyle:focus{
+	outline: 0;
 }
 
-input[type='radio'] {
-
-  -webkit-appearance:none;
-  width:15px;
-  height:15px;
-  border:2px solid #ff6a20;
-  border-radius:50%;
-  outline:none;
-  margin-right: 10px;
-  margin-bottom: -5px;
+#testForm #nextButton:hover {
+	color: #ff6a20;
+	border: 2px solid #ff6a20;
+	text-decoration: none;
 }
 
-input[type='radio']:before {
-  content:'';
-  display: block;
-
-  width:80%;
-  height:80%;
-  margin: 8% auto;  
-  margin-left: 1.5px;  
-  border-radius:60%;    
-}
-input[type='radio']:checked:before {
-  background:#7c8495;
-
-}
-input[type='radio']:focus {
-  outline: 0;
-
+#testForm #nextButton:checked {
+	color: #ff6a20;
+	border: 2px solid #ff6a20;
+	text-decoration: none;
 }
 
-#finishButton {
- margin-left: 87%;
- background-color: white;
- border-radius: 20px;
- border: 2px #ff6a20 solid ;
- padding:5px;
- padding-left:10px;
- padding-right: 10px;
- font-family: verdana;
- font-weight: bold;
- text-transform: uppercase;
- letter-spacing: 1px;
- color:#ff6a20;
- font-size: 10px;
- display:none;
+#testForm #nextButton {
+	color: #ff6a20;
 }
 
-#finishButton:hover{
-  background-color: #ff6a20;
-  color:white;
+#testForm .pager li>#nextButton {
+	background-color: #271629;
+	color: #FAFFBD;
+	border: 1px #FAFFBD solid;
 }
 
-#finishButton:focus{
-  outline: 0; 
+#testForm .pager li>#nextButton:hover {
+	background-color: #442530;
+	color: white;
+	border: 1px #FAFFBD solid;
 }
 
-
-.image{
-text-align: center;
+#testForm input[type='radio'] {
+	-webkit-appearance: none;
+	width: 15px;
+	height: 15px;
+	border: 2px solid #FAFFBD;
+	border-radius: 50%;
+	outline: none;
+	margin-right: 10px;
+	margin-bottom: -5px;
 }
 
-.alternatives{
-  display:flex;
-}
-.answerAlternatives{
-    display: inline;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color:#7c8495;
-}
-
-#error-message{
-  color:red;
-  font-family: verdana;
-  font-size: 14px;
+#testForm input[type='radio']:before {
+	content: '';
+	display: block;
+	width: 80%;
+	height: 80%;
+	margin: 8% auto;
+	margin-left: 1.5px;
+	border-radius: 60%;
 }
 
-#form{
-  margin-left: 15%;
+#testForm input[type='radio']:checked:before {
+	background: #985f5f;
 }
 
-/*clock design*/
-#clock{
-  font-family: lato;
+#testForm input[type='radio']:focus {
+	outline: 0;
 }
 
-/* design for mobile */
-@media screen and (max-width: 376px){
-
-.jumbotron h1{
-  margin-top: 70px;
-  font-size: 50px;  
+#testForm #finishButton {
+	background: #271629;
+	border: 1px #FAFFBD solid;
+	border-radius: 20px;
+	color: #FAFFBD;
+	width: 110px;
+	font-family: verdana;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 10px;
+	padding: 10px;
+	display: none;
 }
 
-.jumbotron p{
-  text-align: left; 
-  margin-left: 15%;
+#testForm #finishButton:hover {
+	border: 1px #FAFFBD solid;
+	background: #442530;
 }
 
-.display-3{
-  
-  font-size: 30px;
-  margin-top: -150px;
+#testForm #finishButton:focus {
+	outline: 0;
 }
 
-.number{
-  font-size: 50px;
+#testForm .questionImage {
+	text-align: center;
 }
 
-.jumbotron h3{
-  margin-top: 140px;
+#testForm img {
+	width: 25%;
+}
+
+#testForm .radioAlternatives {
+	display: flex;
+}
+
+#testForm .answerAlternatives {
+	display: inline;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #ccbc9e;
+}
+
+#testForm #error-message {
+	color: #c19191;
+	font-family: verdana;
+	font-size: 14px;
+}
+
+#testForm #form {
+	margin-left: 15%;
+}
+
+#showtime {
+	color: #dcbf87;
+	margin-top: 30px;
+	font-size: 12px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-family: 'Lato';
+	letter-spacing: 2px;
+}
+
+.timerBox {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.timeBox {
+	background-color: #0b3042;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	border-radius: 50%;
+	border: 4px #dcbf87 dotted;
+}
+
+#testForm .clockImg {
+	width: 100%;
 }
 
 
-.alt{
-  justify-content: center;
+/* design för stående mobil */
+
+@media screen and (max-width: 376px) {
+	#testForm .header1 {
+		margin-top: 70px;
+		font-size: 50px;
+	}
+	#testForm .questionP {
+		text-align: left;
+		margin-left: 15%;
+	}
+	#testForm .noQuestionLength {
+		font-size: 30px;
+		margin-top: -150px;
+	}
+	#testForm .currentQNumber {
+		font-size: 50px;
+	}
+	#testForm .nameOfTest {
+		margin-top: 140px;
+	}
+	#testForm #finishButton {
+		margin-left: 60%;
+	}
+	#testForm .jumbotron {
+		margin-top: 10px;
+	}
+	#testForm img {
+		width: 50%;
+	}
 }
-#myOption{
-  font-family: verdana;
-  margin-top: 10px;
-  margin-left: 50px;
-  text-align: center left;
-}
-
-#finishButton{
- margin-left: 73%;
-
-}
-
-
-}
-
-

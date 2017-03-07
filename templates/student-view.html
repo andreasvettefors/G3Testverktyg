@@ -1,30 +1,52 @@
 <!--Studentpage that shows test to do an also test that have been done -->
 StudentView.addTemplate('default', function(){return `
-<!--Start container-->
-<div id = "studentview" class="container">
+<div id="studentview" class="container">
 
 	<!--Start section-->
 	<section class="student-view">
+		<div class="container">
+			<nav class="menu">
+				<div class="menu-box">
+					<div class="dropdown">
+
+						<a class="dropbtn" data-click="showDropDownMenu">
+							<div class="idBox">
+								<h1 class="h1Student">STUDENT</h1>
+								<h2 class="h2StudentEmail">${this.student.email}</h2>
+								<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+							</div>
+						</a>
+						<div class="dropdown-content droplist">
+
+							<a href="#" data-click="classes" class="navbarTest" checked>Test</a>
+							<a href="." class="navbarLogOut">Logga ut</a>
+
+
+						</div>
+					</div>
+				</div>
+
+			</nav>
+		</div>
 
 		<!--Start row-->
 		<div class="row space-above">
-			
 			<div class="col-md-3 hidden-sm">
 			</div>
-
 			<!--Start maincontent-->
-			<div class="col-md-6 col-sm-12">
-				<div class="panel panel-default panel-style">
+			<div class="col-md-8 col-md-offset-2 mainContent">
+				<div id="contentBox" class="panel panel-default panel-style">
 					<div class="panel-body">
-						<h3>${this.student.email}</h3>
-						<h4>Student</h4>
-						<hr>
+						<div class=" col-md-2 col-centered floatingImg">
+							<div id="glyphicon-ring"><img class="img-circle" src="https://www.atomix.com.au/media/2015/06/atomix_user31.png"></div>
+						</div>
+						<hr class="line">
 
 						<!--List with tests to do-->
 						<article class="student-view-test-info">
-							<p><strong>Kunskapstester att göra</strong></p>
+							<p class="testTextP">Kunskapstester att göra: <strong> ${this.student.testsToDo.length}</strong></p>
 
-							<div class="list-group">
+							<div class="list-group testToDoList">
 								${this.student.testsToDo.display()}
 							</div>
 						</article>
@@ -32,7 +54,7 @@ StudentView.addTemplate('default', function(){return `
 
 						<!--List with finished tests-->
 						<article class="student-view-test-info">
-							<p><strong>Kunskapstester du genomfört</strong></p>
+							<p class="testTextP">Kunskapstester du genomfört: <strong>${this.student.finishedTests.length}</strong></p>
 
 							<div class="list-group">
 								${this.student.finishedTests.display()}
@@ -52,6 +74,6 @@ StudentView.addTemplate('default', function(){return `
 	</section>
 	<!--end content-->
 
+
 </div>
-<!--end container-->
 `});

@@ -1,0 +1,104 @@
+#testview {
+	background-color: #eadbbc;
+	padding: 0;
+}
+
+#testview p {
+	color: #32779e;
+	font-family: 'Lato';
+}
+
+#testview hr {
+	border: 1px #985050 solid;
+	margin-top: -10%;
+}
+
+#testview .line2 {
+	border: 1px #985050 solid;
+	margin-top: 5%;
+}
+
+#testresultview .goBack {
+	text-decoration: none;
+	color: #FAFFBD;
+	border: 1px #FAFFBD solid;
+}
+
+#testresultview .goBack:hover {
+	color: white;
+}
+
+#testresultview .panel-style {
+	border: none;
+}
+
+#testview .paragraphCorrect {
+	color: #4897c3;
+	font-family: 'Lato';
+	font-size: 20px;
+	padding-top: 10px;
+	background-color: #1e4b61;
+	padding-bottom: 10px;
+	margin-bottom: 15%;
+}
+
+#testresult {
+	margin-top: 15%;
+	margin-left: 5%;
+	margin-bottom: 5%;
+}
+
+#testview h4 {
+	color: #c16c6c;
+	font-family: 'Lato';
+	margin-left: 5%;
+}
+
+#testresult {
+	margin-top: 5%;
+}
+
+.bottomPart {
+	padding-bottom: 30px;
+}
+
+#testresultview .paragraphCorrect {
+	margin-bottom: 5%;
+	text-align: center;
+	margin-top: 10%;
+}
+
+.topColoredBox {
+	width: 100%;
+	background-color: #351919;
+	height: 30%;
+	padding-top: 24px;
+}
+
+.line2 {
+	margin-top: 3%;
+}
+
+#testview .information {
+	color: #32779e;
+	font-size: 15px;
+	font-family: 'Lato';
+	text-align: center;
+}
+
+.glyphicon-remove {
+	color: #ec4242;
+}
+
+.glyphicon-ok {
+	color: #2e9e2e;
+}
+
+@media (min-width: 377px) and (max-width: 668px) {
+	#testresultview .panel-style {
+		margin-top: 10%;
+	}
+	#testresult {
+		margin-top: 8%;
+	}
+}
