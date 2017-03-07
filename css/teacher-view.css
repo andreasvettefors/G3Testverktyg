@@ -652,5 +652,6 @@ p{
 }
 
 @media screen and (min-width:667px) {
+
       .dropdown-content { display:inline-block;
 }
