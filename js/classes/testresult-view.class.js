@@ -36,6 +36,10 @@ class TestResultView extends Base {
 
 			$('#testresultview').remove();
 			tv.display('body');
+			statv.display('.main-content');
+			statv.getStats(1);
+			$('#statistics').hide();
+			$('#bodyTemplate2').hide();
 			// Ändrar data-click för att komma till rätt metod som lärare
 			$('.testlist').each(function () {
 				var id = $(this).attr('data-id');

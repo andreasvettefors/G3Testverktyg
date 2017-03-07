@@ -2,9 +2,7 @@ class Modal extends Base {
 
   static defaultPropertyValues(){
     return {
-      title: 'A modal title',
       content: 'This is important!',
-      cancelButton: 'Cancel',
       okButton: 'Ok'
     }
   }

@@ -47,7 +47,7 @@
  				studAns.addAnswer(sv.student.idUser, answerID, questID);
  				/////////////////////////////////////////////////
  				this.currentQIndex++;
- 			} 
+ 			}
 
  			if (this.currentQIndex == this.questions.length - 1) {
  				$('#nextButton').remove();
@@ -88,6 +88,9 @@
  				////////////////////////////////////////////////
  			});
  			studAns.updateUserCompletedTest(sv.student.idUser, testId);
+ 			for (var i = 1; i < 99999; i++) {
+ 				window.clearInterval(i);
+ 			}
  			var finish = new FinishedForm();
  			finish.display('body');
  		}

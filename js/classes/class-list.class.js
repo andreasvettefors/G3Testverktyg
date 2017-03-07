@@ -14,7 +14,7 @@ class ClassList extends List {
 		static get sqlQueries() {
 		return {
 			readClassData: `
-       SELECT * FROM classes
+       SELECT * FROM classes LIMIT 3
       `
 		}
 	}

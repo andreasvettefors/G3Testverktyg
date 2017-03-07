@@ -12,12 +12,8 @@ class StatisticView extends Base {
     
     showTests(e){
 		
-		var a = $(e.target).text();
-		console.log('class',a);
-		$(e.target).after($('.' + a).slideToggle("linear"));
-        this.getStats(1);
-        
-		
+		$(e.target).next('#statistics').slideToggle("linear");
+       
 	}
     
     getStats(testID){
@@ -26,7 +22,7 @@ class StatisticView extends Base {
                     this.getStudentGrades(classID,testID,(element) => {
                 var stats = new Statistic();
                 stats.display('#statistics');
-                var i = 0;
+                var i = 0;	
                 for(i;i < element.length;i++){
                     var email = element[i].email;
                     var grade = element[i].text;;
