@@ -15,7 +15,7 @@ class TestList extends List {
 		return {
 			readAllTests: `
        SELECT idTest,name FROM test
-      `
+     L `
 		}
 	}
 }

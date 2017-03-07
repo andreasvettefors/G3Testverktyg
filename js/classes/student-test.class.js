@@ -76,34 +76,34 @@ class StudentTest extends Base {
 					// Tidsgränsen för att klara testet sätts här. 
 					var totalSec = test.timeLimit;
 					// Funktionn körs varje sekund vilket gör att det ser ut som en timer
-					var x = setInterval(function (){
+					var x = setInterval(function () {
 						//Räknar ut minuter och sekunder till timern
 						var min = parseInt(totalSec / 60, 10);
 						var sec = totalSec - (min * 60);
-						
+
 						// Visar tiden
 						$('#showtime').html("Tid kvar: " + min + "m " + sec + "s");
 
 						// Minskar tiden med
 						totalSec--;
-						
+
 						console.log(totalSec);
 						//Om tiden blir noll så körs detta block
 						if (totalSec < 0) {
 							$('#testForm').remove();
 							var timesUp = new Modal({
-      						content: 'Tyvärr, tiden tog slut!',
-      						okButton: 'Ok'
+								content: 'Tyvärr, tiden tog slut!',
+								okButton: 'Ok'
 							});
 
 							clearInterval(x);
 							//console.log(sv.student.idUser);
 							var studAns = new studentAnswer();
-		
+
 							//////adds student choosen-answer to database////
 							/////////////////////////////////////////////////
-							
-							console.log("studid",sv.student.idUser,"testid",test.idTest);
+
+							console.log("studid", sv.student.idUser, "testid", test.idTest);
 							studAns.studentGradePercentage(sv.student.idUser, test.idTest, (element) => {
 								console.log(element);
 								//Adds final testresult to "grade" database

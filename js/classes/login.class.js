@@ -53,7 +53,7 @@ class Login extends Base {
 					var statv = new StatisticView();
 
 					tv.teacher.readTeacherFromDbById(id, () => {
-		
+
 						$(function () {
 							$('#login').remove();
 							$('canvas').remove();
@@ -84,7 +84,7 @@ class Login extends Base {
 								window.statv = statv;
 							});
 						});
-		
+
 
 					});
 					//data-click="test${this.isDone}"

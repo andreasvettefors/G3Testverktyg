@@ -1,272 +1,270 @@
 /*design för desktop*/
-.container .jumbotron{
-  border-radius: 0px;
-} 
 
-#testForm .jumbotron{
-  background-color: #351919;
-  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-style: 1px solid white;
-  text-align: center;
-  padding-top:20px;
-  padding-bottom: 20px;
-  margin-top: 100px;
-  } 
-
-
-
- #testForm .currentQNumber{
-  font-size: 80px;
-  color:#dcbf87;
-  
+.container .jumbotron {
+	border-radius: 0px;
 }
 
-#testForm .noQuestionLength{
-  font-family: 'Vidaloka', serif;
-  color: #985f5f;
-  text-align:right;
-  float:right;
-}
-
-
-
-#testForm .header1{
-  font-family: 'Vidaloka', serif;
-  font-size: 70px;
-  color:#dcbf87;
-  text-align:left;
-  float:left;
-}
-
-#testForm .nameOfTest{
-  margin-top: 120px;
-  margin-left: 5px;
-  margin-bottom: 0px;
-  font-family: Verdana;
-  font-size: 11px;
-  line-height: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-  color:#985f5f;
-  text-align: left;
-}
-
-#testForm .line{
-
-  margin-top: 30px;
-  border: 1px #ff6a20 solid;
-}
-
-#testForm .questionP{
-  margin-top: 50px;
-  text-align: left;
-  margin-left: 15%;
-  color:#985f5f;
-  font-size: 23px;
-  font-family: 'Vidaloka', serif;
-  margin-top: 10px;
-}
-
-.modal-content{
+#testForm .jumbotron {
 	background-color: #351919;
-	padding:5%;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-style: 1px solid white;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 100px;
+}
+
+#testForm .currentQNumber {
+	font-size: 80px;
+	color: #dcbf87;
+}
+
+#testForm .noQuestionLength {
+	font-family: 'Vidaloka', serif;
+	color: #985f5f;
+	text-align: right;
+	float: right;
+}
+
+#testForm .header1 {
+	font-family: 'Vidaloka', serif;
+	font-size: 70px;
+	color: #dcbf87;
+	text-align: left;
+	float: left;
+}
+
+#testForm .nameOfTest {
+	margin-top: 120px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+	font-family: Verdana;
+	font-size: 11px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #985f5f;
+	text-align: left;
+}
+
+#testForm .line {
+	margin-top: 30px;
+	border: 1px #ff6a20 solid;
+}
+
+#testForm .questionP {
+	margin-top: 50px;
+	text-align: left;
+	margin-left: 15%;
+	color: #985f5f;
+	font-size: 23px;
+	font-family: 'Vidaloka', serif;
+	margin-top: 10px;
+}
+
+.modal-content {
+	background-color: #351919;
+	padding: 5%;
 	border-radius: 0;
 }
 
-.modal-content h2{
-	color:#ad9782;
+.modal-content h2 {
+	color: #ad9782;
 	font-family: 'Vidaloka', serif;
 }
 
-
-#testForm #nextButton:hover{
-  color:#ff6a20 ;
-  border: 2px solid #ff6a20 ;
-  text-decoration: none;
-  
+.modalstyle .btnstyle{
+	background: #271629;
+	border: 1px #FAFFBD solid;
+	border-radius: 20px;
+	color: #FAFFBD;
+	width: 110px;
+	font-family: verdana;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 10px;
+	padding: 10px;
 }
 
-#testForm #nextButton:checked{
-  color:#ff6a20 ;
-  border: 2px solid #ff6a20 ;
-  text-decoration: none;    
+.modalstyle .btnstyle:hover{
+	border: 1px #FAFFBD solid;
+	background: #442530;
 }
 
-#testForm #nextButton{
-  color:#ff6a20;
+.modalstyle .btnstyle:focus{
+	outline: 0;
 }
 
-
-#testForm .pager li>#nextButton{
-  background-color: #271629 ;
-  color:#FAFFBD;
-  border: 1px #FAFFBD solid;
+#testForm #nextButton:hover {
+	color: #ff6a20;
+	border: 2px solid #ff6a20;
+	text-decoration: none;
 }
 
-#testForm .pager li>#nextButton:hover{
-  background-color: #442530;
-  color:white;
-  border: 1px #FAFFBD solid;
+#testForm #nextButton:checked {
+	color: #ff6a20;
+	border: 2px solid #ff6a20;
+	text-decoration: none;
 }
 
+#testForm #nextButton {
+	color: #ff6a20;
+}
+
+#testForm .pager li>#nextButton {
+	background-color: #271629;
+	color: #FAFFBD;
+	border: 1px #FAFFBD solid;
+}
+
+#testForm .pager li>#nextButton:hover {
+	background-color: #442530;
+	color: white;
+	border: 1px #FAFFBD solid;
+}
 
 #testForm input[type='radio'] {
-
-  -webkit-appearance:none;
-  width:15px;
-  height:15px;
-  border:2px solid #FAFFBD;
-  border-radius:50%;
-  outline:none;
-  margin-right: 10px;
-  margin-bottom: -5px;
+	-webkit-appearance: none;
+	width: 15px;
+	height: 15px;
+	border: 2px solid #FAFFBD;
+	border-radius: 50%;
+	outline: none;
+	margin-right: 10px;
+	margin-bottom: -5px;
 }
 
 #testForm input[type='radio']:before {
-  content:'';
-  display: block;
-  width:80%;
-  height:80%;
-  margin: 8% auto;  
-  margin-left: 1.5px;  
-  border-radius:60%;    
+	content: '';
+	display: block;
+	width: 80%;
+	height: 80%;
+	margin: 8% auto;
+	margin-left: 1.5px;
+	border-radius: 60%;
 }
+
 #testForm input[type='radio']:checked:before {
-  background:#985f5f;
-
+	background: #985f5f;
 }
+
 #testForm input[type='radio']:focus {
-  outline: 0;
-
+	outline: 0;
 }
 
-
-#testForm #finishButton{
-    background: #271629 ;
-    border: 1px #FAFFBD solid;
-    border-radius: 20px;
-    color: #FAFFBD;
-    width: 110px;
-    font-family: verdana;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 10px;
-    padding: 10px;
-    display:none;
-  }
-
- #testForm #finishButton:hover{
-   
-  border: 1px #FAFFBD solid;
-  background: #442530;
-
-  }
-
-#testForm #finishButton:focus{
-  outline: 0; 
+#testForm #finishButton {
+	background: #271629;
+	border: 1px #FAFFBD solid;
+	border-radius: 20px;
+	color: #FAFFBD;
+	width: 110px;
+	font-family: verdana;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 10px;
+	padding: 10px;
+	display: none;
 }
 
-#testForm .questionImage{
-  text-align: center;
-
+#testForm #finishButton:hover {
+	border: 1px #FAFFBD solid;
+	background: #442530;
 }
 
-#testForm img{
-	width:25%;
+#testForm #finishButton:focus {
+	outline: 0;
 }
 
-#testForm .radioAlternatives{
-  display:flex;
+#testForm .questionImage {
+	text-align: center;
 }
 
-#testForm .answerAlternatives{
-  display: inline;
-  max-width: 100%;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color:#ccbc9e;
+#testForm img {
+	width: 25%;
 }
 
-#testForm #error-message{
-  color:#c19191;
-  font-family: verdana;
-  font-size: 14px;
+#testForm .radioAlternatives {
+	display: flex;
 }
 
-#testForm #form{
-  margin-left: 15%;
+#testForm .answerAlternatives {
+	display: inline;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #ccbc9e;
 }
 
-#showtime{
-  color: #dcbf87;
-  margin-top: 30px;
-  font-size: 12px;
-  padding-right: 5px;
-  padding-left: 5px;
-  font-family: 'Lato';
-  letter-spacing: 2px;
+#testForm #error-message {
+	color: #c19191;
+	font-family: verdana;
+	font-size: 14px;
 }
 
-.timerBox{
-  width:50%;
-  margin:0 auto;
+#testForm #form {
+	margin-left: 15%;
 }
 
-.timeBox{
-    background-color: #0b3042;
-
-    width: 100px;
-    height: 100px;
-    margin:0 auto;
-    border-radius: 50%;
-    border:4px #dcbf87 dotted;
+#showtime {
+	color: #dcbf87;
+	margin-top: 30px;
+	font-size: 12px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-family: 'Lato';
+	letter-spacing: 2px;
 }
 
-#testForm .clockImg{
-  width:100%;
+.timerBox {
+	width: 50%;
+	margin: 0 auto;
 }
+
+.timeBox {
+	background-color: #0b3042;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	border-radius: 50%;
+	border: 4px #dcbf87 dotted;
+}
+
+#testForm .clockImg {
+	width: 100%;
+}
+
 
 /* design för stående mobil */
-@media screen and (max-width: 376px){
 
-  #testForm .header1{
-    margin-top: 70px;
-    font-size: 50px;  
-  }
-
-  #testForm .questionP{
-    text-align: left; 
-    margin-left: 15%;
-  }
-
-  #testForm .noQuestionLength{
-    font-size: 30px;
-    margin-top: -150px;
-  }
-
-  #testForm .currentQNumber{
-    font-size: 50px;
-  }
-
-  #testForm .nameOfTest{
-    margin-top: 140px;
-  }
-
-
-  #testForm #finishButton{
-   margin-left: 60%;
-  }
-
-  #testForm .jumbotron{
-    margin-top: 10px;
-  }
-
-  #testForm img{
-  width:50%;
+@media screen and (max-width: 376px) {
+	#testForm .header1 {
+		margin-top: 70px;
+		font-size: 50px;
+	}
+	#testForm .questionP {
+		text-align: left;
+		margin-left: 15%;
+	}
+	#testForm .noQuestionLength {
+		font-size: 30px;
+		margin-top: -150px;
+	}
+	#testForm .currentQNumber {
+		font-size: 50px;
+	}
+	#testForm .nameOfTest {
+		margin-top: 140px;
+	}
+	#testForm #finishButton {
+		margin-left: 60%;
+	}
+	#testForm .jumbotron {
+		margin-top: 10px;
+	}
+	#testForm img {
+		width: 50%;
+	}
 }
-
-}
-
-

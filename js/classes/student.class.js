@@ -66,7 +66,7 @@ class Student extends Base {
 
 	}
 
-// "Dropdown" för att visa tester som är gjorda
+	// "Dropdown" för att visa tester som är gjorda
 	collapseTestsDone(e) {
 		$(e.target).closest('.testWrapper').find('.collapse').eq(0).slideToggle('linear');
 	}

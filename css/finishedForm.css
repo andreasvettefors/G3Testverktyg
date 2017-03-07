@@ -1,92 +1,82 @@
-.container .jumbotron2{
-      border-radius: 0px;
+.container .jumbotron2 {
+	border-radius: 0px;
 }
 
-  .jumbotron2{
-    background-color: #351919;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-style: 1px solid white;
-    text-align: center;
-    padding-top:20px;
-    padding-bottom: 20px;
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
- #finishButton2{
-    background: #271629 ;
-    border: 1px #FAFFBD solid;
-    border-radius: 20px;
-    color: #FAFFBD;
-    width: 110px;
-    font-family: verdana;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 10px;
-    padding: 10px;
-  }
-
-  #finishButton2:hover{
-   
-  border: 1px #FAFFBD solid;
-  background: #442530;
-
-  }
-
-  #finishButton2:focus{
-  	outline:0;
-  }
-
-.line2{
- 
-  border:1px #985050 solid;
+.jumbotron2 {
+	background-color: #351919;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-style: 1px solid white;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 60px;
+	padding-right: 60px;
 }
 
-.header1{
-  font-size: 50px;
-  color:#ad9782;
-  font-family: 'Vidaloka', serif;
-  text-align:center;
-}
-.header2{
-    font-family: 'Lato';
-    font-size: 15px;
-    display: block;
-    margin-top: 10%;
-    color: #ab6b6b;
-    text-align: center;
-  
+#finishButton2 {
+	background: #271629;
+	border: 1px #FAFFBD solid;
+	border-radius: 20px;
+	color: #FAFFBD;
+	width: 110px;
+	font-family: verdana;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 10px;
+	padding: 10px;
 }
 
-.glyphicon-hand-down{
-  color:#ab6b6b;
-  text-align: center;
-  margin-top: 10%;
-  font-size: 30px;
+#finishButton2:hover {
+	border: 1px #FAFFBD solid;
+	background: #442530;
 }
 
-@media (min-width: 377px) and (max-width: 668px){
-
-.jumbotron2{
-     margin-top: 10%;
-  }
-
-.header1{
-  font-size:40px;
-  color:#ad9782;
-  font-family: 'Vidaloka', serif;
-  text-align:center;
-}
-.header2{
-   
-    font-size: 16px;
-  
+#finishButton2:focus {
+	outline: 0;
 }
 
-.glyphicon-hand-down{
-
-  margin-top: 5%;
-
+.line2 {
+	border: 1px #985050 solid;
 }
-  }
+
+.header1 {
+	font-size: 50px;
+	color: #ad9782;
+	font-family: 'Vidaloka', serif;
+	text-align: center;
+}
+
+.header2 {
+	font-family: 'Lato';
+	font-size: 15px;
+	display: block;
+	margin-top: 10%;
+	color: #ab6b6b;
+	text-align: center;
+}
+
+.glyphicon-hand-down {
+	color: #ab6b6b;
+	text-align: center;
+	margin-top: 10%;
+	font-size: 30px;
+}
+
+@media (min-width: 377px) and (max-width: 668px) {
+	.jumbotron2 {
+		margin-top: 10%;
+	}
+	.header1 {
+		font-size: 40px;
+		color: #ad9782;
+		font-family: 'Vidaloka', serif;
+		text-align: center;
+	}
+	.header2 {
+		font-size: 16px;
+	}
+	.glyphicon-hand-down {
+		margin-top: 5%;
+	}
+}

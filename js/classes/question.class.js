@@ -1,7 +1,7 @@
 class Question extends Base {
 
-	static defaultPropertyValues(){
-		return{
+	static defaultPropertyValues() {
+		return {
 			idQuestion: 0,
 			question: 'Are you stupid?',
 			imgURL: '',
@@ -10,47 +10,46 @@ class Question extends Base {
 		}
 
 	}
-	constructor(propertyValues){
+	constructor(propertyValues) {
 		super(propertyValues);
-   	this.answerOptions.readFromDb(this.idQuestion,(data) => { 
-		});
+		this.answerOptions.readFromDb(this.idQuestion, (data) => {});
 	}
 
 
-	insertInDb(callback){
-    this.db.newQuestion({
-      idQuestion: this.idQuestion,
-      question: this.question,
-      imgURL: this.imgURL,
-      test_idTest: this.test_idTest
-    },callback);
-  }
+	insertInDb(callback) {
+		this.db.newQuestion({
+			idQuestion: this.idQuestion,
+			question: this.question,
+			imgURL: this.imgURL,
+			test_idTest: this.test_idTest
+		}, callback);
+	}
 
 
-  readQuestionFromDb(){
-    this.db.readQuestion((data) => {
-                  var quest=[];
-                  var a = 0;
-                  data.forEach(function(element) {
-                   quest[a]=element.question
-                   a++;
-                       });
-                  return(quest[2]);
-      
-                });
-              
-}
+	readQuestionFromDb() {
+		this.db.readQuestion((data) => {
+			var quest = [];
+			var a = 0;
+			data.forEach(function (element) {
+				quest[a] = element.question
+				a++;
+			});
+			return (quest[2]);
 
-  static get sqlQueries(){
-    return {
-      newQuestion: `
+		});
+
+	}
+
+	static get sqlQueries() {
+		return {
+			newQuestion: `
         INSERT questions SET ?
       `,
-      readQuestion: `
+			readQuestion: `
         select * from questions
-      ` 
-  		    
+      `
 
-    }
-  }
+
+		}
+	}
 }

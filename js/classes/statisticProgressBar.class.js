@@ -2,8 +2,7 @@ class StatisticProgressBar extends Base {
 
 	static defaultPropertyValues() {
 
-		return {
-		}
+		return {}
 	}
 	constructor(propertyValues) {
 		super(propertyValues);

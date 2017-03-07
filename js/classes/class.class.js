@@ -16,12 +16,12 @@ class Class extends Base {
 
 	showStudentsInClass(e) {
 
-			var a = $(e.target).text();
-	
-			// Visar statistik för en klass
-			$(e.target).closest('#bodyTemplate2').find('#statistics').slideToggle('linear');
-			// Visar elever ri en klass
-			$(e.target).after($('.' + a).slideToggle("linear"));
+		var a = $(e.target).text();
+
+		// Visar statistik för en klass
+		$(e.target).closest('#bodyTemplate2').find('#statistics').slideToggle('linear');
+		// Visar elever ri en klass
+		$(e.target).after($('.' + a).slideToggle("linear"));
 
 
 	}

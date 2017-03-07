@@ -3,35 +3,36 @@ Administrator.addTemplate('default', function(){return `
 
 <div id="adminview" class="container">
 
-<div class="container">
-	<nav class="menu">
-		<div class="menu-box" >
-			<div class="dropdown">
-				
-				<a class="dropbtn" data-click="showDropDownMenu">
-				<div class="idBox">
-					<h1 class="h1Admin">Administratör</h1>
-					<h2 class="h2AdminEmail">${this.email}</h2>
-					<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-				</div></a>
-				<div class="dropdown-content droplist">
+	<div class="container">
+		<nav class="menu">
+			<div class="menu-box">
+				<div class="dropdown">
 
-					<a href="#"  data-click="classes" class="navbarClasses" checked>Klasser</a>
-					<a href="."  class="navbarLogOut">Logga ut</a>
+					<a class="dropbtn" data-click="showDropDownMenu">
+						<div class="idBox">
+							<h1 class="h1Admin">Administratör</h1>
+							<h2 class="h2AdminEmail">${this.email}</h2>
+							<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+						</div>
+					</a>
+					<div class="dropdown-content droplist">
+
+						<a href="#" data-click="classes" class="navbarClasses" checked>Klasser</a>
+						<a href="." class="navbarLogOut">Logga ut</a>
 
 
+					</div>
 				</div>
+
 			</div>
 
-		</div>
-		
-	</nav>
-</div>
-<!--Start section-->
-<section class="student-view">
+		</nav>
+	</div>
+	<!--Start section-->
+	<section class="student-view">
 
-	<!--Start row-->
-	<div class="row space-above parent-container">
+		<!--Start row-->
+		<div class="row space-above parent-container">
 
 		</div>
 	</section>

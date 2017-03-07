@@ -12,11 +12,11 @@ class Userlist extends List {
 	}
 
 
-  static get sqlQueries() {
-    return {
-      getAllUsers: `
+	static get sqlQueries() {
+		return {
+			getAllUsers: `
        select * from users;
       `
-    }
-  }
+		}
+	}
 }

@@ -3,7 +3,7 @@ class Teacher extends Base {
 	static defaultPropertyValues() {
 
 		return {
-		  ID: 0,
+			ID: 0,
 			email: 'john@teacher.se',
 			classes: new ClassList()
 		}
@@ -33,4 +33,3 @@ class Teacher extends Base {
 	}
 
 }
-

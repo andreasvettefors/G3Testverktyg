@@ -57,4 +57,3 @@ class TestResultView extends Base {
 	}
 
 }
-

@@ -6,15 +6,15 @@ TestForm.addTemplate('default', function(){return `
 		<div class=" col-md-8 col-md-offset-2">
 			<div class="jumbotron" id="jumbotronTestForm">
 				<div class="timerBox">
-				<div class="timeBox">
-									<!--<span class="glyphicon glyphicon-time" aria-hidden="true"></span>-->
-					<div class="timer" id="showtime">Tid kvar: 0m 0s</div>
-				</div>
+					<div class="timeBox">
+						<!--<span class="glyphicon glyphicon-time" aria-hidden="true"></span>-->
+						<div class="timer" id="showtime">Tid kvar: 0m 0s</div>
+					</div>
 				</div>
 				<h1 class="header1">Test frågor</h1>
 				<h2 class="noQuestionLength"><strong class="currentQNumber">${this.questions.indexOf(this.question)+1}</strong> av ${this.questions.length}</h2>
 				<h3 class="nameOfTest">${this.name}</h3>
-				 
+
 				<hr class="line"> ${this.question.display()}
 
 				<div class="buttons">

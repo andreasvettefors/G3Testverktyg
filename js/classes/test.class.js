@@ -10,7 +10,7 @@ class Test extends Base {
 	constructor(propertyValues) {
 		super(propertyValues);
 	}
-    	readTestData(id, callback) {
+	readTestData(id, callback) {
 		this.db.readTeacherData([id], (data) => {
 			this.idTest = data[0].idTest;
 			this.name = data[0].name;
