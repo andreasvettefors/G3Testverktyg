@@ -205,15 +205,15 @@ padding:3px;
  
 }
 
-.testWrapper .testlist{
+#adminview .testlist{
   padding-top: 4px;
   padding-bottom: 4px;
   background-color: #0b3042;
-  border-radius: 0px !important;
+  border-radius: 0px;
   text-align: center;
   z-index: 1;
   width:80%;
-  //margin-left: 10%;
+
 }
 
 .testWrapper .buttonAndListLeft .testlist{
@@ -617,5 +617,5 @@ p{
 }
 
 @media screen and (min-width:667px) {
-       .dropdown-content { display:inline-block !important;
+       body #adminview .dropdown-content { display:inline-block;
 }

@@ -145,15 +145,15 @@ padding:3px;
    
 }
 
-.list-group-item{
-  background-color: #592929;
+#teacherview .list-group-item{
+  background-color: #552727;
   font-family: verdana;
   color: #FAFFBD;
   border-radius: 20px;
   border:none;
 }
 
-.list-group-item:hover{
+#teacherview .list-group-item:hover{
  background-color: #1f0e0e;
  border: none;
  cursor: pointer;
@@ -212,15 +212,15 @@ padding:3px;
  
 }
 
-.testWrapper .testlist{
+#teacherview .testlist{
   padding-top: 4px;
   padding-bottom: 4px;
   background-color: #0b3042;
-  border-radius: 0px !important;
+  border-radius: 0px;
   text-align: center;
   z-index: 1;
   width:80%;
-  //margin-left: 10%;
+  
 }
 
 .testWrapper .buttonAndListLeft .testlist{
@@ -358,7 +358,7 @@ p{
   display: inherit;
 }
 
-.testlist:nth-child(even) {
+#teacherview .testlist:nth-child(even) {
     background-color: #1b678c;
 }
 
@@ -652,5 +652,6 @@ p{
 }
 
 @media screen and (min-width:667px) {
-       .dropdown-content { display:inline-block;
+
+      .dropdown-content { display:inline-block;
 }

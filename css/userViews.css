@@ -37,11 +37,6 @@ body{
 	color:#b5bbca;
 }
 
-#studentview a:hover{
-  color:#ff6a20 ;
-  border: 1px solid #ff6a20 ;
-  text-decoration: none;
-}
 
 #testresultview a{
 	background-color: #ff6a20 ;

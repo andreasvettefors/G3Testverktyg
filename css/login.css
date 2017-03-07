@@ -183,8 +183,8 @@ body {
 	margin-top: 15px;
 }
 
-.btn-primary {
-	background: #271629 !important;
+#login .btn-primary {
+	background: #271629;
 	border: 1px #FAFFBD solid;
 	border-radius: 20px;
 	color: #FAFFBD;
@@ -197,9 +197,9 @@ body {
 	padding: 10px;
 }
 
-.btn-primary:hover {
+#login .btn-primary:hover {
 	border: 1px #FAFFBD solid;
-	background: #442530 !important;
+	background: #442530;
 }
 
 .btn-primary:focus {

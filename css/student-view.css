@@ -32,13 +32,13 @@
   height:70px;
 }
 
-.menu a:hover{
+#studentview .container .menu a:hover{
   background-color: #210f0f;
-  color:#9e6262 !important;
-  margin:none !important;
-  border: none !important;
-  padding:none !important;
-  text-decoration: none !important;
+  color:#9e6262;
+  margin:none;
+  border: none;
+  padding:none;
+  text-decoration: none;
 }
 
 .menu a:first-child{
@@ -111,14 +111,14 @@ border-right:1px solid #1e4b61;
   border-color: #351919;
 }
 
-.line{
-  border:1px #985050 solid !important;
+#studentview .line{
+  border:1px #985050 solid;
   margin-top: 10%;
 }
 
-.student-view-test-info{
-  font-family: 'Lato' !important;
-  color:#dcbf87 !important;
+#studentview .student-view-test-info{
+  font-family: 'Lato';
+  color:#dcbf87;
   font-size: 14px;
   letter-spacing: 1px;
 }
@@ -138,15 +138,15 @@ padding:3px;
    
 }
 
-.list-group-item{
+#studentview .list-group-item{
   background-color: #592929;
-  font-family: verdana !important;
-  color: #FAFFBD !important;
-  border-radius: 20px !important;
+  font-family: verdana;
+  color: #FAFFBD;
+  border-radius: 20px;
   border:none;
 }
 
-.list-group-item:hover{
+#studentview .list-group-item:hover{
  background-color: #1f0e0e !important;
  border: none !important;
  cursor: pointer;
@@ -358,7 +358,7 @@ padding:3px;
     margin-left: 76%;
     font-size: 160%;
 }
-.line{
+#studentview .line{
   
   margin-top: 20%;
 }
